@@ -1,0 +1,41 @@
+/* ------------------------------------------------------
+
+Color variables:
+
+------------------------------------------------------ */
+
+//To find particular color names, I am using this website:
+//  https://colors.artyclick.com/color-name-finder/
+
+//Navigation and card item colors:
+$greyish-blue: #67809f; //Bespoke software color
+$silk-blue: #4183d7; //IT support color
+$dark-mint-green: #2ecc71; //Digital marketting color
+$jasper: #d64541; //Telecom Services
+$dark-lilac: #926fb1; //Web Design
+$red-pink: #f62459; //Cyber Security
+$chestnut-red: #ce4125; //Developer Course
+
+$tuna: #333645; //Navigation banner, also just used variously throughout the site
+//a darker version of tuna is used in the footer
+$dodger-blue: #4387f6; //Google reviews button
+$green-teal: #00b67b; //Trustpilot reviews button
+//It's very possible both dodger-blue and green-teal are some variation of silk-blue
+//and dark-mint-green, I may instead use color functions to make these colours later on.
+$star-dust: #999aa2; //Used on some buttons, particularly contact and search
+
+$color-map: (
+  //Colors for navigation and cards:
+  bespoke-software: $greyish-blue,
+  it-support: $silk-blue,
+  digital-marketting: $dark-mint-green,
+  telecom: $jasper,
+  web-design: $dark-lilac,
+  cyber-security: $red-pink,
+  developer: $chestnut-red,
+
+  banner: $tuna,
+  google: $dodger-blue,
+  trustpilot: $green-teal,
+  contact: $star-dust
+);
