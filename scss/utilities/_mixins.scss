@@ -1,0 +1,33 @@
+/* ------------------------------------------------------
+
+Mixins:
+
+------------------------------------------------------ */
+
+@mixin s-e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin s-m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin mq($break) {
+  @if $break = "small" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $break = "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $break = "large" {
+    @media (min-width: 1260px) {
+      @content;
+    }
+  }
+}
