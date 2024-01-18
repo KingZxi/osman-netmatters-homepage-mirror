@@ -8,3 +8,8 @@ Functions:
 @function px-to-em($input, $context) {
   @return ($input / $context) * 1em;
 }
+
+//calculate icon lineheight:
+@function iconLH() {
+  //Do this later but it's basically the parent containers width and length value, then add 15px, that's the correct line height.
+}

@@ -25,7 +25,17 @@ Functions:
 ------------------------------------------------------ */
 /* ------------------------------------------------------
 
-Layout import:
+Mixins:
+
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Mixins:
+
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Base import:
 
 ------------------------------------------------------ */
 /* ------------------------------------------------------
@@ -356,37 +366,61 @@ template {
 Base:
 
 ------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Base Styles:
+
+------------------------------------------------------ */
+h1,
+.h1 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h2,
+.h2 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h3,
+.h3 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h4,
+.h4 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h5,
+.h5 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h6,
+.h6 {
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+}
+
 .h1,
 h1 {
-  font-size: 2.25rem;
-}
-
-h1 {
-  font-size: 20px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 20px;
-}
-
-h6 {
-  font-size: 20px;
+  font-size: 2.7rem;
 }
 
 body {
   font-family: Poppins, sans-serif;
+  letter-spacing: 0.4px;
 }
 
 /* ------------------------------------------------------
@@ -427,7 +461,6 @@ Container:
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 90%;
 }
 
 /* -----------------------------------------------------
@@ -460,7 +493,49 @@ Card:
 ------------------------------------------------------ */
 .card {
   display: block;
-  width: 500px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.card__element {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card__element span {
+  display: block;
+}
+.card__element .icon {
+  height: 65px;
+  width: 65px;
+  margin: 0 auto 17px;
+  color: #fff;
+  background-color: #333645;
+  border-radius: 50%;
+}
+.card__element [class*=icon-] {
+  font-family: icomoon !important;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 62px;
+}
+.card__element .icon-laptop:before {
+  content: "\e957";
+}
+.card__element h2 {
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 0 11px;
+  font-weight: 400;
+}
+.card__element p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 13px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=application.css.map */

@@ -17,15 +17,15 @@ Mixins:
 }
 
 @mixin mq($break) {
-  @if $break = "small" {
+  @if $break == "small" {
     @media (min-width: 768px) {
       @content;
     }
-  } @else if $break = "medium" {
+  } @else if $break == "medium" {
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $break = "large" {
+  } @else if $break == "large" {
     @media (min-width: 1260px) {
       @content;
     }
