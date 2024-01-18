@@ -44,24 +44,23 @@ Mixins:
     $icon: "\e957" !global;
   } @else if $type == "it" {
     $color: map-get($color-map, it-support) !global;
-    $icon: "IT" !global;
+    $icon: "\e956" !global;
   } @else if $type == "marketting" {
     $color: map-get($color-map, digital-marketting) !global;
-    $icon: "M" !global;
+    $icon: "\e99d" !global;
   } @else if $type == "telecoms" {
     $color: map-get($color-map, telecom) !global;
-    $icon: "T" !global;
+    $icon: "\e942" !global;
   } @else if $type == "web" {
     $color: map-get($color-map, web-design) !global;
-    $icon: "W" !global;
+    $icon: "\eae5" !global;
   } @else if $type == "cyber" {
     $color: map-get($color-map, cyber-security) !global;
-    $icon: "C" !global;
+    $icon: "\e9b4" !global;
   } @else if $type == "developer" {
     $color: map-get($color-map, developer) !global;
-    $icon: "D" !global;
+    $icon: "\ea81" !global;
   }
-
   //Assigning card icon and colors
   .icon-laptop:before {
     @if (icon != null) {
