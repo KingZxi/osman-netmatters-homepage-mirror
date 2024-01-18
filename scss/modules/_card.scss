@@ -55,5 +55,14 @@ Card:
       margin-bottom: 13px;
       font-weight: 400;
     }
+
+    button,
+    .button {
+      color: #fff;
+      background-color: $greyish-blue;
+      border-color: $greyish-blue;
+      outline: none;
+      box-shadow: none;
+    }
   }
 }

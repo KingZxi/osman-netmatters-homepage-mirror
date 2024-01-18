@@ -537,5 +537,13 @@ Card:
   margin-bottom: 13px;
   font-weight: 400;
 }
+.card__element button,
+.card__element .button {
+  color: #fff;
+  background-color: #67809f;
+  border-color: #67809f;
+  outline: none;
+  box-shadow: none;
+}
 
 /*# sourceMappingURL=application.css.map */
