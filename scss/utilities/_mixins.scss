@@ -4,6 +4,7 @@ Mixins:
 
 ------------------------------------------------------ */
 
+//Elements and modifiers
 @mixin s-e($element) {
   &__#{$element} {
     @content;
@@ -16,6 +17,7 @@ Mixins:
   }
 }
 
+//Media queries
 @mixin mq($break) {
   @if $break == "small" {
     @media (min-width: 768px) {
@@ -29,5 +31,48 @@ Mixins:
     @media (min-width: 1260px) {
       @content;
     }
+  }
+}
+
+//Card mixin
+//This mixin is used when generating card colors and icons
+@mixin card-type($type) {
+  //If statemens to check card type
+  @if $type == "bespoke" {
+    //I really dislike the use of global, and if I have spare time I will look to change this a bit.
+    $color: map-get($color-map, bespoke-software) !global;
+    $icon: "\e957" !global;
+  } @else if $type == "it" {
+    $color: map-get($color-map, it-support) !global;
+    $icon: "IT" !global;
+  } @else if $type == "marketting" {
+    $color: map-get($color-map, digital-marketting) !global;
+    $icon: "M" !global;
+  } @else if $type == "telecoms" {
+    $color: map-get($color-map, telecom) !global;
+    $icon: "T" !global;
+  } @else if $type == "web" {
+    $color: map-get($color-map, web-design) !global;
+    $icon: "W" !global;
+  } @else if $type == "cyber" {
+    $color: map-get($color-map, cyber-security) !global;
+    $icon: "C" !global;
+  } @else if $type == "developer" {
+    $color: map-get($color-map, developer) !global;
+    $icon: "D" !global;
+  }
+
+  //Assigning card icon and colors
+  .icon-laptop:before {
+    @if (icon != null) {
+      content: $icon;
+    }
+  }
+  .icon:has(.icon-laptop) {
+    background-color: $color;
+  }
+  .btn {
+    border-color: $color;
+    background-color: $color;
   }
 }

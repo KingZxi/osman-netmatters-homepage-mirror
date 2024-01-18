@@ -4,17 +4,52 @@ Card:
 
 ------------------------------------------------------ */
 
+.service {
+  margin-top: 20px;
+
+  .h1 {
+    font-size: 2.7rem;
+  }
+}
+
 .card {
   display: block;
-  text-align: center;
+  margin-top: 30px;
   padding: 30px;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
   border-radius: 15px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
   @include s-e("element") {
     padding-left: 15px;
     padding-right: 15px;
+
+    //I feel like this doesn't need to be at root, in the future I want to find a different solution as I hate using roots and globals
+    //This uses a mixin to assign each one of the cards their respective colors and icon
+    @at-root {
+      .bespoke {
+        @include card-type(bespoke);
+      }
+      .it {
+        @include card-type(it);
+      }
+      .marketting {
+        @include card-type(marketting);
+      }
+      .telecoms {
+        @include card-type(telecoms);
+      }
+      .web {
+        @include card-type(web);
+      }
+      .cyber {
+        @include card-type(cyber);
+      }
+      .developer {
+        @include card-type(developer);
+      }
+    }
 
     span {
       display: block;
@@ -24,9 +59,9 @@ Card:
       height: 65px;
       width: 65px;
       margin: 0 auto 17px;
-      color: #fff;
-      background-color: #333645;
       border-radius: 50%;
+      background-color: $tuna;
+      color: #fff;
     }
 
     [class*="icon-"] {
@@ -37,32 +72,41 @@ Card:
       line-height: 62px;
     }
 
-    .icon-laptop:before {
-      content: "\e957";
+    .btn {
+      display: inline-block;
+      padding: 5px 15px 5px 15px;
+      vertical-align: middle;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      color: #fff;
+      font-weight: 400;
+      font-size: 1.063rem;
+      line-height: 35px;
+      cursor: pointer;
+      text-transform: UPPERCASE;
+
+      @at-root (with: media) {
+        &-container {
+        }
+      }
     }
 
     h2 {
-      font-size: 1.3rem;
       position: relative;
-      padding-bottom: 10px;
       margin: 0 0 11px;
+      padding-bottom: 10px;
+      font-size: 1.3rem;
       font-weight: 400;
+      color: $tuna;
     }
 
     p {
-      font-size: 0.8125rem;
-      line-height: 1.375rem;
       margin-bottom: 13px;
+      margin-top: 0;
+      font-size: 0.8125rem;
       font-weight: 400;
-    }
-
-    button,
-    .button {
-      color: #fff;
-      background-color: $greyish-blue;
-      border-color: $greyish-blue;
-      outline: none;
-      box-shadow: none;
+      line-height: 1.375rem;
+      color: $tuna;
     }
   }
 }
