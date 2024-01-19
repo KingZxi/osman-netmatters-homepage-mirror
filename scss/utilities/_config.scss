@@ -24,6 +24,8 @@ $green-teal: #00b67b; //Trustpilot reviews button
 //and dark-mint-green, I may instead use color functions to make these colours later on.
 $star-dust: #999aa2; //Used on some buttons, particularly contact and search
 
+$white: #fff;
+
 $color-map: (
   //Colors for navigation and cards:
   bespoke-software: $greyish-blue,
@@ -39,4 +41,3 @@ $color-map: (
   trustpilot: $green-teal,
   contact: $star-dust
 );
-

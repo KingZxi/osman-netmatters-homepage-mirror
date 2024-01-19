@@ -478,55 +478,43 @@ Base Styles:
 h1,
 .h1 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 h2,
 .h2 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 h3,
 .h3 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 h4,
 .h4 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 h5,
 .h5 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 h6,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
   color: inherit;
-  margin: 0;
 }
 
 .h1,
@@ -542,22 +530,6 @@ h3 {
 body {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
-}
-
-p {
-  line-height: 1.875rem;
-  margin-bottom: 25px;
-  margin: 0 0 10px;
-}
-
-.btn {
-  padding: 5px 15px;
-  height: auto;
-  line-height: 35px;
-  font-size: 1.063rem;
-  text-transform: uppercase;
-  border-radius: 3px;
-  white-space: normal;
 }
 
 /* ------------------------------------------------------
@@ -749,11 +721,16 @@ Card:
 }
 .card__element .btn {
   display: inline-block;
+  padding: 5px 15px 5px 15px;
   vertical-align: middle;
+  border-radius: 3px;
   border: 1px solid transparent;
   color: #fff;
   font-weight: 400;
+  font-size: 1.063rem;
+  line-height: 35px;
   cursor: pointer;
+  text-transform: UPPERCASE;
 }
 .card__element h2 {
   position: relative;
@@ -807,52 +784,7 @@ Misc styles:
 Welcome to netmatters section:
 ------------------------------------------------------ */
 .section-welcome {
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: #333645;
-}
-.section-welcome p {
-  color: #fff;
-  margin-bottom: 25px;
-}
-.section-welcome h1,
-.section-welcome .h1 {
-  margin-top: -4px;
-  margin-bottom: 40px;
-  font-weight: 600px;
-  color: #fff !important;
-}
-.section-welcome .btn-primary-inverse {
-  display: inline-block;
-  margin-bottom: 17px !important;
-  padding: 10px 30px;
-  border-radius: 6px;
-  font-size: 20px;
-  color: white;
-  background-color: #272936;
-}
-.section-welcome .btn-google {
-  background-color: #4387f6;
-}
-.section-welcome .btn-trustpilot {
-  background-color: #00b67b;
-}
-.section-welcome .btn-margin {
-  margin-bottom: 50px !important;
-}
-.section-welcome .arrow-right:before {
-  font-family: icomoon !important;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  content: "\ea3c";
-}
-.section-welcome .quote {
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-style: italic;
 }
 
 /*# sourceMappingURL=application.css.map */

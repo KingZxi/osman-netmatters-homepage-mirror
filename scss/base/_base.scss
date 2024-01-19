@@ -10,13 +10,15 @@ Base Styles:
 //   font-family: inherit;
 // }
 
+//For loop to generate all base headings
 @for $i from 1 through 6 {
   h#{$i},
   .h#{$i} {
     font-family: inherit;
-    //font-weight: 500;
+    font-weight: 500;
     line-height: 1.1;
     color: inherit;
+    margin: 0;
   }
 }
 
@@ -33,4 +35,20 @@ h3 {
 body {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
+}
+
+p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+  margin: 0 0 10px;
+}
+
+.btn {
+  padding: 5px 15px;
+  height: auto;
+  line-height: 35px;
+  font-size: 1.063rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: normal;
 }

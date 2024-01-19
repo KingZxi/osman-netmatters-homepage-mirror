@@ -1,0 +1,60 @@
+/* -----------------------------------------------------
+Welcome to netmatters section:
+------------------------------------------------------ */
+
+.section-welcome {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #333645;
+
+  p {
+    color: $white;
+    margin-bottom: 25px;
+  }
+
+  h1,
+  .h1 {
+    margin-top: -4px;
+    margin-bottom: 40px;
+    font-weight: 600px;
+    color: $white !important;
+  }
+
+  .btn-primary-inverse {
+    display: inline-block;
+    margin-bottom: 17px !important;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    background-color: #272936;
+  }
+
+  .btn-google {
+    background-color: map-get($color-map, google);
+  }
+
+  .btn-trustpilot {
+    background-color: map-get($color-map, trustpilot);
+  }
+
+  .btn-margin {
+    margin-bottom: 50px !important;
+  }
+
+  .arrow-right:before {
+    font-family: icomoon !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\ea3c";
+  }
+
+  .quote {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+}

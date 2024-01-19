@@ -79,16 +79,12 @@ Card:
 
     .btn {
       display: inline-block;
-      padding: 5px 15px 5px 15px;
       vertical-align: middle;
-      border-radius: 3px;
       border: 1px solid transparent;
       color: #fff;
       font-weight: 400;
-      font-size: 1.063rem;
-      line-height: 35px;
+      //line-height: 35px;
       cursor: pointer;
-      text-transform: UPPERCASE;
 
       @at-root (with: media) {
         &-container {
@@ -116,6 +112,7 @@ Card:
   }
 }
 
+//This section applies to the 'view our work' part at the bottom of 'Our Services,
 .service-all {
   text-align: center;
   padding-right: 15px;
