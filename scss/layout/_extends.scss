@@ -15,3 +15,18 @@ Placeholders:
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+%btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 400;
+  //line-height: 35px;
+  cursor: pointer;
+
+  @at-root (with: media) {
+    &-container {
+    }
+  }
+}
