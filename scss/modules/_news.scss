@@ -1,0 +1,17 @@
+/* -----------------------------------------------------
+
+Latest news section:
+
+------------------------------------------------------ */
+
+.news {
+  @extend %section;
+  .h1 {
+    color: $tuna;
+  }
+
+  @include s-e("card") {
+    font-size: 0.8125rem;
+    margin-top: 30px;
+  }
+}

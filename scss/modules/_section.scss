@@ -1,11 +1,28 @@
 /* -----------------------------------------------------
+
 Welcome to netmatters section:
+
 ------------------------------------------------------ */
 
-.section-welcome {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.welcome {
+  @extend %section;
   background-color: #333645;
+
+  .fa {
+    display: inline-block;
+  }
+
+  .star:before {
+    display: inline-block;
+    font-family: icomoon !important;
+    color: orange;
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    content: "\e9d9";
+  }
 
   p {
     color: $white;
@@ -16,7 +33,6 @@ Welcome to netmatters section:
   .h1 {
     margin-top: -4px;
     margin-bottom: 40px;
-    font-weight: 600px;
     color: $white !important;
   }
 
@@ -56,5 +72,16 @@ Welcome to netmatters section:
     font-weight: 600;
     font-size: 1.3rem;
     font-style: italic;
+  }
+
+  .quote-author {
+    font-weight: 600;
+    color: #a3a8ac;
+    font-size: 1.1rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }

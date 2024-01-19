@@ -8,6 +8,8 @@ Card:
   margin-top: 20px;
 
   .h1 {
+    color: $tuna;
+    font-weight: 600;
     font-size: 2.7rem;
   }
 }
@@ -118,6 +120,7 @@ Card:
   padding-right: 15px;
   padding-left: 15px;
   //margin: 30px auto -70px;
+  margin-top: 30px;
 
   a {
     text-decoration: none;

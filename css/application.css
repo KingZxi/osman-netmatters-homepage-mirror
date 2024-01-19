@@ -84,6 +84,7 @@ main {
  */
 h1 {
   font-size: 2em;
+  font-weight: 600;
   margin: 0.67em 0;
 }
 
@@ -478,7 +479,7 @@ Base Styles:
 h1,
 .h1 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -487,7 +488,7 @@ h1,
 h2,
 .h2 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -496,7 +497,7 @@ h2,
 h3,
 .h3 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -505,7 +506,7 @@ h3,
 h4,
 .h4 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -514,7 +515,7 @@ h4,
 h5,
 .h5 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -523,7 +524,7 @@ h5,
 h6,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
   margin: 0;
@@ -580,6 +581,11 @@ Placeholders:
   margin-left: auto;
 }
 
+.news, .welcome {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /* ------------------------------------------------------
 
 Modules import:
@@ -632,6 +638,8 @@ Card:
   margin-top: 20px;
 }
 .service .h1 {
+  color: #333645;
+  font-weight: 600;
   font-size: 2.7rem;
 }
 
@@ -776,6 +784,7 @@ Card:
   text-align: center;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 30px;
 }
 .service-all a {
   text-decoration: none;
@@ -801,28 +810,41 @@ Miscellaneous Styles:
 
 ------------------------------------------------------ */
 /* -----------------------------------------------------
-Misc styles:
+Welcome to netmatters styles:
 ------------------------------------------------------ */
 /* -----------------------------------------------------
+
 Welcome to netmatters section:
+
 ------------------------------------------------------ */
-.section-welcome {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.welcome {
   background-color: #333645;
 }
-.section-welcome p {
+.welcome .fa {
+  display: inline-block;
+}
+.welcome .star:before {
+  display: inline-block;
+  font-family: icomoon !important;
+  color: orange;
+  margin-bottom: 25px;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  content: "\e9d9";
+}
+.welcome p {
   color: #fff;
   margin-bottom: 25px;
 }
-.section-welcome h1,
-.section-welcome .h1 {
+.welcome h1,
+.welcome .h1 {
   margin-top: -4px;
   margin-bottom: 40px;
-  font-weight: 600px;
   color: #fff !important;
 }
-.section-welcome .btn-primary-inverse {
+.welcome .btn-primary-inverse {
   display: inline-block;
   margin-bottom: 17px !important;
   padding: 10px 30px;
@@ -831,16 +853,16 @@ Welcome to netmatters section:
   color: white;
   background-color: #272936;
 }
-.section-welcome .btn-google {
+.welcome .btn-google {
   background-color: #4387f6;
 }
-.section-welcome .btn-trustpilot {
+.welcome .btn-trustpilot {
   background-color: #00b67b;
 }
-.section-welcome .btn-margin {
+.welcome .btn-margin {
   margin-bottom: 50px !important;
 }
-.section-welcome .arrow-right:before {
+.welcome .arrow-right:before {
   font-family: icomoon !important;
   font-style: normal;
   font-weight: 400;
@@ -849,10 +871,35 @@ Welcome to netmatters section:
   line-height: 1;
   content: "\ea3c";
 }
-.section-welcome .quote {
+.welcome .quote {
   font-weight: 600;
   font-size: 1.3rem;
   font-style: italic;
+}
+.welcome .quote-author {
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+}
+.welcome .quote-author a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------
+Latest news styles:
+------------------------------------------------------ */
+/* -----------------------------------------------------
+
+Latest news section:
+
+------------------------------------------------------ */
+.news .h1 {
+  color: #333645;
+}
+.news__card {
+  font-size: 0.8125rem;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=application.css.map */
