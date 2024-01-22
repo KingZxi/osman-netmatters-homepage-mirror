@@ -4,23 +4,43 @@ Card:
 
 ------------------------------------------------------ */
 
+//Service is applied to the entire cards section container
 .service {
   margin-top: 20px;
 
+  //Section heading
   .h1 {
     color: $tuna;
     font-weight: 600;
     font-size: 2.7rem;
   }
+
+  //Each card heading
+  h2 {
+    position: relative;
+    margin: 0 0 11px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $tuna;
+  }
+
+  //Each card paragraph
+  p {
+    margin-bottom: 13px;
+    margin-top: 0;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: $tuna;
+  }
 }
 
+//This is applied to each card container
 .card {
   display: block;
-
-  /*
-  display: flex;
-  justify-content: center;
-  */
+  /* display: flex;
+  justify-content: center; */
   margin-top: 30px;
   padding: 30px;
   border: 1px solid #ccc;
@@ -28,6 +48,7 @@ Card:
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
 
+  //Each card has an element container within it's initial .card container, this is used for identifying the type of carrd
   @include s-e("element") {
     padding-left: 15px;
     padding-right: 15px;
@@ -58,11 +79,13 @@ Card:
       }
     }
 
+    //The span contains the card icons
     span {
       display: block;
     }
 
-    .icon {
+    //Class applied to divs that contain the icon
+    @include s-e("icon") {
       height: 65px;
       width: 65px;
       margin: 0 auto 17px;
@@ -71,7 +94,8 @@ Card:
       color: #fff;
     }
 
-    [class*="icon-"] {
+    //Class applied to spans that contain each icon
+    [class*="card-icon"] {
       font-family: icomoon !important;
       font-weight: 400;
       font-size: 2rem;
@@ -79,6 +103,7 @@ Card:
       line-height: 62px;
     }
 
+    //This button class is applied to each button, each button is actually an anchor tag.
     .btn {
       display: inline-block;
       vertical-align: middle;
@@ -93,34 +118,16 @@ Card:
         }
       }
     }
-
-    h2 {
-      position: relative;
-      margin: 0 0 11px;
-      padding-bottom: 10px;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: $tuna;
-    }
-
-    p {
-      margin-bottom: 13px;
-      margin-top: 0;
-      font-size: 0.8125rem;
-      font-weight: 400;
-      line-height: 1.375rem;
-      color: $tuna;
-    }
   }
 }
 
-//This section applies to the 'view our work' part at the bottom of 'Our Services,
+//This section applies to the 'view our work' part at the bottom of 'Our Services' section
 .service-all {
-  text-align: center;
   padding-right: 15px;
   padding-left: 15px;
   //margin: 30px auto -70px;
   margin-top: 30px;
+  text-align: center;
 
   a {
     text-decoration: none;

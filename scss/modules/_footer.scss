@@ -4,22 +4,39 @@ Footer:
 
 ------------------------------------------------------ */
 
-.footer-menu {
+.footer {
   position: relative;
   padding: 27px 0 0;
   color: #fff;
 
   h4 {
+    margin: 0 0 26px 0px;
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
-    margin: 0 0 16px 26px;
   }
 
   ul {
-    list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+    list-style: none;
+  }
+
+  @include s-e(container) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer-bottom {
+  padding-top: 10px;
+  background-color: #212330;
+  color: white;
+  font-size: 0.8125rem;
+
+  @include s-e(license) {
+    padding-left: 15px;
   }
 }

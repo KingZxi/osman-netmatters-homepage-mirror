@@ -62,12 +62,12 @@ Mixins:
     $icon: "\ea81" !global;
   }
   //Assigning card icon and colors
-  .icon-laptop:before {
+  .card-icon:before {
     @if (icon != null) {
       content: $icon;
     }
   }
-  .icon:has(.icon-laptop) {
+  .card__element__icon:has(.card-icon) {
     background-color: $color;
   }
   .btn {

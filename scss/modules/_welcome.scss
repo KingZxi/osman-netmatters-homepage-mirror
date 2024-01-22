@@ -4,24 +4,21 @@ Welcome to netmatters section:
 
 ------------------------------------------------------ */
 
+//This class applies to the welcome section's main div, which wraps the entire section.
 .welcome {
   @extend %section;
   background-color: #333645;
 
-  .fa {
-    display: inline-block;
+  p {
+    color: $white;
+    margin-bottom: 25px;
   }
 
-  .star:before {
-    display: inline-block;
-    font-family: icomoon !important;
-    color: orange;
-    margin-bottom: 25px;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    content: "\e9d9";
+  h1,
+  .h1 {
+    margin-top: -4px;
+    margin-bottom: 40px;
+    color: $white !important;
   }
 
   p {
@@ -34,6 +31,26 @@ Welcome to netmatters section:
     margin-top: -4px;
     margin-bottom: 40px;
     color: $white !important;
+  }
+
+  //This is required to keep the stars inline.
+  .star {
+    display: inline-block;
+
+    //This padds the star content to each star tag (<div>)
+    @at-root (with: media) {
+      .star:before {
+        display: inline-block;
+        font-family: icomoon !important;
+        color: orange;
+        margin-bottom: 25px;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        content: "\e9d9";
+      }
+    }
   }
 
   .btn-primary-inverse {

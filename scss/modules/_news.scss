@@ -1,31 +1,35 @@
 /* -----------------------------------------------------
-
+SSSSSSSSSSSSSS
 Latest news section:
 
 ------------------------------------------------------ */
 
+//News is applied to the entire news section's container.
 .news {
   @extend %section;
+
+  //This heading applies to the news' main heading
   .h1 {
+    margin: 0 0 28px;
     color: $tuna;
   }
 
+  //The news card's element applies to each individual news card's div.
   @include s-e(card) {
-    font-size: 0.8125rem;
     margin-top: 30px;
     position: relative;
     top: 0;
+    font-size: 0.8125rem;
     transition: 0.5 ease;
 
     .btn {
       display: inline-block;
-      vertical-align: middle;
-      border: 1px solid transparent;
       background-color: #926fb1;
       border-color: #926fb1;
-      color: #fff;
+      border: 1px solid transparent;
+      vertical-align: middle;
       font-weight: 400;
-      //line-height: 35px;
+      color: #fff;
       cursor: pointer;
 
       @at-root (with: media) {
@@ -34,7 +38,8 @@ Latest news section:
       }
     }
 
-    @include s-e(block) {
+    //The info element is applied to the section of each card with text
+    @include s-e(info) {
       padding: 30px;
       border: 1px solid #ccc;
       border-top: 0;
@@ -44,10 +49,14 @@ Latest news section:
         font-size: 1rem;
         line-height: 1.5rem;
         margin: 0 0 15px;
+
+        //The anchor is used on the heading text
         a {
           color: $dark-lilac;
           font-weight: 600;
         }
+
+        //This span is applied to the news card's date of post
         span {
           display: inline;
           text-transform: uppercase;
@@ -59,6 +68,7 @@ Latest news section:
         }
       }
 
+      //Applied to each news news card's paragraph
       p {
         line-height: 1.375rem;
         font-size: 0.8125rem;
@@ -66,6 +76,7 @@ Latest news section:
       }
     }
 
+    //Honestly, I don't remember the purpose of this right now, will come back and consider if I even need this anymore.
     @include s-e(link) {
       position: absolute;
       top: 0;
@@ -75,14 +86,26 @@ Latest news section:
       z-index: 1;
     }
 
+    //Each image container is wrapped in this div
     @include s-e(image) {
+      display: flex;
       position: relative;
-      display: block;
-      width: auto;
+      max-width: 100%;
+      width: 100%;
       height: auto;
+      justify-content: center;
+      align-items: center;
       overflow: clip;
+
+      //Applies to the image itself
+      a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
+    //This class is applied to containers that contain information about the poster
     @include s-e(creator) {
       margin-top: 30px;
       padding-top: 30px;
@@ -91,9 +114,25 @@ Latest news section:
   }
 }
 
-.image2 {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
+//For the view all text at the bottom of the news section
+.viewAll {
+  text-align: center;
+  margin: 0 0 15px;
+
+  a {
+    color: $tuna;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .arrow-right:before {
+    color: $tuna;
+    font-family: icomoon !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\ea3c";
+  }
 }
