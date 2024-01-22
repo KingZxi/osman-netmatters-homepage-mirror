@@ -636,6 +636,26 @@ Navigation:
 /* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Banner:
+
+------------------------------------------------------ */
+.banner {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -----------------------------------------------------
+Footer styles:
+------------------------------------------------------ */
 /* -----------------------------------------------------
 
 Slide show section:
@@ -1115,6 +1135,26 @@ Footer:
 }
 .footer__container {
   margin-bottom: 30px;
+}
+.footer__follow-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer__follow-box .follow-btn {
+  padding: 12px 22px 16px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 35%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  background-color: #212330;
+}
+.footer__follow-box span {
+  position: relative;
+  top: 4px;
+  color: white;
 }
 
 .footer-bottom {
