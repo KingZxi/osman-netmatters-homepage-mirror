@@ -6,11 +6,11 @@ Footer:
 
 .footer {
   position: relative;
-  padding: 27px 0 0;
   color: #fff;
+  letter-spacing: 0.4px;
 
   h4 {
-    margin: 0 0 26px 0px;
+    margin: 24px 0 26px 0px;
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem;
@@ -61,5 +61,15 @@ Footer:
 
   @include s-e(license) {
     padding-left: 15px;
+    line-height: 20px;
+  }
+}
+
+.footer-logo {
+  width: 250px;
+  display: block;
+
+  img {
+    width: 100%;
   }
 }
