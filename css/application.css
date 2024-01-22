@@ -634,6 +634,29 @@ Navigation:
 }
 
 /* -----------------------------------------------------
+Footer styles:
+------------------------------------------------------ */
+/* -----------------------------------------------------
+
+Slide show section:
+
+------------------------------------------------------ */
+.slideshow {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  color: #fff;
+  background-color: #333645;
+  border-color: #333645;
+  font-weight: 400;
+  cursor: pointer;
+}
+/* -----------------------------------------------------
 Card:
 ------------------------------------------------------ */
 /* ------------------------------------------------------
@@ -642,6 +665,7 @@ Card:
 
 ------------------------------------------------------ */
 .service {
+  padding-top: 50px;
   margin-top: 20px;
 }
 .service .h1 {
@@ -905,7 +929,7 @@ Welcome to netmatters section:
 Latest news styles:
 ------------------------------------------------------ */
 /* -----------------------------------------------------
-SSSSSSSSSSSSSS
+
 Latest news section:
 
 ------------------------------------------------------ */
@@ -987,6 +1011,27 @@ Latest news section:
   padding-top: 30px;
   border-top: 1px solid #ccc;
 }
+.news .web h3 a {
+  color: #926fb1;
+}
+.news .web .btn {
+  border-color: #926fb1;
+  background-color: #926fb1;
+}
+.news .bespoke h3 a {
+  color: #67809f;
+}
+.news .bespoke .btn {
+  border-color: #67809f;
+  background-color: #67809f;
+}
+.news .telecoms h3 a {
+  color: #d64541;
+}
+.news .telecoms .btn {
+  border-color: #d64541;
+  background-color: #d64541;
+}
 
 .viewAll {
   text-align: center;
@@ -1006,6 +1051,39 @@ Latest news section:
   text-transform: none;
   line-height: 1;
   content: "\ea3c";
+}
+
+/* -----------------------------------------------------
+Newsletter:
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Email Newsletter Sign-up:
+
+------------------------------------------------------ */
+.newsletter {
+  background-color: #ddd;
+}
+.newsletter h2 {
+  margin: 0 0 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #333645;
+}
+.newsletter form {
+  padding: 50px 0;
+}
+.newsletter form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.newsletter form input {
+  height: 47px;
+  width: 100%;
+}
+.newsletter form div:has(label) {
+  margin-bottom: 15px;
 }
 
 /* -----------------------------------------------------

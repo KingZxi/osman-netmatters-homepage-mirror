@@ -1,5 +1,5 @@
 /* -----------------------------------------------------
-SSSSSSSSSSSSSS
+
 Latest news section:
 
 ------------------------------------------------------ */
@@ -111,6 +111,17 @@ Latest news section:
       padding-top: 30px;
       border-top: 1px solid #ccc;
     }
+  }
+
+  //These classes use the news-card mixin to get the correct colors for each news card.
+  .web {
+    @include news-card(web);
+  }
+  .bespoke {
+    @include news-card(bespoke);
+  }
+  .telecoms {
+    @include news-card(telecoms);
   }
 }
 

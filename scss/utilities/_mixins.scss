@@ -75,3 +75,22 @@ Mixins:
     background-color: $color;
   }
 }
+
+//News card mixin
+
+@mixin news-card($type) {
+  @if ($type == "web") {
+    $color: map-get($color-map, web-design) !global;
+  } @else if ($type == "bespoke") {
+    $color: map-get($color-map, bespoke-software) !global;
+  } @else if ($type == "telecoms") {
+    $color: map-get($color-map, telecom) !global;
+  }
+  h3 a {
+    color: $color;
+  }
+  .btn {
+    border-color: $color;
+    background-color: $color;
+  }
+}

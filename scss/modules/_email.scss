@@ -1,0 +1,36 @@
+/* ------------------------------------------------------
+
+Email Newsletter Sign-up:
+
+------------------------------------------------------ */
+
+//
+.newsletter {
+  background-color: #ddd;
+
+  h2 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $tuna;
+  }
+
+  form {
+    padding: 50px 0;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    input {
+      height: 47px;
+      width: 100%;
+    }
+
+    div:has(label) {
+      margin-bottom: 15px;
+    }
+  }
+}
