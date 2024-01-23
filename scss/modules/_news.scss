@@ -107,9 +107,28 @@ Latest news section:
 
     //This class is applied to containers that contain information about the poster
     @include s-e(creator) {
+      display: flex;
+      gap: 20px;
+      align-items: center;
       margin-top: 30px;
       padding-top: 30px;
       border-top: 1px solid #ccc;
+
+      @include s-e(pfp) {
+        img {
+          border-radius: 50%;
+        }
+      }
+      @include s-e(info) {
+        line-height: 1.375rem;
+        color: #666;
+        font-size: 0.875;
+        strong {
+          font-weight: 600;
+          color: $tuna;
+          font-size: 0.875rem;
+        }
+      }
     }
   }
 

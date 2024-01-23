@@ -1057,9 +1057,25 @@ Latest news section:
   object-fit: cover;
 }
 .news__card__creator {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #ccc;
+}
+.news__card__creator__pfp img {
+  border-radius: 50%;
+}
+.news__card__creator__info {
+  line-height: 1.375rem;
+  color: #666;
+  font-size: 0.875;
+}
+.news__card__creator__info strong {
+  font-weight: 600;
+  color: #333645;
+  font-size: 0.875rem;
 }
 .news .web h3 a {
   color: #926fb1;
