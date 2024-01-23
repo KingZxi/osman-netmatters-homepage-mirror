@@ -52,13 +52,21 @@ Header:
 }
 
 .hamburger {
+  float: right;
+  button {
+    height: 56px;
+    padding: 5px 15px 5px 15px;
+    background-color: $tuna;
+    border-color: $tuna;
+  }
   .icon-burger:before {
     font-family: icomoon !important;
-    font-size: 1.438rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
     text-transform: none;
     content: "\e9bd";
+    color: white;
   }
 }
