@@ -795,8 +795,22 @@ Header:
   line-height: 1.42857143;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-
-.row {
+.header form button {
+  background: none;
+  border: none;
+  color: #333645;
+  position: absolute;
+  right: 20px;
+  line-height: 47px;
+  font-size: 20px;
+  outline: none;
+}
+.header form .icon-search:before {
+  font-family: icomoon !important;
+  position: relative;
+  content: "\e986";
+}
+.header .row {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
@@ -804,12 +818,10 @@ Header:
   align-items: center;
   vertical-align: middle;
 }
-
-.logo img {
+.header .logo img {
   width: 100%;
 }
-
-.phone .icon-phone:before {
+.header .phone .icon-phone:before {
   font-family: icomoon !important;
   font-size: 32px;
   font-style: normal;
@@ -818,17 +830,16 @@ Header:
   text-transform: none;
   content: "\e901";
 }
-
-.hamburger {
+.header .hamburger {
   float: right;
 }
-.hamburger button {
+.header .hamburger button {
   height: 56px;
   padding: 5px 15px 5px 15px;
   background-color: #333645;
   border-color: #333645;
 }
-.hamburger .icon-burger:before {
+.header .hamburger .icon-burger:before {
   font-family: icomoon !important;
   font-size: 2rem;
   font-style: normal;
