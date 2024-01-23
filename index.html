@@ -513,11 +513,16 @@
           <form method="POST" action="#" id="sign-up" class="sign-up">
             <h2>Email Newsletter Sign-Up</h2>
             <div>
-              <label for="newsletter-name" class="">Your Name</label>
+              <!-- These inner spans with the * are a short term implementation -->
+              <label for="newsletter-name" class=""
+                >Your Name <span style="color: #d24d57">*</span></label
+              >
               <input id="newsletter-name" name="name" type="text" value />
             </div>
             <div>
-              <label for="newsletter-email" class="">Your Email</label>
+              <label for="newsletter-email" class=""
+                >Your Email <span style="color: #d24d57">*</span></label
+              >
               <input id="newsletter-email" name="email" type="email" value />
             </div>
             <div>
