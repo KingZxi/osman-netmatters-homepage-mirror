@@ -690,10 +690,12 @@ Slide show section:
 
 ------------------------------------------------------ */
 .slideshow {
+  display: flex;
+  gap: 90px;
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow-x: clip;
 }
-
 .btn {
   display: inline-block;
   vertical-align: middle;

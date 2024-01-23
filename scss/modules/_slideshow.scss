@@ -5,8 +5,19 @@ Slide show section:
 ------------------------------------------------------ */
 
 .slideshow {
+  display: flex;
+  gap: 90px;
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow-x: clip;
+
+  @include s-e("item") {
+    @include s-e("img") {
+    }
+
+    @include s-e("description") {
+    }
+  }
 }
 .btn {
   display: inline-block;
