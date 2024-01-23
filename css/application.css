@@ -804,15 +804,13 @@ Slide show section:
 .slideshow {
   display: flex;
   gap: 90px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   overflow-x: clip;
-  object-fit: contain;
+  object-fit: fill;
+  align-items: center;
 }
 .slideshow__item__img {
   max-height: auto;
   width: auto;
-  object-fit: contain;
   filter: grayscale(1);
 }
 .height {
@@ -1172,7 +1170,6 @@ Latest news section:
   width: 100%;
   height: auto;
   justify-content: center;
-  align-items: center;
   overflow: clip;
 }
 .news__card__image a img {

@@ -7,17 +7,14 @@ Slide show section:
 .slideshow {
   display: flex;
   gap: 90px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   overflow-x: clip;
-
-  object-fit: contain;
+  object-fit: fill;
+  align-items: center;
 
   @include s-e("item") {
     @include s-e("img") {
       max-height: auto;
       width: auto;
-      object-fit: contain;
       filter: grayscale(1);
     }
 
