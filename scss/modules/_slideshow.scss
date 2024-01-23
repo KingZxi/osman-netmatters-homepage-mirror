@@ -10,9 +10,15 @@ Slide show section:
   padding-top: 50px;
   padding-bottom: 50px;
   overflow-x: clip;
+  height: 200px;
+  object-fit: contain;
 
   @include s-e("item") {
     @include s-e("img") {
+      max-height: auto;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(1);
     }
 
     @include s-e("description") {

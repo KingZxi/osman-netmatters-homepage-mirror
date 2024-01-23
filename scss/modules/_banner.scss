@@ -6,14 +6,48 @@ Banner:
 
 //This class is used on the banner divison
 .banner {
-  height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 500px;
+  gap: 20px;
+  background-image: url("/img/netmatter02.jpg");
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  text-align: center;
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
 
   img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    background-color: #926fb1;
+    border-color: #926fb1;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+
+    .arrow-right:before {
+      font-family: icomoon !important;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      content: "\ea3c";
+    }
   }
 }
