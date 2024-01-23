@@ -35,12 +35,18 @@ Email Newsletter Sign-up:
   }
 }
 
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .test {
   display: table-cell;
   border: 3px solid $tuna;
   height: 32px;
-  width: 32px;
+  width: 128px;
   margin-bottom: 0;
+  margin-right: 20px;
 
   .button {
     border-radius: 3px;

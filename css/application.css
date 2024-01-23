@@ -1136,12 +1136,18 @@ Email Newsletter Sign-up:
   margin-bottom: 15px;
 }
 
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .test {
   display: table-cell;
   border: 3px solid #333645;
   height: 32px;
-  width: 32px;
+  width: 128px;
   margin-bottom: 0;
+  margin-right: 20px;
 }
 .test .button {
   border-radius: 3px;
