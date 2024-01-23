@@ -55,7 +55,7 @@ Welcome to netmatters section:
 
   .btn-primary-inverse {
     display: inline-block;
-    margin-bottom: 17px !important;
+    margin-bottom: 17px;
     padding: 10px 30px;
     border-radius: 6px;
     font-size: 20px;
@@ -65,10 +65,12 @@ Welcome to netmatters section:
 
   .btn-google {
     background-color: map-get($color-map, google);
+    margin-top: 20px;
   }
 
   .btn-trustpilot {
     background-color: map-get($color-map, trustpilot);
+    margin-bottom: 0;
   }
 
   .btn-margin {

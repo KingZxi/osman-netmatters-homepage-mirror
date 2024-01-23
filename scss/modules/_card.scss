@@ -7,7 +7,6 @@ Card:
 //Service is applied to the entire cards section container
 .service {
   padding-top: 50px;
-  margin-top: 20px;
 
   //Section heading
   .h1 {
@@ -51,8 +50,8 @@ Card:
 
   //Each card has an element container within it's initial .card container, this is used for identifying the type of carrd
   @include s-e("element") {
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
 
     //I feel like this doesn't need to be at root, in the future I want to find a different solution as I hate using roots and globals
     //This uses a mixin to assign each one of the cards their respective colors and icon

@@ -26,9 +26,11 @@ Header:
 
 .row {
   display: flex;
+  gap: 20px;
   justify-content: flex-start;
   height: 70px;
   align-items: center;
+  vertical-align: middle;
 }
 
 .logo {
@@ -37,5 +39,26 @@ Header:
   }
 }
 
-.row {
+.phone {
+  .icon-phone:before {
+    font-family: icomoon !important;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    content: "\e942";
+  }
+}
+
+.hamburger {
+  .icon-burger:before {
+    font-family: icomoon !important;
+    font-size: 1.438rem;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    content: "\e9bd";
+  }
 }
