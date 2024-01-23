@@ -41,25 +41,25 @@ Mixins:
   @if $type == "bespoke" {
     //I really dislike the use of global, and if I have spare time I will look to change this a bit.
     $color: map-get($color-map, bespoke-software) !global;
-    $icon: "\e957" !global;
+    $icon: "\e90c" !global;
   } @else if $type == "it" {
     $color: map-get($color-map, it-support) !global;
     $icon: "\e956" !global;
   } @else if $type == "marketting" {
     $color: map-get($color-map, digital-marketting) !global;
-    $icon: "\e99d" !global;
+    $icon: "\e902" !global;
   } @else if $type == "telecoms" {
     $color: map-get($color-map, telecom) !global;
-    $icon: "\e942" !global;
+    $icon: "\e901" !global;
   } @else if $type == "web" {
     $color: map-get($color-map, web-design) !global;
-    $icon: "\eae5" !global;
+    $icon: "\ea80" !global;
   } @else if $type == "cyber" {
     $color: map-get($color-map, cyber-security) !global;
-    $icon: "\e9b4" !global;
+    $icon: "\e900" !global;
   } @else if $type == "developer" {
     $color: map-get($color-map, developer) !global;
-    $icon: "\ea81" !global;
+    $icon: "\e903" !global;
   }
   //Assigning card icon and colors
   .card-icon:before {
