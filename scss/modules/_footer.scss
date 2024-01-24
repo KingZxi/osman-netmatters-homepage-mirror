@@ -29,6 +29,12 @@ Footer:
     margin-bottom: 30px;
   }
 
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
   @include s-e(follow-box) {
     display: flex;
     flex-direction: row;
