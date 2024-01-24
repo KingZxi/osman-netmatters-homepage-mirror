@@ -89,9 +89,9 @@
         <div class="container">
           <!-- Cards -->
           <div class="">
-            <div class="test1">
+            <div class="header-row-positioning">
               <h2 class="h1">Our Services</h2>
-              <h3 class="h3 test111">
+              <h3 class="h3 hide">
                 <a href="#">View Our Work <em class="arrow-right"></em></a>
               </h3>
             </div>
@@ -270,8 +270,8 @@
           </div>
         </div>
       </section>
-      <div class="padding">
-        <div class="container slideshow">
+      <div class="slideshow-padding">
+        <section class="container slideshow">
           <!-- Partner slideshow here? -->
           <div class="slideshow__item">
             <img class="slideshow__item__img" src="img/netmatter09.jpg" />
@@ -306,7 +306,7 @@
           <div class="slideshow__item">
             <img class="slideshow__item__img" src="img/netmatter29.jpg" />
           </div>
-        </div>
+        </section>
       </div>
 
       <section class="welcome">
@@ -334,7 +334,7 @@
               from our relationship in an upfront manner.
             </p>
             <!-- Use uppercase on these -->
-            <div class="group">
+            <div class="btn-group">
               <a class="btn btn-primary-inverse"
                 >Why choose us? <em class="arrow-right"></em
               ></a>
@@ -372,7 +372,7 @@
               </span>
             </p>
             <!-- Use uppercase on these -->
-            <div class="group">
+            <div class="btn-group">
               <a class="btn btn-primary-inverse btn-google"
                 >Google Reviews <em class="arrow-right"></em
               ></a>
@@ -389,8 +389,12 @@
       <section class="news">
         <div class="container">
           <!-- Latest news -->
-          <h2 class="h1">Latest News</h2>
-
+          <div class="header-row-positioning">
+            <h2 class="h1">Latest News</h2>
+            <h3 class="hide view-all-container">
+              <a href="#">View All</a> <span class="arrow-right"></span>
+            </h3>
+          </div>
           <div class="news__card web">
             <a href="#">
               <div class="news__card__image">
@@ -482,11 +486,11 @@
             </a>
           </div>
         </div>
+        <div class="container view-all-container">
+          <h3><a href="#">View All</a> <span class="arrow-right"></span></h3>
+        </div>
       </section>
-      <div class="container viewAll">
-        <h3><a href="#">View All</a> <span class="arrow-right"></span></h3>
-      </div>
-      <div class="padding">
+      <div class="slideshow-padding">
         <div class="container slideshow height">
           <!-- Clients slide show  -->
           <div class="slideshow__item">
@@ -530,43 +534,45 @@
           </div>
         </div>
       </div>
-      <div class="container newsletter">
-        <!-- Newsletter sign-up -->
-        <div>
-          <form method="POST" action="#" id="sign-up" class="sign-up">
-            <h2>Email Newsletter Sign-Up</h2>
-            <div>
-              <!-- These inner spans with the * are a short term implementation -->
-              <label for="newsletter-name" class=""
-                >Your Name <span style="color: #d24d57">*</span></label
-              >
-              <input id="newsletter-name" name="name" type="text" value />
-            </div>
-            <div>
-              <label for="newsletter-email" class=""
-                >Your Email <span style="color: #d24d57">*</span></label
-              >
-              <input id="newsletter-email" name="email" type="email" value />
-            </div>
-            <div>
-              <label>
-                <div class="checkbox-container">
-                  <span class="test button">
-                    <input class="button" type="checkbox" />
-                  </span>
-                  <p>
-                    Please tick this box if you wish to receive marketing
-                    information from us. Please see our
-                    <a>Privacy Policy</a> for more information on how we keep
-                    your data safe.
-                  </p>
-                </div>
-              </label>
-            </div>
-            <a class="btn"> SUBSCRIBE </a>
-          </form>
+      <section class="newsletter">
+        <div class="container">
+          <!-- Newsletter sign-up -->
+          <div>
+            <form method="POST" action="#" id="sign-up" class="sign-up">
+              <h2>Email Newsletter Sign-Up</h2>
+              <div>
+                <!-- These inner spans with the * are a short term implementation -->
+                <label for="newsletter-name" class=""
+                  >Your Name <span style="color: #d24d57">*</span></label
+                >
+                <input id="newsletter-name" name="name" type="text" value />
+              </div>
+              <div>
+                <label for="newsletter-email" class=""
+                  >Your Email <span style="color: #d24d57">*</span></label
+                >
+                <input id="newsletter-email" name="email" type="email" value />
+              </div>
+              <div>
+                <label>
+                  <div class="checkbox-container">
+                    <span class="checkbox-draw">
+                      <input class="check" type="checkbox" />
+                    </span>
+                    <p>
+                      Please tick this box if you wish to receive marketing
+                      information from us. Please see our
+                      <a>Privacy Policy</a> for more information on how we keep
+                      your data safe.
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <a class="btn"> SUBSCRIBE </a>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer>
       <div class="container">

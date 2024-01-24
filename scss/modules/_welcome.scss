@@ -71,11 +71,12 @@ Welcome to netmatters section:
   }
 
   .btn-primary-inverse {
+    //This button is quite unique, so I don't see much reason in inheriting the button placeholder
     display: inline-block;
     padding: 10px 30px;
     border-radius: 6px;
     font-size: 20px;
-    color: white;
+    color: $white;
     background-color: #272936;
   }
 
@@ -96,13 +97,7 @@ Welcome to netmatters section:
   }
 
   .arrow-right:before {
-    font-family: icomoon !important;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    content: "\ea3c";
+    @extend %arrow-right;
   }
 
   .quote {
@@ -123,7 +118,7 @@ Welcome to netmatters section:
     }
   }
 
-  .group {
+  .btn-group {
     display: flex;
     gap: 20px 12.5px;
     flex-flow: row wrap;

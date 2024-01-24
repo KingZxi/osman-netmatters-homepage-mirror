@@ -22,11 +22,30 @@ Placeholders:
   border: 1px solid transparent;
   color: #fff;
   font-weight: 400;
-  //line-height: 35px;
   cursor: pointer;
+  //line-height: 35px;
+}
 
-  @at-root (with: media) {
-    &-container {
-    }
+%arrow-right {
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\ea3c";
+}
+
+
+%header-row-positioning {
+  display: flex;
+  justify-content: space-between;
+}
+
+%hide {
+  margin-top: 10px;
+
+  @include mq(small) {
+    display: none;
   }
 }

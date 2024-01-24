@@ -754,6 +754,39 @@ Placeholders:
   padding-bottom: 50px;
 }
 
+.newsletter .btn, .news__card .btn, .card__element .btn, .banner .btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.welcome .arrow-right:before {
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\ea3c";
+}
+
+.news .header-row-positioning {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news .hide {
+  margin-top: 10px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .news .hide {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------
 
 Modules import:
@@ -970,15 +1003,9 @@ Banner:
 }
 .banner .btn {
   font-size: 1.25rem;
-  display: inline-block;
   padding: 10px 20px 10px 20px;
   background-color: #926fb1;
   border-color: #926fb1;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  font-weight: 400;
-  color: #fff;
-  cursor: pointer;
 }
 .banner .btn div {
   margin-left: 5px;
@@ -995,16 +1022,16 @@ Banner:
   content: "\ea3c";
 }
 .banner__nav__container {
-  margin-top: 40px;
   display: flex;
+  margin-top: 40px;
   gap: 20px;
 }
 .banner__nav__dot {
+  display: inline-block;
   height: 10px;
   width: 10px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
 }
 .banner__nav__dot:hover {
   background-color: #fff;
@@ -1030,24 +1057,14 @@ Slide show section:
   width: auto;
   filter: grayscale(1);
 }
+.slideshow-padding {
+  padding: 50px 0px;
+}
+
 .height {
   height: 70px;
 }
 
-.padding {
-  padding: 50px 0;
-}
-
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  color: #fff;
-  background-color: #333645;
-  border-color: #333645;
-  font-weight: 400;
-  cursor: pointer;
-}
 /* -----------------------------------------------------
 Card:
 ------------------------------------------------------ */
@@ -1065,15 +1082,15 @@ Card:
   font-size: 2.7rem;
   text-align: left;
 }
-.service .test1 {
+.service .header-row-positioning {
   display: flex;
   justify-content: space-between;
 }
-.service .test111 {
+.service .hide {
   margin-top: 10px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
-  .service .test111 {
+  .service .hide {
     display: none;
   }
 }
@@ -1214,14 +1231,6 @@ Card:
   text-align: center;
   line-height: 62px;
 }
-.card__element .btn {
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  color: #fff;
-  font-weight: 400;
-  cursor: pointer;
-}
 .service-all {
   padding-right: 15px;
   padding-left: 15px;
@@ -1329,7 +1338,7 @@ Welcome to netmatters section:
   padding: 10px 30px;
   border-radius: 6px;
   font-size: 20px;
-  color: white;
+  color: #fff;
   background-color: #272936;
 }
 .welcome .btn-google {
@@ -1346,15 +1355,6 @@ Welcome to netmatters section:
 .welcome .btn-margin {
   margin-bottom: 50px !important;
 }
-.welcome .arrow-right:before {
-  font-family: icomoon !important;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  content: "\ea3c";
-}
 .welcome .quote {
   font-weight: 600;
   font-size: 1.3rem;
@@ -1370,7 +1370,7 @@ Welcome to netmatters section:
   color: #fff;
   text-decoration: none;
 }
-.welcome .group {
+.welcome .btn-group {
   display: flex;
   gap: 20px 12.5px;
   flex-flow: row wrap;
@@ -1396,14 +1396,8 @@ Latest news section:
   transition: 0.5 ease;
 }
 .news__card .btn {
-  display: inline-block;
   background-color: #926fb1;
   border-color: #926fb1;
-  border: 1px solid transparent;
-  vertical-align: middle;
-  font-weight: 400;
-  color: #fff;
-  cursor: pointer;
 }
 .news__card__info {
   padding: 30px;
@@ -1499,16 +1493,17 @@ Latest news section:
   background-color: #d64541;
 }
 
-.viewAll {
+.view-all-container {
   text-align: center;
-  margin: 0 0 15px;
+  padding-top: 50px;
+  margin: 0 15px;
 }
-.viewAll a {
+.view-all-container a {
   color: #333645;
   font-weight: 600;
   text-decoration: none;
 }
-.viewAll .arrow-right:before {
+.view-all-container .arrow-right:before {
   color: #333645;
   font-family: icomoon !important;
   font-style: normal;
@@ -1551,13 +1546,17 @@ Email Newsletter Sign-up:
 .newsletter form div:has(label) {
   margin-bottom: 15px;
 }
+.newsletter .btn {
+  background-color: #333645;
+  border-color: #333645;
+}
 
 .checkbox-container {
   display: flex;
   flex-direction: row;
 }
 
-.test {
+.checkbox-draw {
   flex: 0 0 32px;
   position: relative;
   border: 3px solid #333645;
@@ -1567,11 +1566,11 @@ Email Newsletter Sign-up:
   margin-bottom: 0;
   margin-right: 20px;
 }
-.test:active {
+.checkbox-draw:active {
   background-color: red;
   color: white;
 }
-.test .button {
+.checkbox-draw .check {
   border-radius: 3px;
   position: relative;
   float: left;

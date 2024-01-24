@@ -16,12 +16,12 @@ Card:
     text-align: left;
   }
 
-  .test1 {
+  .header-row-positioning {
     display: flex;
     justify-content: space-between;
   }
 
-  .test111 {
+  .hide {
     margin-top: 10px;
 
     @include mq(small) {
@@ -135,18 +135,7 @@ Card:
 
     //This button class is applied to each button, each button is actually an anchor tag.
     .btn {
-      display: inline-block;
-      vertical-align: middle;
-      border: 1px solid transparent;
-      color: #fff;
-      font-weight: 400;
-      //line-height: 35px;
-      cursor: pointer;
-
-      @at-root (with: media) {
-        &-container {
-        }
-      }
+      @extend %btn;
     }
   }
 }

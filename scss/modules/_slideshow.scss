@@ -3,7 +3,6 @@
 Slide show section:
 
 ------------------------------------------------------ */
-
 .slideshow {
   display: flex;
   gap: 90px;
@@ -21,29 +20,14 @@ Slide show section:
     @include s-e("description") {
     }
   }
+
+  @at-root {
+    .slideshow-padding {
+      padding: 50px 0px;
+    }
+  }
 }
 
 .height {
   height: 70px;
-}
-
-.padding {
-  padding: 50px 0;
-}
-
-.btn {
-  display: inline-block;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  color: #fff;
-  background-color: #333645;
-  border-color: #333645;
-  font-weight: 400;
-  //line-height: 35px;
-  cursor: pointer;
-
-  @at-root (with: media) {
-    &-container {
-    }
-  }
 }

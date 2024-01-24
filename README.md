@@ -2,6 +2,16 @@ This project is simply a mirror of the Netmatters homepage I am creating for an 
 
 Created by: Osman of Netmatters, KingZxi on Github
 
-To do list:
+To do list: (Started this list on 24/01/2024)
 
-- Remove "test" class which exists somewhere.
+- Remove "test" class which exists somewhere. (DONE)
+- Refactor buttons to mostly be based off placeholder
+- Btns have incorrect spacing on large viewport in welcome section
+- Header needs a lot of work, especially on larger viewports
+- Cards section needs to expand to different layout styles in different viewports, it's fine in mobile though (flexbox...?)
+- Banner still needs work, it is too small
+- Dots in banner need to be clickable
+- News cards need to change layout in different viewports
+- Sign up input fields should switch to a two column layout on different viewports
+- Footer needs media queries
+- Second slideshow images expand outside the flex area

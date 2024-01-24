@@ -33,6 +33,12 @@ Email Newsletter Sign-up:
       margin-bottom: 15px;
     }
   }
+
+  .btn {
+    @extend %btn;
+    background-color: #333645;
+    border-color: #333645;
+  }
 }
 
 .checkbox-container {
@@ -40,7 +46,7 @@ Email Newsletter Sign-up:
   flex-direction: row;
 }
 
-.test {
+.checkbox-draw {
   flex: 0 0 32px;
   position: relative;
   border: 3px solid $tuna;
@@ -55,7 +61,7 @@ Email Newsletter Sign-up:
     color: white;
   }
 
-  .button {
+  .check {
     border-radius: 3px;
     position: relative;
     float: left;
