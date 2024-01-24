@@ -821,6 +821,9 @@ Header:
 .header .logo img {
   width: 100%;
 }
+.header .phone {
+  margin-bottom: 8px;
+}
 .header .phone .icon-phone:before {
   font-family: icomoon !important;
   font-size: 32px;
@@ -835,9 +838,10 @@ Header:
 }
 .header .hamburger button {
   height: 56px;
-  padding: 5px 15px 5px 15px;
+  padding: 10px 15px 5px 15px;
   background-color: #333645;
   border-color: #333645;
+  margin-bottom: 15px;
 }
 .header .hamburger .icon-burger:before {
   font-family: icomoon !important;
@@ -892,6 +896,7 @@ Chat function:
   background: #333645;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 0;
+  z-index: 20;
 }
 .sofia button span:before {
   font-family: icomoon !important;
