@@ -88,7 +88,7 @@ Latest news section:
 
     //Each image container is wrapped in this div
     @include s-e(image) {
-      display: flex;
+      display: inline; //Making this flex removes the annoying gap, but that has other issues you'll see
       position: relative;
       max-width: 100%;
       width: 100%;

@@ -6,9 +6,15 @@ Container:
 
 //Main container class, used multiple times throughout the page
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
   @extend %center;
+
+  //Expands general containers when viewport is large enough
+  @include mq(medium) {
+    width: 750px;
+  }
+  @include mq(large) {
+    width: 970px;
+  }
 }

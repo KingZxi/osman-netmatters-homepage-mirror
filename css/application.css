@@ -768,10 +768,18 @@ Container:
 
 ------------------------------------------------------ */
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
 }
 
 /* -----------------------------------------------------
@@ -1055,6 +1063,19 @@ Card:
   color: #333645;
   font-weight: 600;
   font-size: 2.7rem;
+  text-align: left;
+}
+.service .test1 {
+  display: flex;
+  justify-content: space-between;
+}
+.service .test111 {
+  margin-top: 10px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .service .test111 {
+    display: none;
+  }
 }
 .service h2 {
   position: relative;
@@ -1063,6 +1084,20 @@ Card:
   font-size: 1.3rem;
   font-weight: 400;
   color: #333645;
+}
+.service a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333645;
+}
+.service a .arrow-right:before {
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\ea3c";
 }
 .service p {
   margin-bottom: 13px;
@@ -1207,6 +1242,16 @@ Card:
   line-height: 1;
   content: "\ea3c";
 }
+@media screen and (min-width: 768px) {
+  .service-all {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service-all {
+    display: none;
+  }
+}
 
 /* -----------------------------------------------------
 Misc styles:
@@ -1225,7 +1270,24 @@ Welcome to netmatters section:
 
 ------------------------------------------------------ */
 .welcome {
+  display: flex;
+  padding-bottom: 50;
   background-color: #333645;
+}
+.welcome .container {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .welcome .container {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+}
+.welcome .container div {
+  flex: 1;
 }
 .welcome p {
   color: #fff;
@@ -1264,7 +1326,6 @@ Welcome to netmatters section:
 
 .welcome .btn-primary-inverse {
   display: inline-block;
-  margin-bottom: 17px;
   padding: 10px 30px;
   border-radius: 6px;
   font-size: 20px;
@@ -1273,11 +1334,14 @@ Welcome to netmatters section:
 }
 .welcome .btn-google {
   background-color: #4387f6;
-  margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  .welcome .btn-google {
+    margin-top: 20px;
+  }
 }
 .welcome .btn-trustpilot {
   background-color: #00b67b;
-  margin-bottom: 0;
 }
 .welcome .btn-margin {
   margin-bottom: 50px !important;
@@ -1300,10 +1364,16 @@ Welcome to netmatters section:
   font-weight: 600;
   color: #a3a8ac;
   font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 .welcome .quote-author a {
   color: #fff;
   text-decoration: none;
+}
+.welcome .group {
+  display: flex;
+  gap: 20px 12.5px;
+  flex-flow: row wrap;
 }
 
 /* -----------------------------------------------------
@@ -1373,7 +1443,7 @@ Latest news section:
   z-index: 1;
 }
 .news__card__image {
-  display: flex;
+  display: inline;
   position: relative;
   max-width: 100%;
   width: 100%;

@@ -13,6 +13,20 @@ Card:
     color: $tuna;
     font-weight: 600;
     font-size: 2.7rem;
+    text-align: left;
+  }
+
+  .test1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .test111 {
+    margin-top: 10px;
+
+    @include mq(small) {
+      display: none;
+    }
   }
 
   //Each card heading
@@ -23,6 +37,22 @@ Card:
     font-size: 1.3rem;
     font-weight: 400;
     color: $tuna;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $tuna;
+
+    .arrow-right:before {
+      font-family: icomoon !important;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      content: "\ea3c";
+    }
   }
 
   //Each card paragraph
@@ -143,5 +173,12 @@ Card:
     text-transform: none;
     line-height: 1;
     content: "\ea3c";
+  }
+
+  @include mq(medium) {
+    display: none;
+  }
+  @include mq(large) {
+    display: none;
   }
 }

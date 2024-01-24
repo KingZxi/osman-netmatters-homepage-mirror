@@ -6,7 +6,24 @@ Welcome to netmatters section:
 
 //This class applies to the welcome section's main div, which wraps the entire section.
 .welcome {
+  display: flex;
+  .container {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+
+    @include mq(large) {
+      flex-direction: row;
+      gap: 30px;
+      justify-content: space-evenly;
+    }
+
+    div {
+      flex: 1;
+    }
+  }
   @extend %section;
+  padding-bottom: 50;
   background-color: #333645;
 
   p {
@@ -55,7 +72,6 @@ Welcome to netmatters section:
 
   .btn-primary-inverse {
     display: inline-block;
-    margin-bottom: 17px;
     padding: 10px 30px;
     border-radius: 6px;
     font-size: 20px;
@@ -65,12 +81,14 @@ Welcome to netmatters section:
 
   .btn-google {
     background-color: map-get($color-map, google);
-    margin-top: 20px;
+
+    @include mq(large) {
+      margin-top: 20px;
+    }
   }
 
   .btn-trustpilot {
     background-color: map-get($color-map, trustpilot);
-    margin-bottom: 0;
   }
 
   .btn-margin {
@@ -97,10 +115,17 @@ Welcome to netmatters section:
     font-weight: 600;
     color: #a3a8ac;
     font-size: 1.1rem;
+    margin-bottom: 25px;
 
     a {
       color: $white;
       text-decoration: none;
     }
+  }
+
+  .group {
+    display: flex;
+    gap: 20px 12.5px;
+    flex-flow: row wrap;
   }
 }
