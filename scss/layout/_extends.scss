@@ -36,7 +36,6 @@ Placeholders:
   content: "\ea3c";
 }
 
-
 %header-row-positioning {
   display: flex;
   justify-content: space-between;
@@ -46,6 +45,35 @@ Placeholders:
   margin-top: 10px;
 
   @include mq(small) {
+    display: none;
+  }
+}
+
+%section-anchor {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $tuna;
+  }
+
+  .arrow-right:before {
+    font-family: icomoon !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\ea3c";
+  }
+
+  @include mq(medium) {
+    display: none;
+  }
+  @include mq(large) {
     display: none;
   }
 }

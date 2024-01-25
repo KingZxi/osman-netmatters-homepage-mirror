@@ -787,6 +787,36 @@ Placeholders:
   }
 }
 
+.view-all-container, .service-all {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+.view-all-container a, .service-all a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333645;
+}
+.view-all-container .arrow-right:before, .service-all .arrow-right:before {
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\ea3c";
+}
+@media screen and (min-width: 768px) {
+  .view-all-container, .service-all {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .view-all-container, .service-all {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------
 
 Modules import:
@@ -1237,34 +1267,16 @@ Card:
   line-height: 62px;
 }
 .service-all {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 30px;
-  text-align: center;
+  padding-top: 30px;
 }
-.service-all a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333645;
+
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.service-all .arrow-right:before {
-  font-family: icomoon !important;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  content: "\ea3c";
-}
-@media screen and (min-width: 768px) {
-  .service-all {
-    display: none;
-  }
-}
-@media screen and (min-width: 992px) {
-  .service-all {
-    display: none;
-  }
+.card-flex .card {
+  flex: 1 0 33%;
 }
 
 /* -----------------------------------------------------
@@ -1516,34 +1528,7 @@ Latest news section:
 }
 
 .view-all-container {
-  text-align: center;
-  padding-top: 50px;
-  margin: 0 15px;
-}
-.view-all-container a {
-  color: #333645;
-  font-weight: 600;
-  text-decoration: none;
-}
-.view-all-container .arrow-right:before {
-  color: #333645;
-  font-family: icomoon !important;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  content: "\ea3c";
-}
-@media screen and (min-width: 768px) {
-  .view-all-container {
-    display: none;
-  }
-}
-@media screen and (min-width: 992px) {
-  .view-all-container {
-    display: none;
-  }
+  margin-top: 50px;
 }
 
 /* -----------------------------------------------------
@@ -1615,12 +1600,18 @@ Email Newsletter Sign-up:
   flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 991px) {
+  .fields {
+    gap: 0;
+  }
+}
 
 input {
   display: flex;
 }
 
 .group {
+  gap: 0px;
   flex: 1 1 450px;
 }
 

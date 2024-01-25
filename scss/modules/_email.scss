@@ -74,6 +74,11 @@ Email Newsletter Sign-up:
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media (max-width: 991px) {
+    //Temp fix, I don't really want to be using a media query here
+    gap: 0;
+  }
 }
 
 input {
@@ -81,5 +86,6 @@ input {
 }
 
 .group {
+  gap: 0px;
   flex: 1 1 450px;
 }

@@ -167,31 +167,6 @@ Latest news section:
 
 //For the view all text at the bottom of the news section
 .view-all-container {
-  text-align: center;
-  padding-top: 50px;
-  margin: 0 15px;
-
-  a {
-    color: $tuna;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .arrow-right:before {
-    color: $tuna;
-    font-family: icomoon !important;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    content: "\ea3c";
-  }
-
-  @include mq(medium) {
-    display: none;
-  }
-  @include mq(large) {
-    display: none;
-  }
+  @extend %section-anchor;
+  margin-top: 50px;
 }
