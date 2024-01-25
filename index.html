@@ -365,7 +365,7 @@
                 were satisfied clients - and we are!
               </span>
             </p>
-            <p>
+            <p class="author-box">
               <span class="quote-author">
                 Eleanor Bishop, Head of Marketing -
                 <a href="#">Ashcroft Partnership LLP</a>
@@ -540,18 +540,25 @@
           <div>
             <form method="POST" action="#" id="sign-up" class="sign-up">
               <h2>Email Newsletter Sign-Up</h2>
-              <div>
-                <!-- These inner spans with the * are a short term implementation -->
-                <label for="newsletter-name" class=""
-                  >Your Name <span style="color: #d24d57">*</span></label
-                >
-                <input id="newsletter-name" name="name" type="text" value />
-              </div>
-              <div>
-                <label for="newsletter-email" class=""
-                  >Your Email <span style="color: #d24d57">*</span></label
-                >
-                <input id="newsletter-email" name="email" type="email" value />
+              <div class="fields">
+                <div class="group">
+                  <!-- These inner spans with the * are a short term implementation -->
+                  <label for="newsletter-name" class=""
+                    >Your Name <span style="color: #d24d57">*</span></label
+                  >
+                  <input id="newsletter-name" name="name" type="text" value />
+                </div>
+                <div class="group">
+                  <label for="newsletter-email" class=""
+                    >Your Email <span style="color: #d24d57">*</span></label
+                  >
+                  <input
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    value
+                  />
+                </div>
               </div>
               <div>
                 <label>
@@ -581,8 +588,8 @@
           <div class="footer-logo">
             <img src="img/netmatter49.png" style="z-index: 1" />
           </div>
+          <h4>Follow Us On:</h4>
           <div class="footer__container social">
-            <h4>Follow Us On:</h4>
             <div class="footer__follow-box">
               <a class="facebook follow-btn" href="#">
                 <span class="icon-facebook"></span>
@@ -598,54 +605,56 @@
               </a>
             </div>
           </div>
-          <div class="footer__container">
-            <h4>About Netmatters</h4>
-            <ul>
-              <li>News</li>
-              <li>Our Careers</li>
-              <li>Our Team</li>
-              <li>Contact Us</li>
-              <li>Privacy Policy</li>
-              <li>Cookie Policy</li>
-              <li>Data Retention & Disposal Policy</li>
-              <li>CCTV Policy</li>
-              <li>Environmental Policy</li>
-              <li>Terms & Conditions</li>
-            </ul>
-          </div>
-          <div class="footer__container">
-            <h4>Our Services</h4>
-            <ul>
-              <li>Bespoke Software</li>
-              <li>IT Support</li>
-              <li>Digital Marketting</li>
-              <li>Telecoms Services</li>
-              <li>Web Design</li>
-              <li>Cyber Security</li>
-              <li>Developer Training</li>
-            </ul>
-          </div>
-          <div class="footer__container">
-            <h4>Our Industries</h4>
-            <ul>
-              <li>Financial Services</li>
-              <li>Construction</li>
-              <li>Retail & E-Commerce</li>
-              <li>Non-Profits</li>
-              <li>SME's</li>
-              <li>Healthcare</li>
-              <li>Education & Training</li>
-              <li>Travel & Leisure</li>
-            </ul>
-          </div>
-          <div class="footer__container">
-            <h4>Locations</h4>
-            <ul>
-              <li>London Office</li>
-              <li>Cambridge Office</li>
-              <li>Wyhmondham Office</li>
-              <li>Great Yarmouth Office</li>
-            </ul>
+          <div class="lists">
+            <div class="footer__container">
+              <h4>About Netmatters</h4>
+              <ul>
+                <li>News</li>
+                <li>Our Careers</li>
+                <li>Our Team</li>
+                <li>Contact Us</li>
+                <li>Privacy Policy</li>
+                <li>Cookie Policy</li>
+                <li>Data Retention & Disposal Policy</li>
+                <li>CCTV Policy</li>
+                <li>Environmental Policy</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            </div>
+            <div class="footer__container">
+              <h4>Our Services</h4>
+              <ul>
+                <li>Bespoke Software</li>
+                <li>IT Support</li>
+                <li>Digital Marketting</li>
+                <li>Telecoms Services</li>
+                <li>Web Design</li>
+                <li>Cyber Security</li>
+                <li>Developer Training</li>
+              </ul>
+            </div>
+            <div class="footer__container">
+              <h4>Our Industries</h4>
+              <ul>
+                <li>Financial Services</li>
+                <li>Construction</li>
+                <li>Retail & E-Commerce</li>
+                <li>Non-Profits</li>
+                <li>SME's</li>
+                <li>Healthcare</li>
+                <li>Education & Training</li>
+                <li>Travel & Leisure</li>
+              </ul>
+            </div>
+            <div class="footer__container">
+              <h4>Locations</h4>
+              <ul>
+                <li>London Office</li>
+                <li>Cambridge Office</li>
+                <li>Wyhmondham Office</li>
+                <li>Great Yarmouth Office</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

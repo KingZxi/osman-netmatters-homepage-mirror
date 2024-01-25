@@ -32,7 +32,7 @@ Footer:
   .social {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: auto;
   }
 
   @include s-e(follow-box) {
@@ -44,11 +44,14 @@ Footer:
       padding: 12px 22px 16px;
       margin-bottom: 10px;
       margin-right: 10px;
-      width: 35%;
       text-align: center;
       text-decoration: none;
       font-size: 26px;
       background-color: #212330;
+
+      @media (max-width: 480px) {
+        width: 35%;
+      }
     }
 
     span {
@@ -78,5 +81,16 @@ Footer:
 
   img {
     width: 100%;
+  }
+}
+
+@include mq("medium") {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer__container {
+      flex: 1 0 calc(50% - 10px);
+    }
   }
 }

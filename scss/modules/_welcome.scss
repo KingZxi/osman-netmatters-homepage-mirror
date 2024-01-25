@@ -110,7 +110,6 @@ Welcome to netmatters section:
     font-weight: 600;
     color: #a3a8ac;
     font-size: 1.1rem;
-    margin-bottom: 25px;
 
     a {
       color: $white;
@@ -122,5 +121,9 @@ Welcome to netmatters section:
     display: flex;
     gap: 20px 12.5px;
     flex-flow: row wrap;
+  }
+
+  .author-box {
+    margin-bottom: 45px;
   }
 }

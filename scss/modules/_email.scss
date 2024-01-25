@@ -69,3 +69,17 @@ Email Newsletter Sign-up:
     display: none;
   }
 }
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+input {
+  display: flex;
+}
+
+.group {
+  flex: 1 1 450px;
+}

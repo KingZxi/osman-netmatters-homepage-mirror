@@ -826,6 +826,9 @@ Header:
 .header {
   padding: 20px 0;
 }
+.header form {
+  margin-top: 11px;
+}
 .header form input {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
@@ -837,13 +840,14 @@ Header:
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .header form button {
-  background: none;
-  border: none;
-  color: #333645;
   position: absolute;
   right: 20px;
-  line-height: 47px;
+  top: 90px;
+  background: none;
+  border: none;
   font-size: 20px;
+  color: #333645;
+  line-height: 47px;
   outline: none;
 }
 .header form .icon-search:before {
@@ -854,13 +858,14 @@ Header:
 .header .row {
   display: flex;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 70px;
   align-items: center;
   vertical-align: middle;
 }
 .header .logo img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
 }
 .header .phone {
   margin-bottom: 8px;
@@ -1364,7 +1369,6 @@ Welcome to netmatters section:
   font-weight: 600;
   color: #a3a8ac;
   font-size: 1.1rem;
-  margin-bottom: 25px;
 }
 .welcome .quote-author a {
   color: #fff;
@@ -1374,6 +1378,9 @@ Welcome to netmatters section:
   display: flex;
   gap: 20px 12.5px;
   flex-flow: row wrap;
+}
+.welcome .author-box {
+  margin-bottom: 45px;
 }
 
 /* -----------------------------------------------------
@@ -1603,6 +1610,20 @@ Email Newsletter Sign-up:
   display: none;
 }
 
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+input {
+  display: flex;
+}
+
+.group {
+  flex: 1 1 450px;
+}
+
 /* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
@@ -1636,7 +1657,7 @@ Footer:
 .footer .social {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: auto;
 }
 .footer__follow-box {
   display: flex;
@@ -1647,11 +1668,15 @@ Footer:
   padding: 12px 22px 16px;
   margin-bottom: 10px;
   margin-right: 10px;
-  width: 35%;
   text-align: center;
   text-decoration: none;
   font-size: 26px;
   background-color: #212330;
+}
+@media (max-width: 480px) {
+  .footer__follow-box .follow-btn {
+    width: 35%;
+  }
 }
 .footer__follow-box span {
   position: relative;
@@ -1677,6 +1702,16 @@ Footer:
 }
 .footer-logo img {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lists .footer__container {
+    flex: 1 0 calc(50% - 10px);
+  }
 }
 
 /*# sourceMappingURL=application.css.map */
