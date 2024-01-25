@@ -21,6 +21,7 @@ Header:
       padding: 5px 40px 5px 15px;
       line-height: 1.42857143;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      margin-bottom: 20px;
     }
     button {
       position: absolute;
@@ -98,6 +99,7 @@ Header:
 
   .hamburger {
     float: right;
+    padding: 7px 0;
     button {
       height: 56px;
       padding: 10px 15px 5px 15px;

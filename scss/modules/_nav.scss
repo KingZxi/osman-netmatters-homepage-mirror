@@ -6,19 +6,23 @@ Navigation:
 
 //Navigation wrapper
 .nav {
-  display: flex;
+  display: none;
+
+  @include mq(medium) {
+    display: flex;
+  }
   flex-direction: row;
   padding: 0;
   margin: 0;
   list-style: none;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   &__item {
     align-items: center;
   }
 
   ul li {
-    flex: 1;
+    flex: 1 calc((100% - 0px * (7 - 1)) / 7);
     margin: 20px;
   }
 
@@ -38,6 +42,7 @@ Navigation:
 
   a span {
     display: block;
+    padding-bottom: 10px;
     text-align: center;
   }
 }
