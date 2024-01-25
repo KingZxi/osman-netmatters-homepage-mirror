@@ -861,10 +861,10 @@ Header:
 .header {
   padding: 20px 0 0 0;
 }
-.header form {
+.header .search-small form {
   margin-top: 11px;
 }
-.header form input {
+.header .search-small form input {
   display: inline-block;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
@@ -876,7 +876,12 @@ Header:
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   margin-bottom: 20px;
 }
-.header form button {
+@media screen and (min-width: 768px) {
+  .header .search-small form input {
+    display: none;
+  }
+}
+.header .search-small form button {
   position: absolute;
   right: 20px;
   background: none;
@@ -886,10 +891,28 @@ Header:
   color: #333645;
   outline: none;
 }
-.header form .icon-search:before {
+.header .search-small form .icon-search:before {
   font-family: icomoon !important;
   position: relative;
   content: "\e986";
+}
+.header .search-wide form {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.header .search-wide form input {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header .search-wide form input {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .search-wide form {
+    display: block;
+  }
 }
 .header .logo {
   max-width: 100%;
@@ -925,6 +948,11 @@ Header:
   font-variant: normal;
   text-transform: none;
   content: "\e901";
+}
+@media screen and (min-width: 768px) {
+  .header .phone {
+    display: none;
+  }
 }
 .header .hamburger {
   float: right;
@@ -1020,7 +1048,7 @@ Navigation:
   justify-content: space-between;
   gap: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .nav {
     display: flex;
   }

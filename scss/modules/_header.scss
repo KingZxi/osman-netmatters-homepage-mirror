@@ -8,7 +8,7 @@ Header:
   //padding: 20px 0;
   padding: 20px 0 0 0;
 
-  form {
+  .search-small form {
     margin-top: 11px;
 
     input {
@@ -22,6 +22,10 @@ Header:
       line-height: 1.42857143;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
       margin-bottom: 20px;
+
+      @include mq(medium) {
+        display: none;
+      }
     }
     button {
       position: absolute;
@@ -37,6 +41,26 @@ Header:
       font-family: icomoon !important;
       position: relative;
       content: "\e986";
+    }
+  }
+
+  .search-wide {
+    form {
+      display: none;
+      width: 100%;
+      height: 100%;
+
+      input {
+        display: none;
+
+        @include mq(medium) {
+          display: block;
+        }
+      }
+
+      @include mq(medium) {
+        display: block;
+      }
     }
   }
 
@@ -94,6 +118,10 @@ Header:
       font-variant: normal;
       text-transform: none;
       content: "\e901";
+    }
+
+    @include mq(medium) {
+      display: none;
     }
   }
 

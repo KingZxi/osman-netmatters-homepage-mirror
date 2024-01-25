@@ -8,7 +8,7 @@ Navigation:
 .nav {
   display: none;
 
-  @include mq(medium) {
+  @include mq(large) {
     display: flex;
   }
   flex-direction: row;
