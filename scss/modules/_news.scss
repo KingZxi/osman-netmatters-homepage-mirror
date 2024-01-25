@@ -41,13 +41,42 @@ Latest news section:
     @extend %hide;
   }
 
+  .card-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .news__card {
+      flex: 1 0 calc(100% - 20px); //Set to 100% of mobile viewport
+    }
+
+    @include mq(medium) {
+      .news__card {
+        flex: 1 0 calc(50% - 20px); //Set to 100% of mobile viewport
+      }
+
+      .news__card:nth-child(3) {
+        display: none;
+      }
+    }
+    @include mq(large) {
+      .news__card {
+        flex: 1 0 calc(33% - 20px); //Set to 100% of mobile viewport
+      }
+
+      .news__card:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+
   //The news card's element applies to each individual news card's div.
   @include s-e(card) {
     margin-top: 30px;
     position: relative;
     top: 0;
     font-size: 0.8125rem;
-    transition: 0.5 ease;
 
     .btn {
       @extend %btn;

@@ -1465,12 +1465,36 @@ Latest news section:
   margin: 0 0 10px;
   color: #333645;
 }
+.news .card-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.news .card-flex .news__card {
+  flex: 1 0 calc(100% - 20px);
+}
+@media screen and (min-width: 768px) {
+  .news .card-flex .news__card {
+    flex: 1 0 calc(50% - 20px);
+  }
+  .news .card-flex .news__card:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .news .card-flex .news__card {
+    flex: 1 0 calc(33% - 20px);
+  }
+  .news .card-flex .news__card:nth-child(3) {
+    display: block;
+  }
+}
 .news__card {
   margin-top: 30px;
   position: relative;
   top: 0;
   font-size: 0.8125rem;
-  transition: 0.5 ease;
 }
 .news__card .btn {
   background-color: #926fb1;
