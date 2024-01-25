@@ -78,6 +78,15 @@ Card:
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
 
+  &:hover {
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: 0.5s ease;
+    transform: translateY(-10px); //This is used to physically raise the object
+    background-color: whitesmoke;
+  }
+
   //Each card has an element container within it's initial .card container, this is used for identifying the type of carrd
   @include s-e("element") {
     // padding-left: 15px;
