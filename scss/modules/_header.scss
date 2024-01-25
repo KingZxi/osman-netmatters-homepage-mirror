@@ -11,6 +11,7 @@ Header:
     margin-top: 11px;
 
     input {
+      display: inline-block;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.1);
       border: 2px solid rgba(0, 0, 0, 0.1);
@@ -23,12 +24,11 @@ Header:
     button {
       position: absolute;
       right: 20px;
-      top: 90px;
       background: none;
       border: none;
+      line-height: 47px;
       font-size: 20px;
       color: $tuna;
-      line-height: 47px;
       outline: none;
     }
     .icon-search:before {
@@ -39,19 +39,40 @@ Header:
   }
 
   .logo {
+    max-width: 100%;
   }
 
-  .row {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
-    vertical-align: middle;
+  // .row {
+  //   display: flex;
+  //   gap: 20px;
+  //   justify-content: space-between;
+  //   height: 70px;
+  //   align-items: center;
+  //   vertical-align: middle;
 
-    .phone,
-    .hamburger {
-    }
+  //   .phone,
+  //   .hamburger {
+  //   }
+  // }
+
+  .row {
+    display: table;
+  }
+
+  .row > * {
+    padding: 0;
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .icon-phone {
+    margin-left: 15px;
+  }
+
+  button {
+    margin-left: 20px;
   }
 
   .logo {
@@ -81,7 +102,6 @@ Header:
       padding: 10px 15px 5px 15px;
       background-color: $tuna;
       border-color: $tuna;
-      margin-bottom: 15px;
     }
     .icon-burger:before {
       font-family: icomoon !important;

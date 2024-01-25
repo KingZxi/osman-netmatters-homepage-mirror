@@ -865,6 +865,7 @@ Header:
   margin-top: 11px;
 }
 .header form input {
+  display: inline-block;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
@@ -877,12 +878,11 @@ Header:
 .header form button {
   position: absolute;
   right: 20px;
-  top: 90px;
   background: none;
   border: none;
+  line-height: 47px;
   font-size: 20px;
   color: #333645;
-  line-height: 47px;
   outline: none;
 }
 .header form .icon-search:before {
@@ -890,13 +890,24 @@ Header:
   position: relative;
   content: "\e986";
 }
+.header .logo {
+  max-width: 100%;
+}
 .header .row {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  height: 70px;
-  align-items: center;
+  display: table;
+}
+.header .row > * {
+  padding: 0;
+  display: table-cell;
+  float: none;
   vertical-align: middle;
+  width: 100%;
+}
+.header .icon-phone {
+  margin-left: 15px;
+}
+.header button {
+  margin-left: 20px;
 }
 .header .logo img {
   display: block;
@@ -922,7 +933,6 @@ Header:
   padding: 10px 15px 5px 15px;
   background-color: #333645;
   border-color: #333645;
-  margin-bottom: 15px;
 }
 .header .hamburger .icon-burger:before {
   font-family: icomoon !important;
@@ -1436,6 +1446,11 @@ Welcome to netmatters section:
 }
 .welcome .author-box {
   margin-bottom: 45px;
+}
+@media screen and (min-width: 768px) {
+  .welcome .author-box {
+    margin-bottom: 33px;
+  }
 }
 
 /* -----------------------------------------------------

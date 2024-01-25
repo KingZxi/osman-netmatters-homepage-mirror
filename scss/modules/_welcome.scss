@@ -125,5 +125,9 @@ Welcome to netmatters section:
 
   .author-box {
     margin-bottom: 45px;
+
+    @include mq(medium) {
+      margin-bottom: 33px;
+    }
   }
 }
