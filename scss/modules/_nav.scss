@@ -12,7 +12,37 @@ Navigation:
   margin: 0;
   list-style: none;
   justify-content: center;
+  gap: 20px;
   &__item {
     align-items: center;
   }
+
+  ul li {
+    flex: 1;
+    margin: 20px;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    color: #fff;
+    padding: 19px 0 18px;
+    text-transform: uppercase;
+  }
+
+  small {
+    display: block;
+    text-align: center;
+    font-size: 6px;
+  }
+
+  a span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.navigation {
+  display: flex;
+  background-color: $tuna;
 }

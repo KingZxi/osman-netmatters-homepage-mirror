@@ -859,7 +859,7 @@ Header:
 
 ------------------------------------------------------ */
 .header {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 }
 .header form {
   margin-top: 11px;
@@ -1016,9 +1016,35 @@ Navigation:
   margin: 0;
   list-style: none;
   justify-content: center;
+  gap: 20px;
 }
 .nav__item {
   align-items: center;
+}
+.nav ul li {
+  flex: 1;
+  margin: 20px;
+}
+.nav a {
+  position: relative;
+  display: block;
+  color: #fff;
+  padding: 19px 0 18px;
+  text-transform: uppercase;
+}
+.nav small {
+  display: block;
+  text-align: center;
+  font-size: 6px;
+}
+.nav a span {
+  display: block;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  background-color: #333645;
 }
 
 /* -----------------------------------------------------
