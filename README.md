@@ -15,4 +15,3 @@ To do list: (Started this list on 24/01/2024)
 - Sign up input fields should switch to a two column layout on different viewports
 - Footer needs media queries
 - Second slideshow images expand outside the flex area
--

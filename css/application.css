@@ -1384,8 +1384,23 @@ Latest news styles:
 Latest news section:
 
 ------------------------------------------------------ */
+.news h3 a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333645;
+}
+.news h3 .arrow-right:before {
+  color: #333645;
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\ea3c";
+}
 .news .h1 {
-  margin: 0 0 40px;
+  margin: 0 0 10px;
   color: #333645;
 }
 .news__card {
@@ -1512,6 +1527,16 @@ Latest news section:
   text-transform: none;
   line-height: 1;
   content: "\ea3c";
+}
+@media screen and (min-width: 768px) {
+  .view-all-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .view-all-container {
+    display: none;
+  }
 }
 
 /* -----------------------------------------------------
