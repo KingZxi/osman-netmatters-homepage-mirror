@@ -17,4 +17,7 @@ Container:
   @include mq(large) {
     width: 970px;
   }
+  @media screen and (min-width: 1260px) {
+    width: 1200px;
+  }
 }

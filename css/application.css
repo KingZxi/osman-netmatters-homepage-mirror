@@ -844,6 +844,11 @@ Container:
     width: 970px;
   }
 }
+@media screen and (min-width: 1260px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 /* -----------------------------------------------------
 Header:
@@ -1272,11 +1277,49 @@ Card:
 
 .card-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .card-flex .card {
-  flex: 1 0 33%;
+  flex: 1 0 100%;
+}
+@media screen and (min-width: 768px) {
+  .card-flex .card:nth-child(4) {
+    flex: 1 0 calc(50% - 20px);
+  }
+  .card-flex .card:nth-child(5) {
+    flex: 1 0 calc(50% - 20px);
+  }
+  .card-flex .card:nth-child(6) {
+    flex: 1 0 calc(50% - 20px);
+  }
+  .card-flex .card:nth-child(7) {
+    flex: 1 0 calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .card-flex .card:nth-child(1) {
+    flex: 1 0 calc(33% - 20px);
+  }
+  .card-flex .card:nth-child(2) {
+    flex: 1 0 calc(33% - 20px);
+  }
+  .card-flex .card:nth-child(3) {
+    flex: 1 0 calc(33% - 20px);
+  }
+  .card-flex .card:nth-child(4) {
+    flex: 1 0 calc(25% - 20px);
+  }
+  .card-flex .card:nth-child(5) {
+    flex: 1 0 calc(25% - 20px);
+  }
+  .card-flex .card:nth-child(6) {
+    flex: 1 0 calc(25% - 20px);
+  }
+  .card-flex .card:nth-child(7) {
+    flex: 1 0 calc(25% - 20px);
+  }
 }
 
 /* -----------------------------------------------------

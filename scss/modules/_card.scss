@@ -148,10 +148,51 @@ Card:
 
 .card-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
 
   .card {
-    flex: 1 0 33%;
+    flex: 1 0 100%;
+  }
+
+  @include mq(medium) {
+    .card:nth-child(4) {
+      flex: 1 0 calc(50% - 20px);
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(50% - 20px);
+    }
+
+    .card:nth-child(6) {
+      flex: 1 0 calc(50% - 20px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(50% - 20px);
+    }
+  }
+
+  @include mq(large) {
+    .card:nth-child(1) {
+      flex: 1 0 calc(33% - 20px);
+    }
+    .card:nth-child(2) {
+      flex: 1 0 calc(33% - 20px);
+    }
+    .card:nth-child(3) {
+      flex: 1 0 calc(33% - 20px);
+    }
+    .card:nth-child(4) {
+      flex: 1 0 calc(25% - 20px);
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(25% - 20px);
+    }
+    .card:nth-child(6) {
+      flex: 1 0 calc(25% - 20px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(25% - 20px);
+    }
   }
 }
