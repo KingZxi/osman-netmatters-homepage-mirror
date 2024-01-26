@@ -6,8 +6,12 @@ Navigation:
 
 //Main navigation container
 .navigation {
-  display: flex;
+  display: none;
   background-color: $tuna;
+
+  @include mq(large) {
+    display: flex;
+  }
 }
 
 //Navigation wrapper
