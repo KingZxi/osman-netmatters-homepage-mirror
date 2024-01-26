@@ -1374,7 +1374,7 @@ Card:
   background-color: #fff;
   color: #67809f;
 }
-.bespoke:hover .btn {
+.bespoke:hover .card-btn-container .btn {
   background-color: #fff;
   color: #67809f;
 }
@@ -1396,7 +1396,7 @@ Card:
   background-color: #fff;
   color: #4183d7;
 }
-.it:hover .btn {
+.it:hover .card-btn-container .btn {
   background-color: #fff;
   color: #4183d7;
 }
@@ -1418,7 +1418,7 @@ Card:
   background-color: #fff;
   color: #2ecc71;
 }
-.marketting:hover .btn {
+.marketting:hover .card-btn-container .btn {
   background-color: #fff;
   color: #2ecc71;
 }
@@ -1440,7 +1440,7 @@ Card:
   background-color: #fff;
   color: #d64541;
 }
-.telecoms:hover .btn {
+.telecoms:hover .card-btn-container .btn {
   background-color: #fff;
   color: #d64541;
 }
@@ -1462,7 +1462,7 @@ Card:
   background-color: #fff;
   color: #926fb1;
 }
-.web:hover .btn {
+.web:hover .card-btn-container .btn {
   background-color: #fff;
   color: #926fb1;
 }
@@ -1484,7 +1484,7 @@ Card:
   background-color: #fff;
   color: #f62459;
 }
-.cyber:hover .btn {
+.cyber:hover .card-btn-container .btn {
   background-color: #fff;
   color: #f62459;
 }
@@ -1506,7 +1506,7 @@ Card:
   background-color: #fff;
   color: #ce4125;
 }
-.developer:hover .btn {
+.developer:hover .card-btn-container .btn {
   background-color: #fff;
   color: #ce4125;
 }

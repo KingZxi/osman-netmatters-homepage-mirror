@@ -74,7 +74,6 @@ Mixins:
     border-color: $color;
     background-color: $color;
   }
-
   //Hover effects on cards
   &:hover {
     background-color: $color;
@@ -84,9 +83,11 @@ Mixins:
       color: $color;
     }
 
-    .btn {
-      background-color: $white;
-      color: $color;
+    .card-btn-container {
+      .btn {
+        background-color: $white;
+        color: $color;
+      }
     }
   }
 }
