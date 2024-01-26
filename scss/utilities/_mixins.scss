@@ -74,6 +74,21 @@ Mixins:
     border-color: $color;
     background-color: $color;
   }
+
+  //Hover effects on cards
+  &:hover {
+    background-color: $color;
+
+    .card__element__icon:has(.card-icon) {
+      background-color: $white;
+      color: $color;
+    }
+
+    .btn {
+      background-color: $white;
+      color: $color;
+    }
+  }
 }
 
 //News card mixin

@@ -1,0 +1,200 @@
+/* ------------------------------------------------------
+
+Header:
+
+------------------------------------------------------ */
+
+.header {
+  padding: 20px 0 0 0;
+
+  //Applies to search bar in header for small layouts
+  //Not to be confused for the small searchbar in wide layouts
+  @include s-e(search-small) {
+    form {
+      margin-top: 11px;
+
+      input {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 5px 40px 5px 15px;
+        width: 100%;
+        height: 47px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        line-height: 1.42857143;
+        color: #555;
+
+        @include mq(medium) {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 20px;
+      border: none;
+      background: none;
+      outline: none;
+      line-height: 47px;
+      font-size: 20px;
+      color: $tuna;
+    }
+
+    .icon-search:before {
+      font-family: icomoon !important;
+      position: relative;
+      content: "\e986";
+
+      @include mq(medium) {
+        display: none;
+      }
+    }
+  }
+
+  //Applies to the search bar in wide layouts, not to be confused for the wider search bar in small layouts.
+  @include s-e(search-wide) {
+    form {
+      display: none;
+      padding-left: 15px;
+      width: 100%;
+      height: 100%;
+
+      input {
+        display: none;
+        padding: 5px 15px;
+        border-color: #ccc;
+        background-color: $white;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        border: 1px solid #e5e5e5;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+
+        @include mq(medium) {
+          height: 56px;
+          display: inline;
+        }
+
+        @include mq(large) {
+          display: none;
+        }
+      }
+
+      button {
+        display: inline;
+        outline: none;
+        margin: 0;
+        padding: 7px 20px 3px;
+        height: 56px;
+        font-size: 1.063rem;
+        border: none;
+        vertical-align: middle;
+        background-color: #999aa2;
+        color: $white;
+      }
+
+      span:before {
+        font-family: icomoon !important;
+        font-size: 23px;
+        content: "\e986";
+        color: $white;
+      }
+
+      @include mq(medium) {
+        display: flex;
+      }
+    }
+  }
+
+  //Other styles for items in the header:
+
+  .logo {
+    max-width: 100%;
+    padding-right: 15px;
+  }
+
+  @include s-e(row) {
+    display: table;
+
+    & > * {
+      padding: 0;
+      display: table-cell;
+      float: none;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .icon-phone {
+    margin-left: 15px;
+  }
+
+  button {
+    margin-left: 20px;
+  }
+
+  .logo {
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .phone {
+    margin-bottom: 8px;
+    .icon-phone:before {
+      font-family: icomoon !important;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      content: "\e901";
+    }
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    padding: 7px 0;
+    float: right;
+    button {
+      padding: 10px 15px 5px 15px;
+      height: 56px;
+      background-color: $tuna;
+      border-color: $tuna;
+    }
+    .icon-burger:before {
+      font-family: icomoon !important;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 900;
+      font-variant: normal;
+      text-transform: none;
+      content: "\e913";
+      color: white;
+    }
+  }
+
+  .btn {
+    @extend %btn;
+    display: none;
+    margin-left: 20px;
+    background-color: rgb(109, 197, 224);
+
+    @include mq(large) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+/* ------------------------------------------------------
+
+Footer:
+
+------------------------------------------------------ */
+
+//Main footer container
+.footer {
+  position: relative;
+  letter-spacing: 0.4px;
+  color: #fff;
+
+  //Each footer sub-heading gets this heading tag
+  h4 {
+    margin: 24px 0 26px 0px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  //ul under each h4
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+  }
+
+  //Footer containers for each ul group
+  @include s-e(container) {
+    margin-bottom: 30px;
+  }
+
+  //Applies to the social media container
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  //Applies to socials anchors container
+  @include s-e(social-box) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .follow-btn {
+      padding: 12px 22px 16px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      background-color: #212330;
+      text-align: center;
+      text-decoration: none;
+      font-size: 26px;
+
+      @media (max-width: 480px) {
+        width: 35%;
+      }
+    }
+
+    //Makes icon white and positions them correctly
+    span {
+      position: relative;
+      top: 4px;
+      color: white;
+    }
+  }
+}
+
+//This is a secondary footer that is at the very bottom of the page, contain less important information to main footer
+.footer-secondary {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #212330;
+  font-size: 0.8125rem;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include s-e(license) {
+    padding-left: 15px;
+    line-height: 20px;
+
+    @include mq(medium) {
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        display: flex;
+        gap: 5px;
+      }
+
+      li:last-child::before {
+        content: "- ";
+      }
+    }
+  }
+}
+
+.footer-logo {
+  display: block;
+  width: 250px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@include mq("medium") {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer__container {
+      flex: 1 0 calc(50% - 10px);
+    }
+  }
+}
+
+@include mq("large") {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer__container {
+      flex: 1 0 calc(20% - 10px);
+    }
+  }
+
+  .footer {
+  }
+}

@@ -1,0 +1,33 @@
+/* ------------------------------------------------------
+
+Chat function:
+
+------------------------------------------------------ */
+
+.sofia {
+  display: block;
+  button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $tuna;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
+    z-index: 20;
+
+    span:before {
+      font-family: icomoon !important;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: white;
+      font-size: 30px;
+      content: "\e90b";
+    }
+  }
+}

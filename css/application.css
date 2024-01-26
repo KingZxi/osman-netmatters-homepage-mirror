@@ -1357,14 +1357,6 @@ Card:
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.card:hover {
-  top: -10px;
-  border-color: transparent;
-  background-color: whitesmoke;
-  color: #fff;
-  transition: 0.5s ease;
-  transform: translateY(-10px);
-}
 .bespoke .card-icon:before {
   content: "\e90c";
 }
@@ -1374,6 +1366,17 @@ Card:
 .bespoke .btn {
   border-color: #67809f;
   background-color: #67809f;
+}
+.bespoke:hover {
+  background-color: #67809f;
+}
+.bespoke:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #67809f;
+}
+.bespoke:hover .btn {
+  background-color: #fff;
+  color: #67809f;
 }
 
 .it .card-icon:before {
@@ -1386,6 +1389,17 @@ Card:
   border-color: #4183d7;
   background-color: #4183d7;
 }
+.it:hover {
+  background-color: #4183d7;
+}
+.it:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #4183d7;
+}
+.it:hover .btn {
+  background-color: #fff;
+  color: #4183d7;
+}
 
 .marketting .card-icon:before {
   content: "\e902";
@@ -1396,6 +1410,17 @@ Card:
 .marketting .btn {
   border-color: #2ecc71;
   background-color: #2ecc71;
+}
+.marketting:hover {
+  background-color: #2ecc71;
+}
+.marketting:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #2ecc71;
+}
+.marketting:hover .btn {
+  background-color: #fff;
+  color: #2ecc71;
 }
 
 .telecoms .card-icon:before {
@@ -1408,6 +1433,17 @@ Card:
   border-color: #d64541;
   background-color: #d64541;
 }
+.telecoms:hover {
+  background-color: #d64541;
+}
+.telecoms:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #d64541;
+}
+.telecoms:hover .btn {
+  background-color: #fff;
+  color: #d64541;
+}
 
 .web .card-icon:before {
   content: "\ea80";
@@ -1418,6 +1454,17 @@ Card:
 .web .btn {
   border-color: #926fb1;
   background-color: #926fb1;
+}
+.web:hover {
+  background-color: #926fb1;
+}
+.web:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #926fb1;
+}
+.web:hover .btn {
+  background-color: #fff;
+  color: #926fb1;
 }
 
 .cyber .card-icon:before {
@@ -1430,6 +1477,17 @@ Card:
   border-color: #f62459;
   background-color: #f62459;
 }
+.cyber:hover {
+  background-color: #f62459;
+}
+.cyber:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #f62459;
+}
+.cyber:hover .btn {
+  background-color: #fff;
+  color: #f62459;
+}
 
 .developer .card-icon:before {
   content: "\e903";
@@ -1440,6 +1498,17 @@ Card:
 .developer .btn {
   border-color: #ce4125;
   background-color: #ce4125;
+}
+.developer:hover {
+  background-color: #ce4125;
+}
+.developer:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+  color: #ce4125;
+}
+.developer:hover .btn {
+  background-color: #fff;
+  color: #ce4125;
 }
 
 .card__element span {
@@ -1460,6 +1529,20 @@ Card:
   text-align: center;
   line-height: 62px;
 }
+.card:hover {
+  top: -10px;
+  border-color: transparent;
+  transition: 0.5s ease;
+  transform: translateY(-10px);
+}
+.card:hover p,
+.card:hover h2 {
+  color: #fff;
+}
+.card:hover .card__element__icon:has(.card-icon) {
+  background-color: #fff;
+}
+
 .service-all {
   padding-top: 30px;
 }

@@ -1,0 +1,36 @@
+/* -----------------------------------------------------
+
+Slide show section:
+
+------------------------------------------------------ */
+
+//Slideshow section container
+.slideshow {
+  display: flex;
+  gap: 90px;
+  overflow-x: clip;
+  object-fit: fill;
+  align-items: center;
+
+  //Each individal slikdeshow item:
+  @include s-e("item") {
+    @include s-e("img") {
+      max-height: auto;
+      width: auto;
+      filter: grayscale(1);
+    }
+
+    @include s-e("description") {
+    }
+  }
+
+  @at-root {
+    .slideshow-padding {
+      padding: 50px 0px;
+    }
+  }
+}
+
+.height {
+  height: 70px;
+}

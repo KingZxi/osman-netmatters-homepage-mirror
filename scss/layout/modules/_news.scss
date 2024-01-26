@@ -1,0 +1,205 @@
+/* -----------------------------------------------------
+
+Latest news section:
+
+------------------------------------------------------ */
+
+//News is applied to the entire news section's container.
+.news {
+  @extend %section;
+
+  h3 {
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: $tuna;
+    }
+
+    .arrow-right:before {
+      color: $tuna;
+      font-family: icomoon !important;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      content: "\ea3c";
+    }
+  }
+
+  //This heading applies to the news' main heading
+  .h1 {
+    margin: 0 0 10px;
+    color: $tuna;
+  }
+
+  .header-row-positioning {
+    @extend %header-row-positioning;
+  }
+
+  .hide {
+    @extend %hide;
+  }
+
+  .card-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    //Default news cards on mobile layout and 1 column
+    .news__card {
+      flex: 1 0 calc(100% - 20px); //Set to 100% of mobile viewport
+    }
+
+    //Larger viewports have 2 column layout
+    @include mq(medium) {
+      .news__card {
+        flex: 1 0 calc(50% - 20px);
+      }
+
+      .news__card:nth-child(3) {
+        display: none;
+      }
+    }
+
+    //Large viewports have 3 column layout
+    @include mq(large) {
+      .news__card {
+        flex: 1 0 calc(33% - 20px); //Set to 100% of mobile viewport
+      }
+
+      .news__card:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+
+  //The news card's element applies to each individual news card's div.
+  @include s-e(card) {
+    margin-top: 30px;
+    top: 0;
+    position: relative;
+    font-size: 0.8125rem;
+
+    .btn {
+      @extend %btn;
+      background-color: $dark-lilac;
+      border-color: $dark-lilac;
+      @at-root (with: media) {
+        &-container {
+        }
+      }
+    }
+
+    //The info element is applied to the section of each card with text
+    @include s-e(info) {
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-top: 0;
+      border-radius: 0 0 3px 3px;
+
+      h3 {
+        margin: 0 0 15px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        //The anchor is used on the heading text
+        a {
+          color: $dark-lilac;
+          font-weight: 600;
+        }
+
+        //This span is applied to the news card's date of post
+        span {
+          display: inline;
+          vertical-align: middle;
+          color: rgba(51, 54, 69, 0.5);
+          text-transform: uppercase;
+          font-size: 0.85rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+        }
+      }
+
+      //Applied to each news news card's paragraph
+      p {
+        line-height: 1.375rem;
+        font-size: 0.8125rem;
+        margin-bottom: 25px;
+      }
+    }
+
+    //Honestly, I don't remember the purpose of this right now, will come back and consider if I even need this anymore.
+    @include s-e(link) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    //Each image container is wrapped in this div
+    @include s-e(image) {
+      display: inline; //Making this flex removes the annoying gap, but that has other issues you'll see
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      //align-items: center;
+      overflow: clip;
+
+      //Applies to the image itself
+      a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    //This class is applied to containers that contain information about the poster
+    @include s-e(creator) {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid #ccc;
+
+      @include s-e(pfp) {
+        img {
+          border-radius: 50%;
+        }
+      }
+      @include s-e(info) {
+        line-height: 1.375rem;
+        color: #666;
+        font-size: 0.875;
+        strong {
+          font-weight: 600;
+          color: $tuna;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  //These classes use the news-card mixin to get the correct colors for each news card.
+  .web {
+    @include news-card(web);
+  }
+  .bespoke {
+    @include news-card(bespoke);
+  }
+  .telecoms {
+    @include news-card(telecoms);
+  }
+}
+
+//For the view all text at the bottom of the news section
+.view-all-container {
+  @extend %section-anchor;
+  margin-top: 50px;
+}

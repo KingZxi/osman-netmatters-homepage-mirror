@@ -135,21 +135,12 @@ Card:
     }
   }
 
-  //Hover effects on cards:
   &:hover {
     top: -10px;
     border-color: transparent;
+    color: #fff;
     transition: 0.5s ease;
     transform: translateY(-10px); //This is used to physically raise the object
-
-    p,
-    h2 {
-      color: #fff;
-    }
-
-    .card__element__icon:has(.card-icon) {
-      background-color: $white;
-    }
   }
 }
 

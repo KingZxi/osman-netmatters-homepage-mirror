@@ -1,0 +1,23 @@
+/* ------------------------------------------------------
+
+Container:
+
+------------------------------------------------------ */
+
+//Main container class, used multiple times throughout the page
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  @extend %center;
+
+  //Expands container as layout grows larger
+  @include mq(medium) {
+    width: 750px;
+  }
+  @include mq(large) {
+    width: 970px;
+  }
+  @media screen and (min-width: 1260px) {
+    width: 1200px;
+  }
+}
