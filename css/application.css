@@ -1203,6 +1203,9 @@ Banner:
   text-align: center;
   color: #fff;
 }
+.banner .h1 {
+  margin-top: 100px;
+}
 .banner p {
   font-size: 1.25rem;
   font-weight: 600;
@@ -1217,6 +1220,7 @@ Banner:
   font-size: 1.25rem;
 }
 .banner .btn div {
+  margin-top: 5px;
   display: inline;
   position: relative;
   margin-left: 5px;
@@ -1232,7 +1236,7 @@ Banner:
 }
 .banner__nav__container {
   display: flex;
-  margin-top: 100px;
+  margin-top: 90px;
   gap: 25px;
 }
 .banner__nav__dot {
