@@ -85,7 +85,6 @@ Welcome to netmatters section:
     background-color: map-get($color-map, google);
 
     @include mq(large) {
-      margin-top: 20px;
     }
   }
 
@@ -128,10 +127,13 @@ Welcome to netmatters section:
 
   //Container for section.
   .author-box {
-    margin-bottom: 45px;
+    margin-bottom: 65px;
 
     @include mq(medium) {
-      margin-bottom: 33px;
+      margin-bottom: 45px;
+    }
+    @media screen and (min-width: 1260px) {
+      margin-bottom: 51px;
     }
   }
 }

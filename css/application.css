@@ -1583,11 +1583,6 @@ Welcome to netmatters section:
 .welcome .btn-google {
   background-color: #4387f6;
 }
-@media screen and (min-width: 992px) {
-  .welcome .btn-google {
-    margin-top: 20px;
-  }
-}
 .welcome .btn-trustpilot {
   background-color: #00b67b;
 }
@@ -1614,11 +1609,16 @@ Welcome to netmatters section:
   flex-flow: row wrap;
 }
 .welcome .author-box {
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 768px) {
   .welcome .author-box {
-    margin-bottom: 33px;
+    margin-bottom: 45px;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .welcome .author-box {
+    margin-bottom: 51px;
   }
 }
 
@@ -1969,6 +1969,15 @@ Footer:
   }
   .lists .footer__container {
     flex: 1 0 calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lists .footer__container {
+    flex: 1 0 calc(20% - 10px);
   }
 }
 
