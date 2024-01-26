@@ -60,12 +60,13 @@ Header:
         display: none;
 
         @include mq(medium) {
+          height: 56px;
           display: block;
         }
       }
 
       @include mq(medium) {
-        display: block;
+        display: inline-block;
       }
     }
   }

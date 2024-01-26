@@ -21,7 +21,7 @@ Navigation:
   @include mq(large) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 20px;
   }
 
@@ -39,19 +39,43 @@ Navigation:
       padding: 19px 0 18px;
       position: relative;
       text-transform: uppercase;
+      font-size: 1.125rem;
       color: #fff;
     }
 
     small {
       display: block;
       text-align: center;
-      font-size: 6px;
+      font-size: 0.625rem;
     }
 
-    a span {
+    [class*="nav-icon"] {
+      font-family: icomoon !important;
       display: block;
       padding-bottom: 10px;
       text-align: center;
+      font-size: 1.438rem;
     }
+  }
+  .bespoke {
+    @include nav-type(bespoke);
+  }
+  .it {
+    @include nav-type(it);
+  }
+  .marketting {
+    @include nav-type(marketting);
+  }
+  .telecoms {
+    @include nav-type(telecoms);
+  }
+  .web {
+    @include nav-type(web);
+  }
+  .cyber {
+    @include nav-type(cyber);
+  }
+  .developer {
+    @include nav-type(developer);
   }
 }

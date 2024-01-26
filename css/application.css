@@ -905,12 +905,13 @@ Header:
 }
 @media screen and (min-width: 768px) {
   .header__search-wide form input {
+    height: 56px;
     display: block;
   }
 }
 @media screen and (min-width: 768px) {
   .header__search-wide form {
-    display: block;
+    display: inline-block;
   }
 }
 .header .logo {
@@ -1065,7 +1066,7 @@ Navigation:
   .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 20px;
   }
 }
@@ -1081,17 +1082,62 @@ Navigation:
   padding: 19px 0 18px;
   position: relative;
   text-transform: uppercase;
+  font-size: 1.125rem;
   color: #fff;
 }
 .nav__item small {
   display: block;
   text-align: center;
-  font-size: 6px;
+  font-size: 0.625rem;
 }
-.nav__item a span {
+.nav__item [class*=nav-icon] {
+  font-family: icomoon !important;
   display: block;
   padding-bottom: 10px;
   text-align: center;
+  font-size: 1.438rem;
+}
+.nav .bespoke a span {
+  color: #67809f;
+}
+.nav .bespoke .nav-icon:before {
+  content: "\e90c";
+}
+.nav .it a span {
+  color: #4183d7;
+}
+.nav .it .nav-icon:before {
+  content: "\e956";
+}
+.nav .marketting a span {
+  color: #2ecc71;
+}
+.nav .marketting .nav-icon:before {
+  content: "\e902";
+}
+.nav .telecoms a span {
+  color: #d64541;
+}
+.nav .telecoms .nav-icon:before {
+  content: "\e901";
+}
+.nav .web a span {
+  color: #926fb1;
+}
+.nav .web .nav-icon:before {
+  content: "\ea80";
+}
+.nav .cyber a span {
+  color: #f62459;
+}
+.nav .cyber .nav-icon:before {
+  content: "\e900";
+}
+.nav .developer a span {
+  color: #ce4125;
+}
+.nav .developer .nav-icon:before {
+  content: "\e903";
 }
 
 /* -----------------------------------------------------
