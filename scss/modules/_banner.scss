@@ -31,16 +31,16 @@ Banner:
 
   .btn {
     @extend %btn;
-    font-size: 1.25rem;
     padding: 10px 20px 10px 20px;
     background-color: map-get($color-map, web-design);
     border-color: map-get($color-map, web-design);
+    font-size: 1.25rem;
 
     div {
-      margin-left: 5px;
-      position: relative;
-      top: 1px;
       display: inline;
+      position: relative;
+      margin-left: 5px;
+      top: 1px;
     }
 
     .arrow-right:before {
@@ -62,7 +62,6 @@ Banner:
 
     @include s-e(dot) {
       display: inline-block;
-
       height: 10px;
       width: 10px;
       background-color: #bbb;

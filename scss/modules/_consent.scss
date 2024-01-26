@@ -1,15 +1,21 @@
+/* ------------------------------------------------------
+
+Manage Consent:
+
+------------------------------------------------------ */
+
 .manage-consent {
   display: block;
   button {
     position: fixed;
+    padding: 0 10px;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
     border: solid #75788a;
     border-width: 1px 1px 0 0;
     border-radius: 0;
     border-top-right-radius: 10px;
-    padding: 0 10px;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
     background-color: #75788a;
     font-size: 0.8rem;
     font-weight: 600;

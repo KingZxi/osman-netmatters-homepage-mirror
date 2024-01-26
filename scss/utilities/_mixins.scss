@@ -77,7 +77,6 @@ Mixins:
 }
 
 //News card mixin
-
 @mixin news-card($type) {
   @if ($type == "web") {
     $color: map-get($color-map, web-design) !global;

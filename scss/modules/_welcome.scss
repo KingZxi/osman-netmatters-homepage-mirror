@@ -13,9 +13,9 @@ Welcome to netmatters section:
     flex-direction: column;
 
     @include mq(large) {
+      justify-content: space-evenly;
       flex-direction: row;
       gap: 30px;
-      justify-content: space-evenly;
     }
 
     div {
@@ -80,6 +80,7 @@ Welcome to netmatters section:
     background-color: #272936;
   }
 
+  //Different types of buttons:
   .btn-google {
     background-color: map-get($color-map, google);
 
@@ -92,6 +93,7 @@ Welcome to netmatters section:
     background-color: map-get($color-map, trustpilot);
   }
 
+  //Adds extra margin to some buttons
   .btn-margin {
     margin-bottom: 50px !important;
   }
@@ -100,6 +102,7 @@ Welcome to netmatters section:
     @extend %arrow-right;
   }
 
+  //Quote styles
   .quote {
     font-weight: 600;
     font-size: 1.3rem;
@@ -123,6 +126,7 @@ Welcome to netmatters section:
     flex-flow: row wrap;
   }
 
+  //Container for section.
   .author-box {
     margin-bottom: 45px;
 

@@ -3,6 +3,8 @@
 Slide show section:
 
 ------------------------------------------------------ */
+
+//Slideshow section container
 .slideshow {
   display: flex;
   gap: 90px;
@@ -10,6 +12,7 @@ Slide show section:
   object-fit: fill;
   align-items: center;
 
+  //Each individal slikdeshow item:
   @include s-e("item") {
     @include s-e("img") {
       max-height: auto;

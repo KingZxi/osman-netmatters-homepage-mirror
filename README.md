@@ -17,3 +17,5 @@ To do list: (Started this list on 24/01/2024)
 - Second slideshow images expand outside the flex area
 - The tab icon shouldn't be default, it should the netmatters logo
 - Navigation bar needs implementation
+- Consider refactoring parts of the code into placeholders and mixins slowly
+- I should really make more variables and go around to add more of my hex colors to the color map, then replace them with map-get

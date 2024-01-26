@@ -21,10 +21,10 @@
       <div class="header">
         <div class="container">
           <!-- Logo, search, expansion button -->
-          <div class="row">
+          <div class="header__row">
             <div class="logo"><img src="img/netmatter01.png" /></div>
             <div class="phone"><span class="icon-phone"></span></div>
-            <div class="search-wide">
+            <div class="header__search-wide">
               <form>
                 <input placeholder="Search..." type="text" />
               </form>
@@ -33,7 +33,7 @@
               <button><span class="icon-burger"></span></button>
             </div>
           </div>
-          <div class="search-small">
+          <div class="header__search-small">
             <form>
               <input placeholder="Search..." type="text" />
               <button><span class="icon-search"></span></button>
@@ -581,17 +581,17 @@
         <div class="container">
           <!-- Newsletter sign-up -->
           <div>
-            <form method="POST" action="#" id="sign-up" class="sign-up">
+            <form method="POST" action="#" id="sign-up" class="form-sign-up">
               <h2>Email Newsletter Sign-Up</h2>
-              <div class="fields">
-                <div class="group">
+              <div class="form-sign-up__fields">
+                <div class="form-sign-up__group">
                   <!-- These inner spans with the * are a short term implementation -->
                   <label for="newsletter-name" class=""
                     >Your Name <span style="color: #d24d57">*</span></label
                   >
                   <input id="newsletter-name" name="name" type="text" value />
                 </div>
-                <div class="group">
+                <div class="form-sign-up__group">
                   <label for="newsletter-email" class=""
                     >Your Email <span style="color: #d24d57">*</span></label
                   >
@@ -633,7 +633,7 @@
           </div>
           <h4>Follow Us On:</h4>
           <div class="footer__container social">
-            <div class="footer__follow-box">
+            <div class="footer__social-box">
               <a class="facebook follow-btn" href="#">
                 <span class="icon-facebook"></span>
               </a>
@@ -701,9 +701,9 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-secondary">
         <!-- Copyright, sitemap, etcetera... -->
-        <div class="footer-bottom__license">
+        <div class="footer-secondary__license">
           © Copyright Netmatters 2024.
           <br />
           All rights reserved.

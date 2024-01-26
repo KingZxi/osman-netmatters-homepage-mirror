@@ -10,7 +10,7 @@ Container:
   padding: 0 15px;
   @extend %center;
 
-  //Expands general containers when viewport is large enough
+  //Expands container as layout grows larger
   @include mq(medium) {
     width: 750px;
   }

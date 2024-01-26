@@ -5,38 +5,43 @@ Header:
 ------------------------------------------------------ */
 
 .header {
-  //padding: 20px 0;
   padding: 20px 0 0 0;
 
-  .search-small form {
-    margin-top: 11px;
+  //Applies to search bar in header for small layouts
+  //Not to be confused for the small searchbar in wide layouts
+  @include s-e(search-small) {
+    form {
+      margin-top: 11px;
 
-    input {
-      display: inline-block;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.1);
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      height: 47px;
-      color: #555;
-      padding: 5px 40px 5px 15px;
-      line-height: 1.42857143;
-      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-      margin-bottom: 20px;
+      input {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 5px 40px 5px 15px;
+        width: 100%;
+        height: 47px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        line-height: 1.42857143;
+        color: #555;
 
-      @include mq(medium) {
-        display: none;
+        @include mq(medium) {
+          display: none;
+        }
       }
     }
+
     button {
       position: absolute;
       right: 20px;
-      background: none;
       border: none;
+      background: none;
+      outline: none;
       line-height: 47px;
       font-size: 20px;
       color: $tuna;
-      outline: none;
     }
+
     .icon-search:before {
       font-family: icomoon !important;
       position: relative;
@@ -44,7 +49,8 @@ Header:
     }
   }
 
-  .search-wide {
+  //Applies to the search bar in wide layouts, not to be confused for the wider search bar in small layouts.
+  @include s-e(search-wide) {
     form {
       display: none;
       width: 100%;
@@ -64,33 +70,33 @@ Header:
     }
   }
 
+  //Other styles for items in the header:
+
   .logo {
     max-width: 100%;
   }
-
-  // .row {
-  //   display: flex;
-  //   gap: 20px;
-  //   justify-content: space-between;
-  //   height: 70px;
-  //   align-items: center;
-  //   vertical-align: middle;
-
-  //   .phone,
-  //   .hamburger {
-  //   }
-  // }
 
   .row {
     display: table;
   }
 
-  .row > * {
-    padding: 0;
-    display: table-cell;
-    float: none;
-    vertical-align: middle;
-    width: 100%;
+  @include s-e(row) {
+    display: table;
+
+    & > * {
+      padding: 0;
+      display: table-cell;
+      float: none;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   .icon-phone {
@@ -126,11 +132,11 @@ Header:
   }
 
   .hamburger {
-    float: right;
     padding: 7px 0;
+    float: right;
     button {
-      height: 56px;
       padding: 10px 15px 5px 15px;
+      height: 56px;
       background-color: $tuna;
       border-color: $tuna;
     }

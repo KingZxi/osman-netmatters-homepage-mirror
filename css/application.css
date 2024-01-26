@@ -750,8 +750,7 @@ Placeholders:
 }
 
 .news, .welcome {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .newsletter .btn, .news__card .btn, .card__element .btn, .banner .btn {
@@ -861,56 +860,56 @@ Header:
 .header {
   padding: 20px 0 0 0;
 }
-.header .search-small form {
+.header__search-small form {
   margin-top: 11px;
 }
-.header .search-small form input {
+.header__search-small form input {
   display: inline-block;
+  margin-bottom: 20px;
+  padding: 5px 40px 5px 15px;
   width: 100%;
+  height: 47px;
   background-color: rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
-  height: 47px;
-  color: #555;
-  padding: 5px 40px 5px 15px;
-  line-height: 1.42857143;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  margin-bottom: 20px;
+  line-height: 1.42857143;
+  color: #555;
 }
 @media screen and (min-width: 768px) {
-  .header .search-small form input {
+  .header__search-small form input {
     display: none;
   }
 }
-.header .search-small form button {
+.header__search-small button {
   position: absolute;
   right: 20px;
-  background: none;
   border: none;
+  background: none;
+  outline: none;
   line-height: 47px;
   font-size: 20px;
   color: #333645;
-  outline: none;
 }
-.header .search-small form .icon-search:before {
+.header__search-small .icon-search:before {
   font-family: icomoon !important;
   position: relative;
   content: "\e986";
 }
-.header .search-wide form {
+.header__search-wide form {
   display: none;
   width: 100%;
   height: 100%;
 }
-.header .search-wide form input {
+.header__search-wide form input {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .header .search-wide form input {
+  .header__search-wide form input {
     display: block;
   }
 }
 @media screen and (min-width: 768px) {
-  .header .search-wide form {
+  .header__search-wide form {
     display: block;
   }
 }
@@ -920,12 +919,19 @@ Header:
 .header .row {
   display: table;
 }
-.header .row > * {
+.header__row {
+  display: table;
+}
+.header__row > * {
   padding: 0;
   display: table-cell;
   float: none;
   vertical-align: middle;
   width: 100%;
+}
+.header .logo img {
+  display: block;
+  max-width: 100%;
 }
 .header .icon-phone {
   margin-left: 15px;
@@ -955,12 +961,12 @@ Header:
   }
 }
 .header .hamburger {
-  float: right;
   padding: 7px 0;
+  float: right;
 }
 .header .hamburger button {
-  height: 56px;
   padding: 10px 15px 5px 15px;
+  height: 56px;
   background-color: #333645;
   border-color: #333645;
 }
@@ -976,21 +982,26 @@ Header:
 }
 
 /* -----------------------------------------------------
-Fixed items:
+Fixed items (Manage consent and Sofia chat):
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Manage Consent:
+
 ------------------------------------------------------ */
 .manage-consent {
   display: block;
 }
 .manage-consent button {
   position: fixed;
+  padding: 0 10px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
   border: solid #75788a;
   border-width: 1px 1px 0 0;
   border-radius: 0;
   border-top-right-radius: 10px;
-  padding: 0 10px;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
   background-color: #75788a;
   font-size: 0.8rem;
   font-weight: 600;
@@ -1011,9 +1022,9 @@ Chat function:
   position: fixed;
   bottom: 25px;
   right: 25px;
-  border-radius: 50%;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
   background: #333645;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 0;
@@ -1039,48 +1050,48 @@ Nav:
 Navigation:
 
 ------------------------------------------------------ */
+.navigation {
+  display: flex;
+  background-color: #333645;
+}
+
 .nav {
   display: none;
-  flex-direction: row;
   padding: 0;
   margin: 0;
   list-style: none;
-  justify-content: space-between;
-  gap: 20px;
 }
 @media screen and (min-width: 992px) {
   .nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 .nav__item {
   align-items: center;
 }
-.nav ul li {
-  flex: 1 calc((100% - 0px) / 7);
+.nav__item li {
   margin: 20px;
+  flex: 1 calc((100% - 0px) / 7);
 }
-.nav a {
-  position: relative;
+.nav__item a {
   display: block;
-  color: #fff;
   padding: 19px 0 18px;
+  position: relative;
   text-transform: uppercase;
+  color: #fff;
 }
-.nav small {
+.nav__item small {
   display: block;
   text-align: center;
   font-size: 6px;
 }
-.nav a span {
+.nav__item a span {
   display: block;
   padding-bottom: 10px;
   text-align: center;
-}
-
-.navigation {
-  display: flex;
-  background-color: #333645;
 }
 
 /* -----------------------------------------------------
@@ -1114,16 +1125,16 @@ Banner:
   object-fit: cover;
 }
 .banner .btn {
-  font-size: 1.25rem;
   padding: 10px 20px 10px 20px;
   background-color: #926fb1;
   border-color: #926fb1;
+  font-size: 1.25rem;
 }
 .banner .btn div {
-  margin-left: 5px;
-  position: relative;
-  top: 1px;
   display: inline;
+  position: relative;
+  margin-left: 5px;
+  top: 1px;
 }
 .banner .btn .arrow-right:before {
   font-family: icomoon !important;
@@ -1178,7 +1189,7 @@ Slide show section:
 }
 
 /* -----------------------------------------------------
-Card:
+Our services styles:
 ------------------------------------------------------ */
 /* ------------------------------------------------------
 
@@ -1239,8 +1250,6 @@ Card:
 
 .card {
   display: block;
-  /* display: flex;
-  justify-content: center; */
   margin-top: 30px;
   padding: 30px;
   border: 1px solid #ccc;
@@ -1249,12 +1258,12 @@ Card:
   text-align: center;
 }
 .card:hover {
-  color: #fff;
-  border-color: transparent;
   top: -10px;
+  border-color: transparent;
+  background-color: whitesmoke;
+  color: #fff;
   transition: 0.5s ease;
   transform: translateY(-10px);
-  background-color: whitesmoke;
 }
 .bespoke .card-icon:before {
   content: "\e90c";
@@ -1430,9 +1439,9 @@ Welcome to netmatters section:
 }
 @media screen and (min-width: 992px) {
   .welcome .container {
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 30px;
-    justify-content: space-evenly;
   }
 }
 .welcome .container div {
@@ -1577,8 +1586,8 @@ Latest news section:
 }
 .news__card {
   margin-top: 30px;
-  position: relative;
   top: 0;
+  position: relative;
   font-size: 0.8125rem;
 }
 .news__card .btn {
@@ -1592,9 +1601,9 @@ Latest news section:
   border-radius: 0 0 3px 3px;
 }
 .news__card__info h3 {
+  margin: 0 0 15px;
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 0 0 15px;
 }
 .news__card__info h3 a {
   color: #926fb1;
@@ -1602,10 +1611,10 @@ Latest news section:
 }
 .news__card__info h3 span {
   display: inline;
-  text-transform: uppercase;
-  color: rgba(51, 54, 69, 0.5);
-  font-size: 0.85rem;
   vertical-align: middle;
+  color: rgba(51, 54, 69, 0.5);
+  text-transform: uppercase;
+  font-size: 0.85rem;
   line-height: 1.5rem;
   font-weight: 400;
 }
@@ -1684,7 +1693,7 @@ Latest news section:
 }
 
 /* -----------------------------------------------------
-Newsletter:
+Newsletter sign-up styles:
 ------------------------------------------------------ */
 /* ------------------------------------------------------
 
@@ -1705,8 +1714,8 @@ Email Newsletter Sign-up:
 }
 .newsletter form label {
   display: block;
-  font-weight: 600;
   margin-bottom: 5px;
+  font-weight: 600;
 }
 .newsletter form input {
   height: 47px;
@@ -1714,6 +1723,20 @@ Email Newsletter Sign-up:
 }
 .newsletter form div:has(label) {
   margin-bottom: 15px;
+}
+.newsletter .form-sign-up__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .newsletter .form-sign-up__fields {
+    gap: 0;
+  }
+}
+.newsletter .form-sign-up__group {
+  flex: 1 1 450px;
+  gap: 0px;
 }
 .newsletter .btn {
   background-color: #333645;
@@ -1726,45 +1749,29 @@ Email Newsletter Sign-up:
 }
 
 .checkbox-draw {
-  flex: 0 0 32px;
-  position: relative;
-  border: 3px solid #333645;
-  height: 32px;
-  width: 32px;
-  float: left;
   margin-bottom: 0;
   margin-right: 20px;
+  flex: 0 0 32px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  float: left;
+  border: 3px solid #333645;
 }
 .checkbox-draw:active {
   background-color: red;
   color: white;
 }
 .checkbox-draw .check {
-  border-radius: 3px;
+  display: none;
+  margin-right: 20px;
   position: relative;
   float: left;
-  margin-right: 20px;
-  display: none;
-}
-
-.fields {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-@media (max-width: 991px) {
-  .fields {
-    gap: 0;
-  }
+  border-radius: 3px;
 }
 
 input {
   display: flex;
-}
-
-.group {
-  gap: 0px;
-  flex: 1 1 450px;
 }
 
 /* -----------------------------------------------------
@@ -1777,22 +1784,22 @@ Footer:
 ------------------------------------------------------ */
 .footer {
   position: relative;
-  color: #fff;
   letter-spacing: 0.4px;
+  color: #fff;
 }
 .footer h4 {
   margin: 24px 0 26px 0px;
-  color: #fff;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 400;
+  color: #fff;
 }
 .footer ul {
   padding: 0;
   margin: 0;
+  list-style: none;
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  list-style: none;
 }
 .footer__container {
   margin-bottom: 30px;
@@ -1802,46 +1809,46 @@ Footer:
   flex-wrap: wrap;
   width: auto;
 }
-.footer__follow-box {
+.footer__social-box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.footer__follow-box .follow-btn {
+.footer__social-box .follow-btn {
   padding: 12px 22px 16px;
   margin-bottom: 10px;
   margin-right: 10px;
+  background-color: #212330;
   text-align: center;
   text-decoration: none;
   font-size: 26px;
-  background-color: #212330;
 }
 @media (max-width: 480px) {
-  .footer__follow-box .follow-btn {
+  .footer__social-box .follow-btn {
     width: 35%;
   }
 }
-.footer__follow-box span {
+.footer__social-box span {
   position: relative;
   top: 4px;
   color: white;
 }
 
-.footer-bottom {
+.footer-secondary {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #212330;
-  color: white;
   font-size: 0.8125rem;
+  color: white;
 }
-.footer-bottom__license {
+.footer-secondary__license {
   padding-left: 15px;
   line-height: 20px;
 }
 
 .footer-logo {
-  width: 250px;
   display: block;
+  width: 250px;
 }
 .footer-logo img {
   width: 100%;

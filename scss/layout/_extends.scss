@@ -5,17 +5,17 @@ Placeholders:
 ------------------------------------------------------ */
 
 //Center alignment of block elements
-
 %center {
   margin-right: auto;
   margin-left: auto;
 }
 
+//Used in each 'section' for the wrapper / container
 %section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
+//This button placeholder applies to msot buttons throughout the page
 %btn {
   display: inline-block;
   vertical-align: middle;
@@ -23,9 +23,9 @@ Placeholders:
   color: #fff;
   font-weight: 400;
   cursor: pointer;
-  //line-height: 35px;
 }
 
+//Basic placeholder used a common style used on arrows throughout the page
 %arrow-right {
   font-family: icomoon !important;
   font-style: normal;
@@ -49,6 +49,7 @@ Placeholders:
   }
 }
 
+//This placeholder is used for the anchors in our services and latest news sections, particularly the ones that display at the bottom
 %section-anchor {
   padding-right: 15px;
   padding-left: 15px;

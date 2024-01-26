@@ -69,8 +69,6 @@ Card:
 //This is applied to each card container
 .card {
   display: block;
-  /* display: flex;
-  justify-content: center; */
   margin-top: 30px;
   padding: 30px;
   border: 1px solid #ccc;
@@ -79,19 +77,16 @@ Card:
   text-align: center;
 
   &:hover {
-    color: #fff;
-    border-color: transparent;
     top: -10px;
+    border-color: transparent;
+    background-color: whitesmoke;
+    color: #fff;
     transition: 0.5s ease;
     transform: translateY(-10px); //This is used to physically raise the object
-    background-color: whitesmoke;
   }
 
   //Each card has an element container within it's initial .card container, this is used for identifying the type of carrd
   @include s-e("element") {
-    // padding-left: 15px;
-    // padding-right: 15px;
-
     //I feel like this doesn't need to be at root, in the future I want to find a different solution as I hate using roots and globals
     //This uses a mixin to assign each one of the cards their respective colors and icon
     @at-root {
@@ -155,16 +150,19 @@ Card:
   padding-top: 30px;
 }
 
+//This is a wrapper that wraps around all card elements to give them flex properties.
 .card-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
 
+  //Basic mobile layout cards
   .card {
     flex: 1 0 100%;
   }
 
+  //Medium layout cards: 3 rows with 1 card each, 2 rows with 2 cards each.
   @include mq(medium) {
     .card:nth-child(4) {
       flex: 1 0 calc(50% - 20px);
@@ -172,7 +170,6 @@ Card:
     .card:nth-child(5) {
       flex: 1 0 calc(50% - 20px);
     }
-
     .card:nth-child(6) {
       flex: 1 0 calc(50% - 20px);
     }
@@ -181,6 +178,7 @@ Card:
     }
   }
 
+  //Large layout cards, 1 row with 3 cards, 1 row with 4 cards.
   @include mq(large) {
     .card:nth-child(1) {
       flex: 1 0 calc(33% - 20px);
