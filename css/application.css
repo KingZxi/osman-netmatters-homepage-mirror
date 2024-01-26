@@ -1931,9 +1931,27 @@ Footer:
   font-size: 0.8125rem;
   color: white;
 }
+.footer-secondary ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 .footer-secondary__license {
   padding-left: 15px;
   line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer-secondary__license {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-secondary__license ul {
+    display: flex;
+    gap: 5px;
+  }
+  .footer-secondary__license li:last-child::before {
+    content: "- ";
+  }
 }
 
 .footer-logo {

@@ -77,9 +77,29 @@ Footer:
   font-size: 0.8125rem;
   color: white;
 
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
   @include s-e(license) {
     padding-left: 15px;
     line-height: 20px;
+
+    @include mq(medium) {
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        display: flex;
+        gap: 5px;
+      }
+
+      li:last-child::before {
+        content: "- ";
+      }
+    }
   }
 }
 
