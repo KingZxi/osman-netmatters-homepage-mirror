@@ -753,7 +753,7 @@ Placeholders:
   padding: 50px 0;
 }
 
-.newsletter .btn, .news__card .btn, .card__element .btn, .banner .btn {
+.newsletter .btn, .news__card .btn, .card__element .btn, .banner .btn, .header .btn {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid transparent;
@@ -1015,6 +1015,16 @@ Header:
   text-transform: none;
   content: "\e913";
   color: white;
+}
+.header .btn {
+  display: none;
+  margin-left: 20px;
+  background-color: rgb(109, 197, 224);
+}
+@media screen and (min-width: 992px) {
+  .header .btn {
+    display: block;
+  }
 }
 
 /* -----------------------------------------------------

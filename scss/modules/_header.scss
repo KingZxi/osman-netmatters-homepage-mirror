@@ -186,4 +186,15 @@ Header:
       color: white;
     }
   }
+
+  .btn {
+    @extend %btn;
+    display: none;
+    margin-left: 20px;
+    background-color: rgb(109, 197, 224);
+
+    @include mq(large) {
+      display: block;
+    }
+  }
 }
