@@ -19,3 +19,7 @@ To do list: (Started this list on 24/01/2024)
 - Navigation bar needs implementation
 - Consider refactoring parts of the code into placeholders and mixins slowly
 - I should really make more variables and go around to add more of my hex colors to the color map, then replace them with map-get
+- Unexpected bug with the card hovers in latest news section, needs fixing ASAP
+
+
+#Note: I haven't started ticking these off yet, a good amount of them are actually fixed / complete
