@@ -22,4 +22,4 @@ To do list: (Started this list on 24/01/2024)
 - Unexpected bug with the card hovers in latest news section, needs fixing ASAP
 
 
-#Note: I haven't started ticking these off yet, a good amount of them are actually fixed / complete
+# Note: I haven't started ticking these off yet, a good amount of them are actually fixed / complete
