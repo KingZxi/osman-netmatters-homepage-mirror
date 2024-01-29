@@ -25,13 +25,22 @@ Navigation:
   @include mq(large) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    //gap: 20px;
   }
 
   //Applies to each nav item
   &__item {
+    width: 40%;
+    max-width: 40%;
+    padding: 0 25px;
     align-items: center;
+
+    &:hover {
+      [class*="nav-icon"] {
+        color: $white;
+      }
+    }
 
     li {
       margin: 20px;
@@ -42,9 +51,11 @@ Navigation:
       display: block;
       padding: 19px 0 18px;
       position: relative;
+      text-align: center;
       text-transform: uppercase;
       font-size: 1.125rem;
       color: #fff;
+      user-select: none;
     }
 
     small {
@@ -61,25 +72,25 @@ Navigation:
       font-size: 1.438rem;
     }
   }
-  .bespoke {
+  .n-bespoke {
     @include nav-type(bespoke);
   }
-  .it {
+  .n-it {
     @include nav-type(it);
   }
-  .marketting {
+  .n-marketting {
     @include nav-type(marketting);
   }
-  .telecoms {
+  .n-telecoms {
     @include nav-type(telecoms);
   }
-  .web {
+  .n-web {
     @include nav-type(web);
   }
-  .cyber {
+  .n-cyber {
     @include nav-type(cyber);
   }
-  .developer {
+  .n-developer {
     @include nav-type(developer);
   }
 }

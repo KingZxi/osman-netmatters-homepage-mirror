@@ -80,6 +80,11 @@ Header:
         @include mq(large) {
           display: none;
         }
+
+        @media screen and (min-width: 1260px) {
+          height: 56px;
+          display: inline;
+        }
       }
 
       button {
@@ -189,6 +194,7 @@ Header:
 
   .btn {
     @extend %btn;
+    height: 56px;
     display: none;
     margin-left: 20px;
     background-color: rgb(109, 197, 224);
@@ -196,5 +202,41 @@ Header:
     @include mq(large) {
       display: block;
     }
+
+    span {
+      line-height: 0px;
+      vertical-align: middle;
+    }
+
+    .icon-mouse,
+    .icon-paperplane:before {
+      line-height: 45px;
+      margin-right: 5px;
+    }
+
+    .icon-mouse:before,
+    .icon-paperplane:before {
+      font-family: icomoon !important;
+      font-size: 1.438rem;
+      font-style: normal;
+      font-weight: 900;
+      font-variant: normal;
+      text-transform: none;
+      content: "\e920";
+      color: white;
+    }
+
+    .icon-paperplane:before {
+      content: "\e91f";
+    }
+  }
+  .btn-support {
+    background-color: #4183d7;
+    border-color: #4183d7;
+  }
+
+  .btn-contact {
+    background-color: #999aa2;
+    border-color: #999aa2;
   }
 }

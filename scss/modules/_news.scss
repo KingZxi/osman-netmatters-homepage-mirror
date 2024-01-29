@@ -92,12 +92,22 @@ Latest news section:
       }
     }
 
+    &:hover {
+      top: -10px;
+      border-color: transparent;
+      transition: 0.5s ease;
+      transform: translateY(
+        -10px
+      ); //This is used to physically raise the object
+    }
+
     //The info element is applied to the section of each card with text
     @include s-e(info) {
       padding: 30px;
       border: 1px solid #ccc;
       border-top: 0;
       border-radius: 0 0 3px 3px;
+      box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 
       h3 {
         margin: 0 0 15px;
@@ -187,13 +197,13 @@ Latest news section:
   }
 
   //These classes use the news-card mixin to get the correct colors for each news card.
-  .web {
+  .n-web {
     @include news-card(web);
   }
-  .bespoke {
+  .n-bespoke {
     @include news-card(bespoke);
   }
-  .telecoms {
+  .n-telecoms {
     @include news-card(telecoms);
   }
 }

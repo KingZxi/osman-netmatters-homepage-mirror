@@ -928,6 +928,12 @@ Header:
     display: none;
   }
 }
+@media screen and (min-width: 1260px) {
+  .header__search-wide form input {
+    height: 56px;
+    display: inline;
+  }
+}
 .header__search-wide form button {
   display: inline;
   outline: none;
@@ -1017,6 +1023,7 @@ Header:
   color: white;
 }
 .header .btn {
+  height: 56px;
   display: none;
   margin-left: 20px;
   background-color: rgb(109, 197, 224);
@@ -1025,6 +1032,37 @@ Header:
   .header .btn {
     display: block;
   }
+}
+.header .btn span {
+  line-height: 0px;
+  vertical-align: middle;
+}
+.header .btn .icon-mouse,
+.header .btn .icon-paperplane:before {
+  line-height: 45px;
+  margin-right: 5px;
+}
+.header .btn .icon-mouse:before,
+.header .btn .icon-paperplane:before {
+  font-family: icomoon !important;
+  font-size: 1.438rem;
+  font-style: normal;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  content: "\e920";
+  color: white;
+}
+.header .btn .icon-paperplane:before {
+  content: "\e91f";
+}
+.header .btn-support {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+.header .btn-contact {
+  background-color: #999aa2;
+  border-color: #999aa2;
 }
 
 /* -----------------------------------------------------
@@ -1116,12 +1154,17 @@ Navigation:
   .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
   }
 }
 .nav__item {
+  width: 40%;
+  max-width: 40%;
+  padding: 0 25px;
   align-items: center;
+}
+.nav__item:hover [class*=nav-icon] {
+  color: #fff;
 }
 .nav__item li {
   margin: 20px;
@@ -1131,9 +1174,11 @@ Navigation:
   display: block;
   padding: 19px 0 18px;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
   font-size: 1.125rem;
   color: #fff;
+  user-select: none;
 }
 .nav__item small {
   display: block;
@@ -1147,47 +1192,68 @@ Navigation:
   text-align: center;
   font-size: 1.438rem;
 }
-.nav .bespoke a span {
+.nav .n-bespoke a span {
   color: #67809f;
 }
-.nav .bespoke .nav-icon:before {
+.nav .n-bespoke .nav-icon:before {
   content: "\e90c";
 }
-.nav .it a span {
+.nav .n-bespoke:hover {
+  background-color: #67809f;
+}
+.nav .n-it a span {
   color: #4183d7;
 }
-.nav .it .nav-icon:before {
+.nav .n-it .nav-icon:before {
   content: "\e956";
 }
-.nav .marketting a span {
+.nav .n-it:hover {
+  background-color: #4183d7;
+}
+.nav .n-marketting a span {
   color: #2ecc71;
 }
-.nav .marketting .nav-icon:before {
+.nav .n-marketting .nav-icon:before {
   content: "\e902";
 }
-.nav .telecoms a span {
+.nav .n-marketting:hover {
+  background-color: #2ecc71;
+}
+.nav .n-telecoms a span {
   color: #d64541;
 }
-.nav .telecoms .nav-icon:before {
+.nav .n-telecoms .nav-icon:before {
   content: "\e901";
 }
-.nav .web a span {
+.nav .n-telecoms:hover {
+  background-color: #d64541;
+}
+.nav .n-web a span {
   color: #926fb1;
 }
-.nav .web .nav-icon:before {
+.nav .n-web .nav-icon:before {
   content: "\ea80";
 }
-.nav .cyber a span {
+.nav .n-web:hover {
+  background-color: #926fb1;
+}
+.nav .n-cyber a span {
   color: #f62459;
 }
-.nav .cyber .nav-icon:before {
+.nav .n-cyber .nav-icon:before {
   content: "\e900";
 }
-.nav .developer a span {
+.nav .n-cyber:hover {
+  background-color: #f62459;
+}
+.nav .n-developer a span {
   color: #ce4125;
 }
-.nav .developer .nav-icon:before {
+.nav .n-developer .nav-icon:before {
   content: "\e903";
+}
+.nav .n-developer:hover {
+  background-color: #ce4125;
 }
 
 /* -----------------------------------------------------
@@ -1202,8 +1268,6 @@ Banner:
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
   height: 550px;
   background-image: url("/img/netmatter02.jpg");
   background-color: rgba(0, 0, 0, 0.5);
@@ -1213,15 +1277,29 @@ Banner:
   text-align: center;
   color: #fff;
 }
+.banner__container {
+  display: flex;
+  margin-top: 220px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .banner .h1 {
-  margin-top: 100px;
+  flex: 2 0 calc(20% - 20px);
 }
 .banner p {
+  margin-top: 20px;
   font-size: 1.25rem;
   font-weight: 600;
+  flex: 2 0 calc(20% - 20px);
 }
 .banner img {
   object-fit: cover;
+}
+.banner .btn-container {
+  flex: 1 0 calc(30% - 20px);
+  margin-top: 25px;
 }
 .banner .btn {
   padding: 10px 20px 10px 20px;
@@ -1244,9 +1322,12 @@ Banner:
   text-transform: none;
   content: "\ea3c";
 }
+.banner__nav {
+  flex: 1 0 calc(70% - 20px);
+}
 .banner__nav__container {
-  display: flex;
   margin-top: 90px;
+  display: flex;
   gap: 25px;
 }
 .banner__nav__dot {
@@ -1260,6 +1341,26 @@ Banner:
   background-color: #fff;
 }
 
+@media screen and (min-width: 992px) {
+  .banner {
+    background: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
+    z-index: 3;
+  }
+  .banner p {
+    text-align: left;
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+  .banner .h1,
+  .banner p,
+  .banner .btn-container {
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+  .h1 {
+    font-size: 4rem;
+  }
+}
 /* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
@@ -1777,11 +1878,18 @@ Latest news section:
   background-color: #926fb1;
   border-color: #926fb1;
 }
+.news__card:hover {
+  top: -10px;
+  border-color: transparent;
+  transition: 0.5s ease;
+  transform: translateY(-10px);
+}
 .news__card__info {
   padding: 30px;
   border: 1px solid #ccc;
   border-top: 0;
   border-radius: 0 0 3px 3px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 .news__card__info h3 {
   margin: 0 0 15px;
@@ -1849,24 +1957,24 @@ Latest news section:
   color: #333645;
   font-size: 0.875rem;
 }
-.news .web h3 a {
+.news .n-web h3 a {
   color: #926fb1;
 }
-.news .web .btn {
+.news .n-web .btn {
   border-color: #926fb1;
   background-color: #926fb1;
 }
-.news .bespoke h3 a {
+.news .n-bespoke h3 a {
   color: #67809f;
 }
-.news .bespoke .btn {
+.news .n-bespoke .btn {
   border-color: #67809f;
   background-color: #67809f;
 }
-.news .telecoms h3 a {
+.news .n-telecoms h3 a {
   color: #d64541;
 }
-.news .telecoms .btn {
+.news .n-telecoms .btn {
   border-color: #d64541;
   background-color: #d64541;
 }
