@@ -1345,9 +1345,9 @@ Banner:
   .banner {
     background: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
     background-position: center;
+    background-size: cover;
     z-index: 3;
     width: 100%;
-    gap: 2555px;
   }
   .banner p {
     text-align: left;
@@ -1358,7 +1358,6 @@ Banner:
   .banner p,
   .banner .btn-container {
     align-self: flex-start;
-    margin-left: 20px;
   }
   .banner .h1 {
     font-size: 4rem;
