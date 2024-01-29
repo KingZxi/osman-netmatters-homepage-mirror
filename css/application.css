@@ -1317,6 +1317,10 @@ Banner:
   border-color: #926fb1;
   font-size: 1.25rem;
 }
+.banner .btn:hover {
+  background-color: #79539a;
+  border-color: #79539a;
+}
 .banner .btn div {
   margin-top: 5px;
   display: inline;

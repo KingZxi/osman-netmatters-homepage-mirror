@@ -56,6 +56,11 @@ Banner:
     border-color: map-get($color-map, web-design);
     font-size: 1.25rem;
 
+    &:hover {
+      background-color: darken(map-get($color-map, web-design), 10%);
+      border-color: darken(map-get($color-map, web-design), 10%);
+    }
+
     div {
       margin-top: 5px;
       display: inline;
