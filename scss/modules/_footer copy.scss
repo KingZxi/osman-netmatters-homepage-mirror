@@ -112,15 +112,6 @@ Footer:
   }
 }
 
-.footer-logo-large {
-  display: none;
-}
-
-.test {
-  flex: 0 0 100%;
-  flex-wrap: nowrap;
-}
-
 @include mq("medium") {
   .lists {
     display: flex;
@@ -128,10 +119,6 @@ Footer:
 
     .footer__container {
       flex: 1 0 calc(50% - 10px);
-    }
-    .test {
-      flex: 0 0 100%;
-      flex-wrap: nowrap;
     }
   }
 }
@@ -142,26 +129,10 @@ Footer:
     flex-wrap: wrap;
 
     .footer__container {
-      flex: 1 0 calc(17.5% - 10px);
-    }
-
-    .test {
-      margin-top: 20px;
-      flex: 1 0 calc(30% - 10px);
-      flex-wrap: nowrap;
+      flex: 1 0 calc(20% - 10px);
     }
   }
 
-  .footer-logo {
-    display: none;
-  }
-
-  .footer-logo-large {
-    display: block;
-    width: 250px;
-
-    img {
-      width: 100%;
-    }
+  .footer {
   }
 }

@@ -100,7 +100,10 @@ Banner:
   .banner {
     background: url("/img/netmatter02.jpg"),
       linear-gradient(270deg, transparent 25%, #000);
+    background-position: center;
     z-index: 3;
+    width: 100%;
+    gap: 2555px;
 
     p {
       text-align: left;
@@ -114,9 +117,9 @@ Banner:
       align-self: flex-start;
       margin-left: 20px;
     }
-  }
 
-  .h1 {
-    font-size: 4rem;
+    .h1 {
+      font-size: 4rem;
+    }
   }
 }

@@ -1344,7 +1344,10 @@ Banner:
 @media screen and (min-width: 992px) {
   .banner {
     background: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
+    background-position: center;
     z-index: 3;
+    width: 100%;
+    gap: 2555px;
   }
   .banner p {
     text-align: left;
@@ -1357,7 +1360,7 @@ Banner:
     align-self: flex-start;
     margin-left: 20px;
   }
-  .h1 {
+  .banner .h1 {
     font-size: 4rem;
   }
 }
@@ -2163,6 +2166,15 @@ Footer:
   width: 100%;
 }
 
+.footer-logo-large {
+  display: none;
+}
+
+.test {
+  flex: 0 0 100%;
+  flex-wrap: nowrap;
+}
+
 @media screen and (min-width: 768px) {
   .lists {
     display: flex;
@@ -2171,6 +2183,10 @@ Footer:
   .lists .footer__container {
     flex: 1 0 calc(50% - 10px);
   }
+  .lists .test {
+    flex: 0 0 100%;
+    flex-wrap: nowrap;
+  }
 }
 @media screen and (min-width: 992px) {
   .lists {
@@ -2178,7 +2194,22 @@ Footer:
     flex-wrap: wrap;
   }
   .lists .footer__container {
-    flex: 1 0 calc(20% - 10px);
+    flex: 1 0 calc(17.5% - 10px);
+  }
+  .lists .test {
+    margin-top: 20px;
+    flex: 1 0 calc(30% - 10px);
+    flex-wrap: nowrap;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .footer-logo-large {
+    display: block;
+    width: 250px;
+  }
+  .footer-logo-large img {
+    width: 100%;
   }
 }
 
