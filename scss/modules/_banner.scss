@@ -93,6 +93,23 @@ Banner:
         background-color: #fff;
       }
     }
+
+    .selected {
+      background-color: #fff;
+
+      span:after {
+        content: "O";
+      }
+      span {
+        position: relative;
+        right: 6.5px;
+        top: -10.4px;
+        font-size: 29px;
+      }
+    }
+
+    .selected-dot {
+    }
   }
 }
 

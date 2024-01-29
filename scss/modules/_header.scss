@@ -64,6 +64,7 @@ Header:
       input {
         display: none;
         padding: 5px 15px;
+        width: 250px;
         border-color: #ccc;
         background-color: $white;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -118,6 +119,7 @@ Header:
   .logo {
     max-width: 100%;
     padding-right: 15px;
+    padding-left: 15px;
   }
 
   @include s-e(row) {
@@ -195,6 +197,7 @@ Header:
   .btn {
     @extend %btn;
     height: 56px;
+    font-size: 1.125rem;
     display: none;
     margin-left: 20px;
     background-color: rgb(109, 197, 224);

@@ -21,6 +21,22 @@ Slide show section:
     }
 
     @include s-e("description") {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: -200px;
+      right: -200px;
+    }
+
+    &:hover {
+      .slideshow__item__description {
+        display: block;
+        background-color: red;
+      }
+
+      .slideshow__img {
+        filter: grayscale(0);
+      }
     }
   }
 
@@ -33,4 +49,13 @@ Slide show section:
 
 .height {
   height: 70px;
+}
+
+.box {
+  user-select: auto;
+  padding: 20px;
+  margin: 0 auto 50px;
+  font-size: 0.875px;
+  background-color: $tuna;
+  max-width: 280px;
 }
