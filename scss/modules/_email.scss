@@ -61,6 +61,10 @@ Email Newsletter Sign-up:
     @extend %btn;
     background-color: #333645;
     border-color: #333645;
+
+    &:hover {
+      background-color: darken(#333645, 10%);
+    }
   }
 }
 

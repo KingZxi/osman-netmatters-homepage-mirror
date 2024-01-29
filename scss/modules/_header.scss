@@ -236,10 +236,18 @@ Header:
   .btn-support {
     background-color: #4183d7;
     border-color: #4183d7;
+
+    &:hover {
+      background-color: darken(#4183d7, 10%);
+    }
   }
 
   .btn-contact {
     background-color: #999aa2;
     border-color: #999aa2;
+
+    &:hover {
+      background-color: darken(#999aa2, 10%);
+    }
   }
 }

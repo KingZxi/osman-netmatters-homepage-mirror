@@ -78,18 +78,28 @@ Welcome to netmatters section:
     font-size: 20px;
     color: $white;
     background-color: #272936;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#272936, 10%);
+    }
   }
 
   //Different types of buttons:
   .btn-google {
     background-color: map-get($color-map, google);
 
-    @include mq(large) {
+    &:hover {
+      background-color: darken(map-get($color-map, google), 10%);
     }
   }
 
   .btn-trustpilot {
     background-color: map-get($color-map, trustpilot);
+
+    &:hover {
+      background-color: darken(map-get($color-map, trustpilot), 10%);
+    }
   }
 
   //Adds extra margin to some buttons

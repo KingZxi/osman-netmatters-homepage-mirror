@@ -1063,9 +1063,15 @@ Header:
   background-color: #4183d7;
   border-color: #4183d7;
 }
+.header .btn-support:hover {
+  background-color: #286abd;
+}
 .header .btn-contact {
   background-color: #999aa2;
   border-color: #999aa2;
+}
+.header .btn-contact:hover {
+  background-color: #7e808a;
 }
 
 /* -----------------------------------------------------
@@ -1813,12 +1819,22 @@ Welcome to netmatters section:
   font-size: 20px;
   color: #fff;
   background-color: #272936;
+  cursor: pointer;
+}
+.welcome .btn-primary-inverse:hover {
+  background-color: #121318;
 }
 .welcome .btn-google {
   background-color: #4387f6;
 }
+.welcome .btn-google:hover {
+  background-color: #1268f4;
+}
 .welcome .btn-trustpilot {
   background-color: #00b67b;
+}
+.welcome .btn-trustpilot:hover {
+  background-color: #008359;
 }
 .welcome .btn-margin {
   margin-bottom: 50px !important;
@@ -2072,6 +2088,9 @@ Email Newsletter Sign-up:
 .newsletter .btn {
   background-color: #333645;
   border-color: #333645;
+}
+.newsletter .btn:hover {
+  background-color: #1d1f28;
 }
 
 .checkbox-container {
