@@ -108,6 +108,9 @@ Mixins:
     border-color: $color;
     background-color: $color;
   }
+  .tooltip {
+    background-color: $color;
+  }
 }
 
 @mixin nav-type($type) {

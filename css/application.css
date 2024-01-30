@@ -2197,11 +2197,17 @@ Latest news section:
   border-color: #926fb1;
   background-color: #926fb1;
 }
+.news .n-web .tooltip {
+  background-color: #926fb1;
+}
 .news .n-bespoke h3 a {
   color: #67809f;
 }
 .news .n-bespoke .btn {
   border-color: #67809f;
+  background-color: #67809f;
+}
+.news .n-bespoke .tooltip {
   background-color: #67809f;
 }
 .news .n-telecoms h3 a {
@@ -2211,9 +2217,30 @@ Latest news section:
   border-color: #d64541;
   background-color: #d64541;
 }
+.news .n-telecoms .tooltip {
+  background-color: #d64541;
+}
 
 .view-all-container {
   margin-top: 50px;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 0 10px;
+  top: 10px;
+  right: 0;
+  z-index: 1;
+  background-color: #333645;
+  font-size: 0.75rem;
+  line-height: 1.438rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+.tooltip:hover {
+  text-decoration: underline;
 }
 
 /* -----------------------------------------------------
