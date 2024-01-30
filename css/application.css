@@ -1170,6 +1170,7 @@ Navigation:
   padding: 0;
   margin: 0;
   list-style: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .nav {
@@ -1667,6 +1668,7 @@ Card:
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 .bespoke .card-icon:before {
   content: "\e90c";
@@ -2083,6 +2085,7 @@ Latest news section:
 }
 .news .card-flex .news__card {
   flex: 1 0 calc(100% - 20px);
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .news .card-flex .news__card {

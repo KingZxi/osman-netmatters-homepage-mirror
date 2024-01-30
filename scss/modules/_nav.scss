@@ -20,6 +20,7 @@ Navigation:
   padding: 0;
   margin: 0;
   list-style: none;
+  cursor: pointer;
 
   //Main navigation is invisble until viewport is large enough
   @include mq(large) {

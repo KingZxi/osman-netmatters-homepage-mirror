@@ -56,6 +56,7 @@ Latest news section:
     //Default news cards on mobile layout and 1 column
     .news__card {
       flex: 1 0 calc(100% - 20px); //Set to 100% of mobile viewport
+      cursor: pointer;
     }
 
     //Larger viewports have 2 column layout
