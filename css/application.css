@@ -2271,6 +2271,7 @@ Email Newsletter Sign-up:
 .newsletter form input {
   height: 47px;
   width: 100%;
+  padding-left: 10px;
 }
 .newsletter form div:has(label) {
   margin-bottom: 15px;
