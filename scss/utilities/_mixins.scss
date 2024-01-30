@@ -149,4 +149,12 @@ Mixins:
   &:hover {
     background-color: $color;
   }
+
+  .sub-menu {
+    background-color: darken($color, 10%);
+  }
+
+  .triangle {
+    border-color: transparent transparent $color transparent;
+  }
 }

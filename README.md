@@ -5,7 +5,7 @@ Created by: Osman of Netmatters, KingZxi on Github
 To do list: (Started this list on 24/01/2024)
 
 - Remove "test" class which exists somewhere. (DONE)
-- Refactor buttons to mostly be based off placeholder (optional)
+- Refactor buttons to mostly be based off placeholder (optional) (changed some stuff but still not exactly what I expected)
 - Btns have incorrect spacing on large viewport in welcome section (DONE)
 - Header needs a lot of work, especially on larger viewports (DONE)
 - Cards section needs to expand to different layout styles in different viewports, it's fine in mobile though (flexbox...?) (DONE)
@@ -15,7 +15,7 @@ To do list: (Started this list on 24/01/2024)
 - Sign up input fields should switch to a two column layout on different viewports (DONE)
 - Footer needs media queries (DONE)
 - Second slideshow images expand outside the flex area
-- The tab icon shouldn't be default, it should the netmatters logo
+- The tab icon shouldn't be default, it should the netmatters logo (DONE)
 - Navigation bar needs implementation (DONE)
 - Consider refactoring parts of the code into placeholders and mixins slowly (DONE, sorta)
 - I should really make more variables and go around to add more of my hex colors to the color map, then replace them with map-get (optional)
@@ -23,5 +23,6 @@ To do list: (Started this list on 24/01/2024)
 - Footer needs some work still, it doesn't look exactly right on larger viewports
 - Buttons need hover effects (MOSTLY ADDED, SEARCH ICON, HAMBURGER AND SOCIAL MEDIA ICONS STILL NEED HOVER EFFECTS)
 - Need to implement slideshow hovers
-
-# Note: I haven't started ticking these off yet, a good amount of them are actually fixed / complete
+- Navigation hover tabs must be implemented
+- Latest news cards require an absolute tag on the image, look at normal page for example
+- Make box tickable in signup area (make two boxes, change display modes based on psuedo classes?), if you click one, make it affect the display properties of the other, and vice versa

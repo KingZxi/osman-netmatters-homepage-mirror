@@ -29,6 +29,12 @@ Card:
     }
   }
 
+  .underline-hover {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   //Each card heading
   h2 {
     position: relative;
@@ -75,6 +81,7 @@ Card:
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: 0.5s ease;
 
   @at-root {
     .bespoke {
@@ -104,7 +111,9 @@ Card:
   @include s-e("element") {
     //I feel like this doesn't need to be at root, in the future I want to find a different solution as I hate using roots and globals
     //This uses a mixin to assign each one of the cards their respective colors and icon
-
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     //The span contains the card icons
     span {
       display: block;
@@ -211,4 +220,8 @@ Card:
       flex: 1 0 calc(25% - 20px);
     }
   }
+}
+
+.card-btn-container {
+  margin-top: auto;
 }

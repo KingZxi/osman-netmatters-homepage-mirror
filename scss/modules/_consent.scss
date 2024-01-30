@@ -22,5 +22,10 @@ Manage Consent:
     line-height: 22px;
     color: $white;
     cursor: pointer;
+
+    &:hover {
+      background-color: lighten(#75788a, 10%);
+      border-color: lighten(#75788a, 10%);
+    }
   }
 }

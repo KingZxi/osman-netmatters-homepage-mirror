@@ -41,6 +41,14 @@ Navigation:
       [class*="nav-icon"] {
         color: $white;
       }
+
+      .triangle {
+        display: block;
+      }
+
+      .sub-menu {
+        display: flex;
+      }
     }
 
     li {
@@ -93,5 +101,83 @@ Navigation:
   }
   .n-developer {
     @include nav-type(developer);
+  }
+}
+
+.sub-menu {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  padding: 50px 0;
+  left: 0;
+  z-index: 10;
+  background-color: #a3331d;
+  color: $white;
+
+  .h2 {
+    width: 100%;
+    flex: 1 0 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    li {
+      display: flex;
+      flex: 1 0 25%;
+      font-size: 1.2rem;
+      align-items: center;
+    }
+  }
+  @include s-e(inner) {
+    position: relative;
+    width: 1250px;
+    display: flex;
+    background-color: inherit;
+  }
+
+  .sub-menu-text {
+    display: inline;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  [class^="icon"] {
+    position: relative;
+    margin-top: 0;
+    margin-right: 10px;
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+//Triangle to display under nav items when hovered over.
+.triangle {
+  display: none;
+  position: absolute;
+  left: -21%;
+  top: 100%;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 83.5px 40px 83.5px;
+  border-color: transparent transparent #ff4532 transparent;
+  transform: rotate(180deg);
+  z-index: 2000;
+
+  @media screen and (max-width: 1259px) {
+    border-width: 0 62px 40px 62px;
+    left: -33%;
   }
 }

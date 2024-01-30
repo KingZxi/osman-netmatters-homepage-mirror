@@ -26,6 +26,15 @@ Footer:
     list-style: none;
     font-size: 0.8125rem;
     line-height: 1.375rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   //Footer containers for each ul group
@@ -60,6 +69,19 @@ Footer:
       }
     }
 
+    .facebook:hover {
+      background-color: #3b5998;
+    }
+    .linkedin:hover {
+      background-color: #0077b5;
+    }
+    .twitter:hover {
+      background-color: #00aced;
+    }
+    .instagram:hover {
+      background-color: #d93175;
+    }
+
     //Makes icon white and positions them correctly
     span {
       position: relative;
@@ -81,6 +103,15 @@ Footer:
     list-style-type: none;
     padding: 0;
     margin: 0;
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @include s-e(license) {
@@ -116,7 +147,7 @@ Footer:
   display: none;
 }
 
-.test {
+.lists-container {
   flex: 0 0 100%;
   flex-wrap: nowrap;
 }
@@ -129,7 +160,7 @@ Footer:
     .footer__container {
       flex: 1 0 calc(50% - 10px);
     }
-    .test {
+    .lists-container {
       flex: 0 0 100%;
       flex-wrap: nowrap;
     }
@@ -145,7 +176,7 @@ Footer:
       flex: 1 0 calc(17.5% - 10px);
     }
 
-    .test {
+    .lists-container {
       margin-top: 20px;
       flex: 1 0 calc(30% - 10px);
       flex-wrap: nowrap;

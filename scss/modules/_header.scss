@@ -5,7 +5,12 @@ Header:
 ------------------------------------------------------ */
 
 .header {
-  padding: 20px 0 0 0;
+  //padding: 20px 0 0 0;
+
+  .container-top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   //Applies to search bar in header for small layouts
   //Not to be confused for the small searchbar in wide layouts
@@ -99,6 +104,11 @@ Header:
         vertical-align: middle;
         background-color: #999aa2;
         color: $white;
+
+        &:hover {
+          background-color: darken(#999aa2, 10%);
+          cursor: pointer;
+        }
       }
 
       span:before {
@@ -119,7 +129,7 @@ Header:
   .logo {
     max-width: 100%;
     padding-right: 15px;
-    padding-left: 15px;
+    //padding-left: 15px;
   }
 
   @include s-e(row) {
@@ -181,6 +191,11 @@ Header:
       height: 56px;
       background-color: $tuna;
       border-color: $tuna;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($tuna, 10%);
+      }
     }
     .icon-burger:before {
       font-family: icomoon !important;
