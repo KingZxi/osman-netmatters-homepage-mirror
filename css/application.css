@@ -719,6 +719,18 @@ footer {
   background-color: #323544;
 }
 
+input[type=text]:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
+input[type=email]:focus {
+  border-color: #5bc0de;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+
 .btn {
   padding: 5px 15px;
   height: auto;
@@ -910,11 +922,11 @@ Header:
 .header__search-wide form input {
   display: none;
   padding: 5px 15px;
-  width: 250px;
+  width: 240px;
   border-color: #ccc;
   background-color: #fff;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ccc;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -938,15 +950,16 @@ Header:
 }
 .header__search-wide form button {
   display: inline;
-  outline: none;
   margin: 0;
   padding: 7px 20px 3px;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  background-color: #999aa2;
   height: 56px;
   font-size: 1.063rem;
-  border: none;
   vertical-align: middle;
-  background-color: #999aa2;
   color: #fff;
+  outline: none;
 }
 .header__search-wide form button:hover {
   background-color: #7e808a;
@@ -1001,7 +1014,9 @@ Header:
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
+  color: #333645;
   content: "\e901";
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .header .phone {
@@ -1015,6 +1030,10 @@ Header:
 .header .hamburger button {
   padding: 10px 15px 5px 15px;
   height: 56px;
+  border: none;
+  border: 1px;
+  border-radius: 3px;
+  outline: none;
   background-color: #333645;
   border-color: #333645;
   cursor: pointer;
@@ -1366,6 +1385,9 @@ Navigation:
   display: flex;
   background-color: inherit;
 }
+.sub-menu__inner .icon-phone {
+  margin-left: 0;
+}
 .sub-menu .sub-menu-text {
   display: inline;
   text-transform: capitalize;
@@ -1542,7 +1564,7 @@ Slide show section:
   position: relative;
 }
 .slideshow__item__img {
-  max-height: auto;
+  max-height: 70px;
   width: auto;
   filter: grayscale(1);
 }
@@ -1578,22 +1600,6 @@ Slide show section:
   max-width: 280px;
   text-align: center;
   color: white;
-}
-
-.arrow {
-  display: block;
-  position: absolute;
-  left: 30%;
-  top: 75%;
-  margin-left: 36px;
-  margin-top: auto;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 83.5px 40px 83.5px;
-  border-color: transparent transparent #333645 transparent;
-  transform: rotate(180deg);
-  z-index: 2000;
 }
 
 /* -----------------------------------------------------
@@ -1934,7 +1940,6 @@ Welcome to netmatters section:
 ------------------------------------------------------ */
 .welcome {
   display: flex;
-  padding-bottom: 50;
   background-color: #333645;
 }
 .welcome .container {
@@ -1965,6 +1970,13 @@ Welcome to netmatters section:
 .welcome p {
   color: #fff;
   margin-bottom: 25px;
+}
+.welcome p a {
+  color: inherit;
+  text-decoration: none;
+}
+.welcome p a:hover {
+  text-decoration: underline;
 }
 .welcome h1,
 .welcome .h1 {
@@ -2132,11 +2144,11 @@ Latest news section:
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.news__card__info h3 a {
+.news__card__info__h3 {
   color: #926fb1;
   font-weight: 600;
 }
-.news__card__info h3 span {
+.news__card__info__time {
   display: inline;
   vertical-align: middle;
   color: rgba(51, 54, 69, 0.5);
@@ -2180,20 +2192,22 @@ Latest news section:
   padding-top: 30px;
   border-top: 1px solid #ccc;
 }
+.news__card__creator__pfp {
+  border-radius: 50%;
+}
 .news__card__creator__pfp img {
   border-radius: 50%;
 }
 .news__card__creator__info {
   line-height: 1.375rem;
   color: #666;
-  font-size: 0.875;
 }
 .news__card__creator__info strong {
   font-weight: 600;
   color: #333645;
   font-size: 0.875rem;
 }
-.news .n-web h3 a {
+.news .n-web .news__card__info__h3 {
   color: #926fb1;
 }
 .news .n-web .btn {
@@ -2203,7 +2217,7 @@ Latest news section:
 .news .n-web .tooltip {
   background-color: #926fb1;
 }
-.news .n-bespoke h3 a {
+.news .n-bespoke .news__card__info__h3 {
   color: #67809f;
 }
 .news .n-bespoke .btn {
@@ -2213,7 +2227,7 @@ Latest news section:
 .news .n-bespoke .tooltip {
   background-color: #67809f;
 }
-.news .n-telecoms h3 a {
+.news .n-telecoms .news__card__info__h3 {
   color: #d64541;
 }
 .news .n-telecoms .btn {
@@ -2267,14 +2281,23 @@ Email Newsletter Sign-up:
   padding: 50px 0;
 }
 .newsletter form label {
-  display: block;
+  display: flex;
   margin-bottom: 5px;
   font-weight: 600;
 }
-.newsletter form input {
+.newsletter form label .label-text {
+  font-weight: 600;
+  line-height: 1.875rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+.newsletter form .form-sign-up__group input {
   height: 47px;
   width: 100%;
   padding-left: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .newsletter form div:has(label) {
   margin-bottom: 15px;
@@ -2473,7 +2496,12 @@ Footer:
   width: 250px;
 }
 .footer-logo img {
-  width: 100%;
+  width: 150%;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo img {
+    width: 100%;
+  }
 }
 
 .footer-logo-large {
@@ -2485,19 +2513,6 @@ Footer:
   flex-wrap: nowrap;
 }
 
-@media screen and (min-width: 768px) {
-  .lists {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .lists .footer__container {
-    flex: 1 0 calc(50% - 10px);
-  }
-  .lists .lists-container {
-    flex: 0 0 100%;
-    flex-wrap: nowrap;
-  }
-}
 @media screen and (min-width: 992px) {
   .lists {
     display: flex;
@@ -2520,6 +2535,19 @@ Footer:
   }
   .footer-logo-large img {
     width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1259px) {
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lists .footer__container {
+    flex: 1 0 calc(50% - 10px);
+  }
+  .lists .lists-container {
+    flex: 0 0 100%;
+    flex-wrap: nowrap;
   }
 }
 

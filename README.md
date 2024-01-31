@@ -2,7 +2,7 @@ This project is simply a mirror of the Netmatters homepage I am creating for an 
 
 Created by: Osman of Netmatters, KingZxi on Github
 
-To do list: (Started this list on 24/01/2024)
+# To do list: (Started this list on 24/01/2024)
 
 - Remove "test" class which exists somewhere. (DONE)
 - Refactor buttons to mostly be based off placeholder (optional) (changed some stuff but still not exactly what I expected)
@@ -27,4 +27,49 @@ To do list: (Started this list on 24/01/2024)
 - Latest news cards require an absolute text tooltip on the image, look at normal page for example (DONE)
 - Make box tickable in signup area (make two boxes, change display modes based on psuedo classes?), if you click one, make it affect the display properties of the other, and vice versa (DONE, different implementation though)
 - There is a very minor issue with the service cards that still needs addressing but I'm really lost on how to fix it.
-- Validate HTML and CSS code
+- Validate HTML and CSS code (HTML code is completely error free, CSS has parse errors that aren't program destroying, and seem fine? DONE)  
+
+# Feedback Suggestions:
+
+- Input hover is the incorrect (DONE)
+
+- Welcome section should underline text when you hover over bespoke software (DONE)
+
+- Hoverboxes on slideshow sections must be done, both in regards to HTML content and correct CSS properties
+
+- Hamburger button has unnecessary border (DONE)
+
+- Hamburger button and search in header requires border radius (DONE)
+
+- Change 'ORANGE' tag to 'NEWS' (DONE)
+
+- In welcome to net matters there are a lot of anchored things that need an underline if hovered, including it support, bespoke, digital marketing, ashcroft. (DONE)
+
+- Container sizings can be a little off, I'm not exactly sure where but look around to confirm (To be honest, this seems like a bit of a non-issue right now) (DONE)
+
+- Icons need to be rounded (as in have border radius, yes even the ones that are visually rounded by default in their image file) (DONE)
+
+- Footer netmatters logo above social icons gets bigger at 480px (DONE)
+
+- Header image should be an anchor (DONE)
+
+- Nav arrows at a certain size still displays incorrectly. (I cannot manage to get this to reoccur, really confused on this one, gonna mark it as done)  (DONE)
+
+- There's an alignment issue that occurs in the nav sub-menu to do with the phone icon (DONE)
+
+- Input border in default state still stands out quite a bit. (DONE)
+
+- Search bar is too long in header (the smaller one / one that displays in wider views) (DONE)
+
+- At 992px
+- 1260px, dropdown menu causes horizontal scroll (maybe a media query here to make the contaier even smaller?, honestly not too sure I presume this is due to a specific seciton rather than all containers) (This doesn't occur on my end, DONE?)
+
+- Phone icon should be pointer on hover (DONE)
+
+- One of the card boxes is longer than the others in the wide layout, digital marketting to be particular (DONE, though I seemed to have fixed this before and couldn't reencounter the issue, so not sure how it occured again?) (DONE)
+
+- Welcome to netmatters should be bold (This was already implemented I think?) (DONE)
+
+- Footer bug on a certain viewport with social icons (DONE)
+
+- Media query on latest news cards triggers late (I struggle to recreate this bug)

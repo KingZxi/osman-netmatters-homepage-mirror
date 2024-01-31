@@ -101,7 +101,7 @@ Mixins:
   } @else if ($type == "telecoms") {
     $color: map-get($color-map, telecom) !global;
   }
-  h3 a {
+  .news__card__info__h3 {
     color: $color;
   }
   .btn {

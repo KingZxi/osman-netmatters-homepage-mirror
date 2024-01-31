@@ -23,7 +23,6 @@ Welcome to netmatters section:
     }
   }
   @extend %section;
-  padding-bottom: 50;
   background-color: #333645;
 
   p {
@@ -41,6 +40,15 @@ Welcome to netmatters section:
   p {
     color: $white;
     margin-bottom: 25px;
+
+    //For links in the welcome text:
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   h1,

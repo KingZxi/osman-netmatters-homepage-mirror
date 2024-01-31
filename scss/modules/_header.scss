@@ -69,11 +69,11 @@ Header:
       input {
         display: none;
         padding: 5px 15px;
-        width: 250px;
+        width: 240px;
         border-color: #ccc;
         background-color: $white;
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-        border: 1px solid #e5e5e5;
+        border: 1px solid #ccc;
         font-size: 14px;
         line-height: 1.42857143;
         color: #555;
@@ -95,15 +95,16 @@ Header:
 
       button {
         display: inline;
-        outline: none;
         margin: 0;
         padding: 7px 20px 3px;
+        border: none;
+        border-radius: 0 3px 3px 0;
+        background-color: #999aa2;
         height: 56px;
         font-size: 1.063rem;
-        border: none;
         vertical-align: middle;
-        background-color: #999aa2;
         color: $white;
+        outline: none;
 
         &:hover {
           background-color: darken(#999aa2, 10%);
@@ -175,7 +176,9 @@ Header:
       font-weight: 400;
       font-variant: normal;
       text-transform: none;
+      color: $tuna;
       content: "\e901";
+      cursor: pointer;
     }
 
     @include mq(medium) {
@@ -189,10 +192,13 @@ Header:
     button {
       padding: 10px 15px 5px 15px;
       height: 56px;
+      border: none; //resets border
+      border: 1px;
+      border-radius: 3px;
+      outline: none;
       background-color: $tuna;
       border-color: $tuna;
       cursor: pointer;
-
       &:hover {
         background-color: darken($tuna, 10%);
       }

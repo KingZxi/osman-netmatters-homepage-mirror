@@ -121,23 +121,23 @@ Latest news section:
         margin: 0 0 15px;
         font-size: 1rem;
         line-height: 1.5rem;
+      }
 
-        //The anchor is used on the heading text
-        a {
-          color: $dark-lilac;
-          font-weight: 600;
-        }
+      //The anchor is used on the heading text
+      @include s-e(h3) {
+        color: $dark-lilac;
+        font-weight: 600;
+      }
 
-        //This span is applied to the news card's date of post
-        span {
-          display: inline;
-          vertical-align: middle;
-          color: rgba(51, 54, 69, 0.5);
-          text-transform: uppercase;
-          font-size: 0.85rem;
-          line-height: 1.5rem;
-          font-weight: 400;
-        }
+      //This span is applied to the news card's date of post
+      @include s-e(time) {
+        display: inline;
+        vertical-align: middle;
+        color: rgba(51, 54, 69, 0.5);
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+        font-weight: 400;
       }
 
       //Applied to each news news card's paragraph
@@ -187,6 +187,7 @@ Latest news section:
       border-top: 1px solid #ccc;
 
       @include s-e(pfp) {
+        border-radius: 50%;
         img {
           border-radius: 50%;
         }
@@ -194,7 +195,7 @@ Latest news section:
       @include s-e(info) {
         line-height: 1.375rem;
         color: #666;
-        font-size: 0.875;
+        //font-size: 0.875;
         strong {
           font-weight: 600;
           color: $tuna;
