@@ -111,6 +111,7 @@ Latest news section:
 
     //The info element is applied to the section of each card with text
     @include s-e(info) {
+      margin-top: -6.5px;
       padding: 30px;
       border: 1px solid #ccc;
       border-top: 0;

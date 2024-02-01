@@ -30,7 +30,22 @@ Email Newsletter Sign-up:
         line-height: 1.875rem;
         font-size: 1rem;
         display: inline-block;
+        color: $tuna;
       }
+    }
+
+    input[type="text"]:focus {
+      border-color: #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(91, 192, 222, 0.6);
+    }
+
+    input[type="email"]:focus {
+      border-color: #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(91, 192, 222, 0.6);
     }
 
     .form-sign-up__group input {
@@ -43,7 +58,10 @@ Email Newsletter Sign-up:
     }
 
     div:has(label) {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
+      @include mq(medium) {
+        margin-bottom: 15px;
+      }
     }
   }
 

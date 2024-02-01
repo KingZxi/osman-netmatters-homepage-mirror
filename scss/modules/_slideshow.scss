@@ -14,15 +14,15 @@ Slide show section:
 
   //Each individal slikdeshow item:
   @include s-e("item") {
+    display: flex;
     position: relative;
+    height: 70px;
     @include s-e("img") {
       //max-height: auto; //(Apparently this doesn't do anything)
-      max-height: 70px;
+      max-height: 100%;
       width: auto;
+      align-self: center;
       filter: grayscale(1);
-    }
-
-    .test {
     }
 
     @include s-e("description") {
@@ -32,7 +32,7 @@ Slide show section:
       left: -200px;
       right: -200px;
       bottom: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       z-index: 4444;
     }
 
@@ -70,17 +70,36 @@ Slide show section:
 }
 
 .arrow {
-  // display: block;
-  // position: absolute;
-  // left: 0%;
-  // top: -100%;
-  // margin-left: 36px;
-  // margin-top: auto;
-  // width: 0px;
-  // height: 0px;
+  position: absolute;
+  left: 49.5%;
+  bottom: -0%;
+  margin-left: -36px;
+  z-index: 2000;
+}
+
+.arrow::after {
+  display: inline-block;
+  border-style: solid;
+  border-width: 30.5px 40.5px 0px 40.5px;
+  border-color: #333645 transparent transparent;
+  content: " ";
+
+  // content: "";
+  // margin: auto;
+  // display: inline-block;
+  // border-color: #333645 transparent transparent;
   // border-style: solid;
-  // border-width: 0 83.5px 40px 83.5px;
-  // border-color: transparent transparent $tuna transparent;
-  // transform: rotate(180deg);
-  // z-index: 2000;
+  // border-width: 35px 36px 0;
+  // border-top-width: 35px;
+  // border-right-width: 36px;
+  // border-bottom-width: 0px;
+  // border-left-width: 36px;
+}
+
+.btn {
+  @extend %btn;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
 }
