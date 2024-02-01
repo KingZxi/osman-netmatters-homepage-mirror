@@ -76,8 +76,8 @@ Created by: Osman of Netmatters, KingZxi on Github
 
 # Final changes consider:
 
-- The slide show images have a hover textbox, but it's not perfect, as it disappears before you can hover on the description box itself.
+- The slide show images have a hover textbox, but it's not perfect, as it disappears before you can hover on the description box itself. (FIXED)
 
 - This is more of a choice, there are some sections of the page that aren't entirely 1:1 with the site, however they work completely fine as I honestly prefer the look out them design wise, I'll leave them as they are but if they don't allow me to pass I will need to change them eventually.
 
-- Slideshow description boxes on hover don't have the 1:1 text right now, I should probably update them and also add the appropriate buttons.
+- Slideshow description boxes on hover don't have the 1:1 text right now, I should probably update them and also add the appropriate buttons. (DONE, sorta, the visible ones have text)
