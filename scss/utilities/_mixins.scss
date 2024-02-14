@@ -31,6 +31,14 @@ Mixins:
     @media screen and (min-width: 992px) {
       @content;
     }
+  } @else if $break == "landscape" {
+    @media screen and (orientation: landscape) {
+      @content;
+    }
+  } @else if $break == "s-landscape" {
+    @media screen and (orientation: landscape) and (min-width: 767px) {
+      @content;
+    }
   }
 }
 

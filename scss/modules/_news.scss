@@ -70,6 +70,17 @@ Latest news section:
       }
     }
 
+    //Having troubles getting this not to cascade with the large mq
+    // @include mq(s-landscape) {
+    //   .news__card {
+    //     flex: 1 0 calc(50% - 20px);
+    //   }
+
+    //   .news__card:nth-child(3) {
+    //     display: none;
+    //   }
+    // }
+
     //Large viewports have 3 column layout
     @include mq(large) {
       .news__card {
