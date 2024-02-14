@@ -132,6 +132,7 @@ Latest news section:
       box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 
       h3 {
+        min-height: 3rem;
         margin: 0 0 15px;
         font-size: 1rem;
         line-height: 1.5rem;
@@ -156,6 +157,7 @@ Latest news section:
 
       //Applied to each news news card's paragraph
       p {
+        min-height: 66px;
         line-height: 1.375rem;
         font-size: 0.8125rem;
         margin-bottom: 25px;

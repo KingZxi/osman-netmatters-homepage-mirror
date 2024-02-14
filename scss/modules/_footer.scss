@@ -186,7 +186,7 @@ Footer:
   }
 }
 
-@media (min-width: 768px) and (max-width: 1259px) {
+@media ((min-width: 768px) and (max-width: 1259px)) {
   .lists {
     display: flex;
     flex-wrap: wrap;
