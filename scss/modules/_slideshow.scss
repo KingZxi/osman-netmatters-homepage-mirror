@@ -67,6 +67,16 @@ Slide show section:
   max-width: 280px;
   text-align: center;
   color: white;
+
+  h3 {
+    font-size: 1.125rem;
+    padding-bottom: 17px;
+  }
+
+  p {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+  }
 }
 
 .arrow {

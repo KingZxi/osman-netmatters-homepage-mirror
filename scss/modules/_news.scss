@@ -84,6 +84,7 @@ Latest news section:
 
   //The news card's element applies to each individual news card's div.
   @include s-e(card) {
+    flex-direction: column;
     margin-top: 30px;
     top: 0;
     position: relative;
@@ -92,6 +93,7 @@ Latest news section:
 
     .btn {
       @extend %btn;
+      justify-self: flex-end;
       background-color: $dark-lilac;
       border-color: $dark-lilac;
       @at-root (with: media) {
@@ -189,10 +191,12 @@ Latest news section:
 
       @include s-e(pfp) {
         border-radius: 50%;
-        img {
-          border-radius: 50%;
-        }
       }
+
+      img {
+        border-radius: 50%;
+      }
+
       @include s-e(info) {
         line-height: 1.375rem;
         color: #666;
@@ -241,4 +245,8 @@ Latest news section:
   &:hover {
     text-decoration: underline;
   }
+}
+
+.test {
+  min-height: 300px;
 }
