@@ -112,4 +112,39 @@ Slide show section:
   text-align: center;
   vertical-align: middle;
   justify-content: center;
+  letter-spacing: 0;
+
+  @at-root {
+    .bespoke {
+      @include card-type(bespoke);
+    }
+    .it {
+      @include card-type(it);
+    }
+    .marketting {
+      @include card-type(marketting);
+    }
+    .telecoms {
+      @include card-type(telecoms);
+    }
+    .web {
+      @include card-type(web);
+    }
+    .cyber {
+      @include card-type(cyber);
+    }
+    .developer {
+      @include card-type(developer);
+    }
+  }
+}
+
+.btn-arrow:after {
+  margin-left: 5px;
+  font-family: icomoon !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  content: "\ea3c";
 }
