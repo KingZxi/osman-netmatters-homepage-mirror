@@ -183,7 +183,7 @@ Card:
   }
 
   //Medium layout cards: 3 rows with 1 card each, 2 rows with 2 cards each.
-  @include mq(medium) {
+  @include mq(large) {
     .card:nth-child(4) {
       flex: 1 0 calc(50% - 30px); //Flex calc value will always be subtracted by the amount of gap applied to the cards
     }
@@ -199,7 +199,7 @@ Card:
   }
 
   //Large layout cards, 1 row with 3 cards, 1 row with 4 cards.
-  @include mq(large) {
+  @include mq(x-large) {
     .card:nth-child(1) {
       flex: 1 0 calc(33% - 30px);
     }
