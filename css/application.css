@@ -2760,7 +2760,7 @@ Footer:
   width: 250px;
 }
 .footer-logo img {
-  width: 150%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .footer-logo img {

@@ -125,7 +125,7 @@ Banner:
 @include mq(large) {
   .banner {
     background: url("/img/netmatter02.jpg"),
-      linear-gradient(270deg, transparent 25%, #000);
+    linear-gradient(270deg, transparent 25%, #000);
     background-position: center;
     background-size: cover;
     z-index: 3;

@@ -26,7 +26,6 @@ Footer:
     list-style: none;
     font-size: 0.8125rem;
     line-height: 1.375rem;
-
     a {
       color: $white;
       text-decoration: none;
@@ -139,7 +138,7 @@ Footer:
   width: 250px;
 
   img {
-    width: 150%;
+    width: 100%;
 
     @include mq(medium) {
       width: 100%;
