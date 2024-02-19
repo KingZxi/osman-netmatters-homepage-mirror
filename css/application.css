@@ -1216,7 +1216,6 @@ Navigation:
 .nav__item {
   width: 40%;
   max-width: 40%;
-  padding: 0 25px;
   align-items: center;
   line-height: 1;
 }
@@ -1421,7 +1420,7 @@ Navigation:
 .triangle {
   display: none;
   position: absolute;
-  left: -21%;
+  left: 0%;
   top: 100%;
   width: 0px;
   height: 0px;
@@ -1433,8 +1432,8 @@ Navigation:
 }
 @media screen and (max-width: 1259px) {
   .triangle {
-    border-width: 0 62px 40px 62px;
-    left: -33%;
+    border-width: 0 67px 40px 67px;
+    left: 0%;
   }
 }
 
