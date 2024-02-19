@@ -182,6 +182,21 @@ Card:
     flex: 1 0 100%;
   }
 
+  @include mq(medium) {
+    .card:nth-child(4) {
+      flex: 1 0 calc(50% - 30px); //Flex calc value will always be subtracted by the amount of gap applied to the cards
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(50% - 30px);
+    }
+    .card:nth-child(6) {
+      flex: 1 0 calc(50% - 30px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(50% - 30px);
+    }
+  }
+
   //Medium layout cards: 3 rows with 1 card each, 2 rows with 2 cards each.
   @include mq(large) {
     .card:nth-child(4) {

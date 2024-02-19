@@ -2095,6 +2095,20 @@ Card:
 .card-flex .card {
   flex: 1 0 100%;
 }
+@media screen and (min-width: 768px) {
+  .card-flex .card:nth-child(4) {
+    flex: 1 0 calc(50% - 30px);
+  }
+  .card-flex .card:nth-child(5) {
+    flex: 1 0 calc(50% - 30px);
+  }
+  .card-flex .card:nth-child(6) {
+    flex: 1 0 calc(50% - 30px);
+  }
+  .card-flex .card:nth-child(7) {
+    flex: 1 0 calc(50% - 30px);
+  }
+}
 @media screen and (min-width: 992px) {
   .card-flex .card:nth-child(4) {
     flex: 1 0 calc(50% - 30px);
