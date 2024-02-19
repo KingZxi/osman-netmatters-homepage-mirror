@@ -637,6 +637,12 @@ Base:
 Base Styles:
 
 ------------------------------------------------------ */
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
 h1,
 .h1 {
   font-family: inherit;
@@ -699,12 +705,6 @@ h1 {
 .h3,
 h3 {
   font-size: 1.625rem;
-}
-
-body {
-  font-family: Poppins, sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.4px;
 }
 
 p {
@@ -784,16 +784,16 @@ Placeholders:
   content: "\ea3c";
 }
 
-.news .header-row-positioning {
+.news .section-heading-positioning, .service .section-heading-positioning {
   display: flex;
   justify-content: space-between;
 }
 
-.news .hide {
+.news .small-hide {
   margin-top: 10px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
-  .news .hide {
+  .news .small-hide {
     display: none;
   }
 }
@@ -1850,15 +1850,11 @@ Card:
   font-size: 2.7rem;
   text-align: left;
 }
-.service .header-row-positioning {
-  display: flex;
-  justify-content: space-between;
-}
-.service .hide {
+.service .small-hide {
   margin-top: 10px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
-  .service .hide {
+  .service .small-hide {
     display: none;
   }
 }

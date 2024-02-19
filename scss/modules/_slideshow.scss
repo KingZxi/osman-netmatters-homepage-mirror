@@ -12,13 +12,12 @@ Slide show section:
   object-fit: fill;
   align-items: center;
 
-  //Each individal slikdeshow item:
+  //Each individal slideshow item:
   @include s-e("item") {
     display: flex;
     position: relative;
     height: 70px;
     @include s-e("img") {
-      //max-height: auto; //(Apparently this doesn't do anything)
       max-height: 100%;
       width: auto;
       align-self: center;

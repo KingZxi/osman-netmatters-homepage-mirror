@@ -110,6 +110,7 @@ Navigation:
   }
 }
 
+//Sub-menu refers to the menu that appears when covering over a navigation item
 .sub-menu {
   display: none;
   box-sizing: border-box;
@@ -143,6 +144,7 @@ Navigation:
       align-items: center;
     }
   }
+
   @include s-e(inner) {
     position: relative;
     width: 1250px;

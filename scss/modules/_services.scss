@@ -16,12 +16,11 @@ Card:
     text-align: left;
   }
 
-  .header-row-positioning {
-    display: flex;
-    justify-content: space-between;
+  .section-heading-positioning {
+    @extend %section-heading-positioning;
   }
 
-  .hide {
+  .small-hide {
     margin-top: 10px;
 
     @include mq(small) {
