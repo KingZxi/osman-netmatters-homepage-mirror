@@ -185,6 +185,7 @@ Card:
     flex: 1 0 calc(100% - 30px);
   }
 
+  //3 cards on their own row, two on separate rows onwards
   @include mq(medium) {
     .card:nth-child(4) {
       flex: 1 0 calc(50% - 30px); //Flex calc value will always be subtracted by the amount of gap applied to the cards
@@ -240,29 +241,30 @@ Card:
       flex: 1 0 calc(25% - 30px);
     }
   }
-}
 
-@include mq(m-landscape) {
-  .card:nth-child(1) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(2) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(3) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(4) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(5) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(6) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(7) {
-    flex: 1 0 calc(25% - 30px);
+  //On most landscape views, we get 3 cards on one row, 4 on the second
+  @include mq(m-landscape) {
+    .card:nth-child(1) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(2) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(3) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(4) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(6) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(25% - 30px);
+    }
   }
 }
 

@@ -2163,30 +2163,30 @@ Card:
     flex: 1 0 calc(25% - 30px);
   }
 }
-
 @media screen and (orientation: landscape) and (min-width: 991px) {
-  .card:nth-child(1) {
+  .card-flex .card:nth-child(1) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card:nth-child(2) {
+  .card-flex .card:nth-child(2) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card:nth-child(3) {
+  .card-flex .card:nth-child(3) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card:nth-child(4) {
+  .card-flex .card:nth-child(4) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card:nth-child(5) {
+  .card-flex .card:nth-child(5) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card:nth-child(6) {
+  .card-flex .card:nth-child(6) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card:nth-child(7) {
+  .card-flex .card:nth-child(7) {
     flex: 1 0 calc(25% - 30px);
   }
 }
+
 .card-btn-container {
   margin-top: auto;
 }
