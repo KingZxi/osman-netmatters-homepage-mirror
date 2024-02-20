@@ -36,12 +36,14 @@ Placeholders:
   content: "\ea3c";
 }
 
-%header-row-positioning {
+//Used in news and service sections for positioning the view our work links to the right of the heading
+%section-heading-positioning {
   display: flex;
   justify-content: space-between;
 }
 
-%hide {
+//Used for hiding from mobile viewports
+%small-hide {
   margin-top: 10px;
 
   @include mq(small) {
@@ -79,6 +81,7 @@ Placeholders:
   }
 }
 
+//This placeholder disables an item from being used
 %disabled {
   pointer-events: none;
 }

@@ -16,12 +16,11 @@ Card:
     text-align: left;
   }
 
-  .header-row-positioning {
-    display: flex;
-    justify-content: space-between;
+  .section-heading-positioning {
+    @extend %section-heading-positioning;
   }
 
-  .hide {
+  .small-hide {
     margin-top: 10px;
 
     @include mq(small) {
@@ -75,7 +74,6 @@ Card:
 //This is applied to each card container
 .card {
   display: block;
-  margin-top: 30px;
   padding: 30px;
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -176,10 +174,31 @@ Card:
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 30px;
 
   //Basic mobile layout cards
   .card {
     flex: 1 0 100%;
+  }
+
+  @include mq(small) {
+    flex: 1 0 calc(100% - 30px);
+  }
+
+  //3 cards on their own row, two on separate rows onwards
+  @include mq(medium) {
+    .card:nth-child(4) {
+      flex: 1 0 calc(50% - 30px); //Flex calc value will always be subtracted by the amount of gap applied to the cards
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(50% - 30px);
+    }
+    .card:nth-child(6) {
+      flex: 1 0 calc(50% - 30px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(50% - 30px);
+    }
   }
 
   //Medium layout cards: 3 rows with 1 card each, 2 rows with 2 cards each.
@@ -222,29 +241,30 @@ Card:
       flex: 1 0 calc(25% - 30px);
     }
   }
-}
 
-@include mq(landscape) {
-  .card:nth-child(1) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(2) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(3) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card:nth-child(4) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(5) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(6) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card:nth-child(7) {
-    flex: 1 0 calc(25% - 30px);
+  //On most landscape views, we get 3 cards on one row, 4 on the second
+  @include mq(m-landscape) {
+    .card:nth-child(1) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(2) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(3) {
+      flex: 1 0 calc(33% - 30px);
+    }
+    .card:nth-child(4) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(5) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(6) {
+      flex: 1 0 calc(25% - 30px);
+    }
+    .card:nth-child(7) {
+      flex: 1 0 calc(25% - 30px);
+    }
   }
 }
 

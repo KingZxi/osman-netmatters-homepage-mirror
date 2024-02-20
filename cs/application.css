@@ -2107,11 +2107,6 @@ Card:
 .card-flex .card {
   flex: 1 0 100%;
 }
-@media (min-width: 0px) and (max-width: 767px) {
-  .card-flex {
-    flex: 1 0 calc(100% - 30px);
-  }
-}
 @media screen and (min-width: 768px) {
   .card-flex .card:nth-child(4) {
     flex: 1 0 calc(50% - 30px);
@@ -2163,30 +2158,30 @@ Card:
     flex: 1 0 calc(25% - 30px);
   }
 }
-@media screen and (orientation: landscape) and (min-width: 991px) {
-  .card-flex .card:nth-child(1) {
+
+@media screen and (orientation: landscape) {
+  .card:nth-child(1) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card-flex .card:nth-child(2) {
+  .card:nth-child(2) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card-flex .card:nth-child(3) {
+  .card:nth-child(3) {
     flex: 1 0 calc(33% - 30px);
   }
-  .card-flex .card:nth-child(4) {
+  .card:nth-child(4) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card-flex .card:nth-child(5) {
+  .card:nth-child(5) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card-flex .card:nth-child(6) {
+  .card:nth-child(6) {
     flex: 1 0 calc(25% - 30px);
   }
-  .card-flex .card:nth-child(7) {
+  .card:nth-child(7) {
     flex: 1 0 calc(25% - 30px);
   }
 }
-
 .card-btn-container {
   margin-top: auto;
 }

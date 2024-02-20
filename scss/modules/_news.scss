@@ -33,12 +33,12 @@ Latest news section:
     color: $tuna;
   }
 
-  .header-row-positioning {
-    @extend %header-row-positioning;
+  .section-heading-positioning {
+    @extend %section-heading-positioning;
   }
 
-  .hide {
-    @extend %hide;
+  .small-hide {
+    @extend %small-hide;
   }
 
   .underline-hover {

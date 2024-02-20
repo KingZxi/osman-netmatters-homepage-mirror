@@ -34,9 +34,14 @@ Navigation:
   &__item {
     width: 40%;
     max-width: 40%;
-    padding: 0 25px;
+    // padding: 0 25px;
     align-items: center;
     line-height: 1;
+
+    // @include mq(medium) {
+    //   flex-basis: 50px;
+    //   background-color: red;
+    // }
 
     &:hover {
       [class*="nav-icon"] {
@@ -105,6 +110,7 @@ Navigation:
   }
 }
 
+//Sub-menu refers to the menu that appears when covering over a navigation item
 .sub-menu {
   display: none;
   box-sizing: border-box;
@@ -138,6 +144,7 @@ Navigation:
       align-items: center;
     }
   }
+
   @include s-e(inner) {
     position: relative;
     width: 1250px;
@@ -171,7 +178,7 @@ Navigation:
 .triangle {
   display: none;
   position: absolute;
-  left: -21%;
+  left: -0%;
   top: 100%;
   width: 0px;
   height: 0px;
@@ -182,7 +189,7 @@ Navigation:
   z-index: 2000;
 
   @media screen and (max-width: 1259px) {
-    border-width: 0 62px 40px 62px;
-    left: -33%;
+    border-width: 0 67px 40px 67px;
+    left: -0%;
   }
 }
