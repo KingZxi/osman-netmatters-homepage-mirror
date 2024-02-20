@@ -2107,11 +2107,6 @@ Card:
 .card-flex .card {
   flex: 1 0 100%;
 }
-@media (min-width: 0px) and (max-width: 767px) {
-  .card-flex {
-    flex: 1 0 calc(100% - 30px);
-  }
-}
 @media screen and (min-width: 768px) {
   .card-flex .card:nth-child(4) {
     flex: 1 0 calc(50% - 30px);
@@ -2164,7 +2159,7 @@ Card:
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 991px) {
+@media screen and (orientation: landscape) {
   .card:nth-child(1) {
     flex: 1 0 calc(33% - 30px);
   }
