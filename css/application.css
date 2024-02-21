@@ -1063,7 +1063,7 @@ Header:
   width: 65px;
   height: 35px;
   cursor: pointer;
-  padding: 10px 15px 5px 15px;
+  padding: 5px 16px 5px 16px;
   height: 56px;
   border: none;
   border: 1px;
@@ -1077,7 +1077,7 @@ Header:
   content: "";
   display: block;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: #fff;
   margin: 6px 0px;
   transition: 0.4s;
