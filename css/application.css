@@ -2368,6 +2368,14 @@ Latest news section:
   flex: 1 0 calc(100% - 20px);
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .news .card-flex .news__card {
+    flex: 1 0 calc(50% - 20px);
+  }
+  .news .card-flex .news__card:nth-child(3) {
+    display: none;
+  }
+}
 @media screen and (min-width: 992px) {
   .news .card-flex .news__card {
     flex: 1 0 calc(50% - 20px);

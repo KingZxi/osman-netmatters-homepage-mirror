@@ -59,6 +59,16 @@ Latest news section:
       cursor: pointer;
     }
 
+    @include mq(medium) {
+      .news__card {
+        flex: 1 0 calc(50% - 20px);
+      }
+
+      .news__card:nth-child(3) {
+        display: none;
+      }
+    }
+
     //Larger viewports have 2 column layout
     @include mq(large) {
       .news__card {
