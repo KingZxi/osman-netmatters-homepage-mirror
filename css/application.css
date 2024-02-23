@@ -2140,29 +2140,6 @@ Card:
     flex: 1 0 calc(50% - 30px);
   }
 }
-@media screen and (min-width: 1260px) {
-  .card-flex .card:nth-child(1) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card-flex .card:nth-child(2) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card-flex .card:nth-child(3) {
-    flex: 1 0 calc(33% - 30px);
-  }
-  .card-flex .card:nth-child(4) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card-flex .card:nth-child(5) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card-flex .card:nth-child(6) {
-    flex: 1 0 calc(25% - 30px);
-  }
-  .card-flex .card:nth-child(7) {
-    flex: 1 0 calc(25% - 30px);
-  }
-}
 @media screen and (orientation: landscape) and (min-width: 991px) {
   .card-flex .card:nth-child(1) {
     flex: 1 0 calc(33% - 30px);
@@ -2184,6 +2161,29 @@ Card:
   }
   .card-flex .card:nth-child(7) {
     flex: 1 0 calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1260px) {
+  .card-flex .card:nth-child(1) {
+    flex: 1 0 calc(33% - 30px);
+  }
+  .card-flex .card:nth-child(2) {
+    flex: 1 0 calc(33% - 30px);
+  }
+  .card-flex .card:nth-child(3) {
+    flex: 1 0 calc(33% - 30px);
+  }
+  .card-flex .card:nth-child(4) {
+    flex: 1 0 calc(25% - 30px);
+  }
+  .card-flex .card:nth-child(5) {
+    flex: 1 0 calc(25% - 30px);
+  }
+  .card-flex .card:nth-child(6) {
+    flex: 1 0 calc(25% - 30px);
+  }
+  .card-flex .card:nth-child(7) {
+    flex: 1 0 calc(25% - 30px);
   }
 }
 
