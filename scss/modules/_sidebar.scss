@@ -3,3 +3,53 @@
 Sidebar:
 
 ------------------------------------------------------ */
+
+.sidebar {
+  position: fixed;
+  z-index: 10000;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: $tuna;
+  color: $white;
+  transition: right 0.3s ease-in-out;
+
+  ul {
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  li {
+    display: block;
+    padding: 18px 60px 18px 20px;
+    list-style-type: none;
+    font-size: 0.875rem;
+    background-color: #262834;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  }
+
+  ul li:not(.sidebar__heading)::before {
+    content: "» ";
+    padding-right: 15px !important;
+  }
+
+  @include s-e("heading") {
+    padding: 20px 20px !important;
+    font-size: 1rem !important;
+    background-color: #333645 !important;
+    line-height: 1rem;
+    h4 {
+      font-weight: 400;
+    }
+  }
+}
+
+.sidebar-reveal {
+  right: 0;
+}
+
+.sidebar-push {
+  position: relative;
+  left: -350px;
+  transition: right 0.3s ease-in-out;
+}
