@@ -13,12 +13,20 @@ Sidebar:
   right: -100%;
   background-color: $tuna;
   color: $white;
-  transition: right 0.3s ease-in-out;
+  text-transform: uppercase;
+  transition: all 0.5s;
   overflow: auto;
 
   ul {
     padding-left: 0px;
     margin: 0;
+
+    &:hover {
+      .sidebar__heading {
+        background-color: hsla(0, 0%, 100%, 0.05) !important;
+      }
+      cursor: pointer;
+    }
   }
 
   li {
@@ -68,11 +76,12 @@ Sidebar:
 .sidebar-push {
   position: relative;
   left: -275px;
-  transition: 0.3s;
 }
 
 .main-content {
-  transition: 0.3s;
+  overflow: hidden;
+  left: 0;
+  transition: all 0.5s;
 }
 
 @include mq(large) {

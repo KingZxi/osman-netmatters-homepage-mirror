@@ -1471,12 +1471,19 @@ Sidebar:
   right: -100%;
   background-color: #333645;
   color: #fff;
-  transition: right 0.3s ease-in-out;
+  text-transform: uppercase;
+  transition: all 0.5s;
   overflow: auto;
 }
 .sidebar ul {
   padding-left: 0px;
   margin: 0;
+}
+.sidebar ul:hover {
+  cursor: pointer;
+}
+.sidebar ul:hover .sidebar__heading {
+  background-color: hsla(0, 0%, 100%, 0.05) !important;
 }
 .sidebar li {
   display: block;
@@ -1519,11 +1526,12 @@ Sidebar:
 .sidebar-push {
   position: relative;
   left: -275px;
-  transition: 0.3s;
 }
 
 .main-content {
-  transition: 0.3s;
+  overflow: hidden;
+  left: 0;
+  transition: all 0.5s;
 }
 
 @media screen and (min-width: 992px) {
