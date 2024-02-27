@@ -10,78 +10,177 @@ Sidebar:
   height: 100vh;
   width: 275px;
   top: 0;
-  right: -100%;
+  right: -350px; //This value appears to work the best in terms of hiding the sidebar just enough
   background-color: $tuna;
   color: $white;
+  font-size: 1.125rem;
+  font-weight: 400;
   text-transform: uppercase;
   transition: all 0.5s;
   overflow: auto;
 
-  ul {
-    padding-left: 0px;
-    margin: 0;
-
-    &:hover {
-      .sidebar__heading {
-        background-color: hsla(0, 0%, 100%, 0.05) !important;
-      }
-      cursor: pointer;
-    }
-  }
-
-  li {
+  @include s-e("top") {
     display: block;
-    padding: 17.5px 20px 17.5px 20px;
-    background-color: #262834;
-    border-top: 1px solid hsla(0, 0%, 100%, 0.05);
-    list-style-type: none;
-    font-size: 0.875rem;
-  }
+    padding: 21px;
 
-  ul li:not(.sidebar__heading)::before {
-    content: "» ";
-    padding-right: 15px !important;
-  }
+    @include mq(large) {
+      display: none;
+    }
 
-  @include s-e("heading") {
-    padding: 20px 20px !important;
-    background-color: #333645 !important;
-    line-height: 1rem;
-    font-size: 1rem !important;
-    h4 {
-      font-weight: 400;
+    @include s-e("card") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+      padding: 19px 0 18px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid hsla(0, 0%, 100%, 0.1);
+      cursor: pointer;
+
+      &:hover {
+        background-color: hsla(0, 0%, 100%, 0.05);
+      }
+    }
+
+    .s-bespoke {
+      @include side-type(bespoke);
+    }
+    .s-it {
+      @include side-type(it);
+    }
+    .s-marketting {
+      @include side-type(marketting);
+    }
+    .s-telecoms {
+      @include side-type(telecoms);
+    }
+    .s-web {
+      @include side-type(web);
+    }
+    .s-cyber {
+      @include side-type(cyber);
+    }
+    .s-developer {
+      @include side-type(developer);
+    }
+
+    span {
+      font-family: icomoon !important;
+      display: block;
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 1.438rem;
+    }
+
+    small {
+      font-size: 0.625rem;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: block;
+      padding: 10px;
+      background-color: #262834;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+      list-style-type: none;
+      text-align: center;
+      font-size: 1rem;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
     }
   }
 
-  @include s-e("section") {
-    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  }
+  @include s-e("bottom") {
+    @include s-e("section") {
+      border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      @include s-e("heading") {
+        padding: 20px 20px !important;
+        background-color: #333645 !important;
+        line-height: 1rem;
+        font-size: 1rem !important;
+        h4 {
+          font-weight: 400;
+        }
+      }
 
-  @include s-m("inner") {
-    border-top: 1px solid rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  }
+      ul {
+        padding-left: 0px;
+        margin: 0;
+        &:hover {
+          .sidebar__bottom__section__heading {
+            background-color: hsla(0, 0%, 100%, 0.05) !important;
+          }
+          cursor: pointer;
+        }
+      }
 
-  a {
-    text-decoration: none;
-    color: $white;
-  }
-}
+      li {
+        display: block;
+        padding: 17.5px 20px 17.5px 20px;
+        background-color: #262834;
+        border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+        list-style-type: none;
+        font-size: 0.875rem;
+      }
 
-.sidebar-reveal {
-  right: 0;
+      ul li:not(.sidebar__bottom__section__heading)::before {
+        content: "» ";
+        padding-right: 15px !important;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+
+    @include s-m("inner") {
+      border-top: 1px solid rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    }
+  }
 }
 
 .sidebar-push {
   position: relative;
-  left: -275px;
 }
-
+.sidebar-reveal {
+  right: 0;
+}
 .main-content {
   overflow: hidden;
   left: 0;
   transition: all 0.5s;
+}
+
+@include mq(medium) {
+  .sidebar-push {
+    position: relative;
+    left: -275px;
+  }
+  .sidebar {
+    width: 275px;
+  }
+}
+
+@include mq(small) {
+  .sidebar-push {
+    position: relative;
+    left: -275px;
+  }
+  .sidebar {
+    width: 275px;
+  }
 }
 
 @include mq(large) {
