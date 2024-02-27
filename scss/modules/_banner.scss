@@ -9,6 +9,7 @@ Banner:
   height: 550px;
 }
 
+//Selects the container for the slick-dots
 .slick-dots {
   display: none;
   gap: 10px;
@@ -38,6 +39,7 @@ Banner:
   }
 }
 
+//Selects the active slick dot item
 .slick-active {
   position: relative;
   span:after {
