@@ -1770,10 +1770,11 @@ Banner:
 
 .slick-dots {
   display: none;
+  gap: 10px;
   flex-direction: row;
-  position: absolute;
-  top: 80%;
-  left: 50%;
+  position: relative;
+  margin-left: 46.5vw;
+  margin-top: -50px;
   padding: 0;
   background-color: transparent;
   color: white;
@@ -1792,13 +1793,16 @@ Banner:
   }
 }
 
+.slick-active {
+  position: relative;
+}
 .slick-active span:after {
   content: "O";
 }
 .slick-active span {
-  position: relative;
-  right: 100%;
-  top: -35px;
+  position: absolute;
+  right: 145%;
+  top: -20%;
   font-size: 30px;
 }
 
