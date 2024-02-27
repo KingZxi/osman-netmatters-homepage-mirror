@@ -9,6 +9,46 @@ Banner:
   height: 550px;
 }
 
+.slick-dots {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+
+  button {
+    visibility: hidden;
+    background-color: transparent;
+  }
+
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+
+  &:hover {
+  }
+
+  @include mq(medium) {
+    display: flex;
+  }
+}
+
+.slick-active {
+  span:after {
+    content: "O";
+  }
+  span {
+    position: relative;
+    right: 100%;
+    top: -35px;
+    font-size: 30px;
+  }
+}
+
 //This class is used on the banner divison
 .banner {
   position: relative;
@@ -161,5 +201,29 @@ Banner:
     .h1 {
       font-size: 4rem;
     }
+  }
+}
+
+@at-root {
+  .b-bespoke {
+    @include banner-type(bespoke);
+  }
+  .b-it {
+    @include banner-type(it);
+  }
+  .b-marketting {
+    @include banner-type(marketting);
+  }
+  .b-telecoms {
+    @include banner-type(telecoms);
+  }
+  .b-web {
+    @include banner-type(web);
+  }
+  .b-cyber {
+    @include banner-type(cyber);
+  }
+  .b-developer {
+    @include banner-type(developer);
   }
 }

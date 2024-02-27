@@ -1768,6 +1768,40 @@ Banner:
   height: 550px;
 }
 
+.slick-dots {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.slick-dots button {
+  visibility: hidden;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .slick-dots {
+    display: flex;
+  }
+}
+
+.slick-active span:after {
+  content: "O";
+}
+.slick-active span {
+  position: relative;
+  right: 100%;
+  top: -35px;
+  font-size: 30px;
+}
+
 .banner {
   position: relative;
   display: flex;
@@ -1893,6 +1927,125 @@ Banner:
     font-size: 4rem;
   }
 }
+.b-bespoke .banner {
+  background-image: url("/img/netmatter05.jpg");
+}
+.b-bespoke .banner .btn {
+  background-color: #67809f;
+  border-color: #67809f;
+}
+.b-bespoke .banner .btn:hover {
+  background-color: #526781;
+  border-color: #526781;
+}
+@media screen and (min-width: 992px) {
+  .b-bespoke .banner {
+    background-image: url("/img/netmatter05.jpg"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-it .banner {
+  background-image: url("/img/netmatter06.png");
+}
+.b-it .banner .btn {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+.b-it .banner .btn:hover {
+  background-color: #286abd;
+  border-color: #286abd;
+}
+@media screen and (min-width: 992px) {
+  .b-it .banner {
+    background-image: url("/img/netmatter06.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-marketting .banner {
+  background-image: url("/img/netmatter07.png");
+}
+.b-marketting .banner .btn {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+.b-marketting .banner .btn:hover {
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+@media screen and (min-width: 992px) {
+  .b-marketting .banner {
+    background-image: url("/img/netmatter07.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-telecoms .banner {
+  background-image: url("/img/netmatter08.png");
+}
+.b-telecoms .banner .btn {
+  background-color: #d64541;
+  border-color: #d64541;
+}
+.b-telecoms .banner .btn:hover {
+  background-color: #bc2c28;
+  border-color: #bc2c28;
+}
+@media screen and (min-width: 992px) {
+  .b-telecoms .banner {
+    background-image: url("/img/netmatter08.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-web .banner {
+  background-image: url("/img/netmatter02.jpg");
+}
+.b-web .banner .btn {
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.b-web .banner .btn:hover {
+  background-color: #79539a;
+  border-color: #79539a;
+}
+@media screen and (min-width: 992px) {
+  .b-web .banner {
+    background-image: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-cyber .banner {
+  background-image: url("/img/netmatter03.png");
+}
+.b-cyber .banner .btn {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+.b-cyber .banner .btn:hover {
+  background-color: #de093f;
+  border-color: #de093f;
+}
+@media screen and (min-width: 992px) {
+  .b-cyber .banner {
+    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-developer .banner {
+  background-image: url("/img/netmatter03.png");
+}
+.b-developer .banner .btn {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+.b-developer .banner .btn:hover {
+  background-color: #de093f;
+  border-color: #de093f;
+}
+@media screen and (min-width: 992px) {
+  .b-developer .banner {
+    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
 /* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
