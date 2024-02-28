@@ -343,15 +343,6 @@ Header:
 }
 
 //Sticky header
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 
 .sticky-header {
   position: fixed;
@@ -360,5 +351,5 @@ Header:
   width: 100%;
   background-color: $white;
   transition: 0.4s;
-  animation: slideDown 0.4s ease-in-out forwards;
+  animation: 0.4s ease-in-out forwards;
 }

@@ -1150,14 +1150,6 @@ Header:
   background-color: #7e808a;
 }
 
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .sticky-header {
   position: fixed;
   top: 0;
@@ -1165,7 +1157,7 @@ Header:
   width: 100%;
   background-color: #fff;
   transition: 0.4s;
-  animation: slideDown 0.4s ease-in-out forwards;
+  animation: 0.4s ease-in-out forwards;
 }
 
 /* -----------------------------------------------------

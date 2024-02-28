@@ -22,7 +22,7 @@ document.addEventListener("mousemove", (e) => {
   ) {
     clone.style.top = "0";
   } else {
-    clone.style.top = "-300px";
+    clone.style.top = "-40rem";
     document.removeEventListener("scroll", stickyHeader);
   }
 });
