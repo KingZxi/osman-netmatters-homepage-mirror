@@ -1098,7 +1098,7 @@ Header:
 }
 .header .hamburger .open .bar {
   margin: 0px 0px;
-  transform: rotate(-45deg);
+  transform: translateY(3px) rotate(-45deg);
 }
 .header .btn {
   height: 56px;
