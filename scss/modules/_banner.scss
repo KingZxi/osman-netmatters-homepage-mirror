@@ -3,56 +3,56 @@
 Banner:
 
 ------------------------------------------------------ */
+.slick-banner {
+  // Limits size of slick carousel
+  .slick-list {
+    height: 550px;
+  }
 
-// Limits size of slick carousel
-.slick-list {
-  height: 550px;
-}
-
-//Selects the container for the slick-dots
-.slick-dots {
-  display: none;
-  gap: 10px;
-  flex-direction: row;
-  position: relative;
-  margin-left: 46.5vw;
-  margin-top: -50px;
-  padding: 0;
-  background-color: transparent;
-  color: white;
-  font-size: 25px;
-
-  button {
-    visibility: hidden;
+  //Selects the container for the slick-dots
+  .slick-dots {
+    display: none;
+    gap: 10px;
+    flex-direction: row;
+    position: relative;
+    margin-left: 46.5vw;
+    margin-top: -50px;
+    padding: 0;
     background-color: transparent;
+    color: white;
+    font-size: 25px;
+
+    button {
+      visibility: hidden;
+      background-color: transparent;
+    }
+
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+
+    &:hover {
+    }
+
+    @include mq(medium) {
+      display: flex;
+    }
   }
 
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-
-  &:hover {
-  }
-
-  @include mq(medium) {
-    display: flex;
+  //Selects the active slick dot item
+  .slick-active {
+    position: relative;
+    span:after {
+      content: "O";
+    }
+    span {
+      position: absolute;
+      right: 145%;
+      top: -20%;
+      font-size: 30px;
+    }
   }
 }
-
-//Selects the active slick dot item
-.slick-active {
-  position: relative;
-  span:after {
-    content: "O";
-  }
-  span {
-    position: absolute;
-    right: 145%;
-    top: -20%;
-    font-size: 30px;
-  }
-}
-
 //This class is used on the banner divison
 .banner {
   position: relative;

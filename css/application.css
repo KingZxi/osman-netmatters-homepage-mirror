@@ -1758,11 +1758,10 @@ Footer styles:
 Banner:
 
 ------------------------------------------------------ */
-.slick-list {
+.slick-banner .slick-list {
   height: 550px;
 }
-
-.slick-dots {
+.slick-banner .slick-dots {
   display: none;
   gap: 10px;
   flex-direction: row;
@@ -1777,23 +1776,22 @@ Banner:
   width: 15px;
   border-radius: 50%;
 }
-.slick-dots button {
+.slick-banner .slick-dots button {
   visibility: hidden;
   background-color: transparent;
 }
 @media screen and (min-width: 768px) {
-  .slick-dots {
+  .slick-banner .slick-dots {
     display: flex;
   }
 }
-
-.slick-active {
+.slick-banner .slick-active {
   position: relative;
 }
-.slick-active span:after {
+.slick-banner .slick-active span:after {
   content: "O";
 }
-.slick-active span {
+.slick-banner .slick-active span {
   position: absolute;
   right: 145%;
   top: -20%;
@@ -2052,6 +2050,10 @@ Footer styles:
 Slide show section:
 
 ------------------------------------------------------ */
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
 .slideshow {
   display: flex;
   gap: 90px;
@@ -2059,15 +2061,20 @@ Slide show section:
   object-fit: fill;
   align-items: center;
 }
+.slideshow .slick-list {
+  height: 100px;
+}
 .slideshow__item {
   display: flex;
   position: relative;
   height: 70px;
+  justify-content: center;
 }
 .slideshow__item__img {
   max-height: 100%;
   width: auto;
   align-self: center;
+  justify-self: center;
   filter: grayscale(1);
 }
 .slideshow__item__description {

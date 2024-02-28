@@ -5,6 +5,11 @@ Slide show section:
 ------------------------------------------------------ */
 
 //Slideshow section container
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
 .slideshow {
   display: flex;
   gap: 90px;
@@ -12,15 +17,22 @@ Slide show section:
   object-fit: fill;
   align-items: center;
 
+  .slick-list {
+    height: 100px;
+  }
+
   //Each individal slideshow item:
   @include s-e("item") {
     display: flex;
     position: relative;
     height: 70px;
+    justify-content: center;
+
     @include s-e("img") {
       max-height: 100%;
       width: auto;
       align-self: center;
+      justify-self: center;
       filter: grayscale(1);
     }
 
