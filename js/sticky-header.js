@@ -9,7 +9,7 @@ let clone = header.cloneNode(true);
 test.appendChild(clone);
 
 //The clone is hidde bby default, it acts as the sticky header
-clone.style.display = "none";
+clone.classList.add("sticky-header");
 
 document.addEventListener("mousemove", (e) => {
   //clientY is used to determine where the mouse is to drop the header, scrollY determines how far the user is already scrolled down
@@ -20,12 +20,10 @@ document.addEventListener("mousemove", (e) => {
     (e.clientY < 300 && window.scrollY > 300) ||
     (e.target.closest(".sub-menu") && window.scrollY > 300)
   ) {
-    clone.classList.add("sticky-header");
-    clone.style.display = "inline-block";
+    clone.style.top = "0";
   } else {
+    clone.style.top = "-300px";
     document.removeEventListener("scroll", stickyHeader);
-    clone.classList.remove("sticky-header");
-    clone.style.display = "none";
   }
 });
 
