@@ -1,3 +1,4 @@
+/*
 $(".slideshow").slick({
   slidesToShow: 6,
   slidesToScroll: 1,
@@ -28,4 +29,18 @@ $(".slideshow").slick({
       },
     },
   ],
+});
+*/
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 100,
+  mouseDrag: false,
+  touchDrag: false,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplaySpeed: 200,
+  autoplayHoverPause: true,
+  autoWidth: true,
+  autoHeight: true,
 });

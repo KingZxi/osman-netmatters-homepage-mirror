@@ -6,9 +6,9 @@ Slide show section:
 
 //Slideshow section container
 
-.slick-initialized .slick-slide {
-  display: flex;
-}
+// .slick-initialized .slick-slide {
+//   display: flex;
+// }
 
 .slideshow {
   display: flex;
@@ -16,10 +16,6 @@ Slide show section:
   overflow-x: clip;
   object-fit: fill;
   align-items: center;
-
-  .slick-list {
-    height: 100px;
-  }
 
   //Each individal slideshow item:
   @include s-e("item") {

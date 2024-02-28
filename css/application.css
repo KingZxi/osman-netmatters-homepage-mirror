@@ -2050,19 +2050,12 @@ Footer styles:
 Slide show section:
 
 ------------------------------------------------------ */
-.slick-initialized .slick-slide {
-  display: flex;
-}
-
 .slideshow {
   display: flex;
   gap: 90px;
   overflow-x: clip;
   object-fit: fill;
   align-items: center;
-}
-.slideshow .slick-list {
-  height: 100px;
 }
 .slideshow__item {
   display: flex;
