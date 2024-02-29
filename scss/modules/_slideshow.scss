@@ -70,7 +70,7 @@ Slide show section:
   padding: 20px;
   margin: 0 auto 25px;
   font-size: 16px;
-  background-color: $tuna;
+  background-color: $tuna !important  ;
   max-width: 280px;
   text-align: center;
   color: white;
@@ -143,6 +143,9 @@ Slide show section:
     .developer {
       @include card-type(developer);
     }
+  }
+
+  &:hover {
   }
 }
 

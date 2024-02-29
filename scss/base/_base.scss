@@ -78,3 +78,21 @@ input[type="email"]:focus {
   border-radius: 3px;
   white-space: normal;
 }
+
+.dimmed::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dimmed::after {
+  opacity: 1;
+}

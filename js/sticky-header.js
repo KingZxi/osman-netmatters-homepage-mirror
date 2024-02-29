@@ -9,6 +9,7 @@ let clone = header.cloneNode(true);
 test.appendChild(clone);
 
 //The clone is hidde bby default, it acts as the sticky header
+clone.style.top = "-40rem";
 clone.classList.add("sticky-header");
 
 document.addEventListener("mousemove", (e) => {

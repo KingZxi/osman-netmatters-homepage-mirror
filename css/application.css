@@ -742,6 +742,24 @@ input[type=email]:focus {
   white-space: normal;
 }
 
+.dimmed::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dimmed::after {
+  opacity: 1;
+}
+
 /* ------------------------------------------------------
 
 Layout import:
@@ -1762,18 +1780,16 @@ Banner:
   height: 550px;
 }
 .slick-banner .slick-dots {
-  display: none;
+  display: flex;
+  justify-content: center;
   gap: 10px;
   flex-direction: row;
   position: relative;
-  margin-left: 46.5vw;
   margin-top: -50px;
-  padding: 0;
   background-color: transparent;
   color: white;
   font-size: 25px;
   height: 15px;
-  width: 15px;
   border-radius: 50%;
 }
 .slick-banner .slick-dots button {
@@ -2098,7 +2114,7 @@ Slide show section:
   padding: 20px;
   margin: 0 auto 25px;
   font-size: 16px;
-  background-color: #333645;
+  background-color: #333645 !important;
   max-width: 280px;
   text-align: center;
   color: white;
