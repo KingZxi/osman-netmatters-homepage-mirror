@@ -370,8 +370,8 @@ Base:
 ------------------------------------------------------ */
 @font-face {
   font-family: "icomoon";
-  src: url("/fonts/icomoon.eot?d18ym6");
-  src: url("/fonts/icomoon.eot?d18ym6#iefix") format("embedded-opentype"), url("/fonts/icomoon.ttf?d18ym6") format("truetype"), url("/fonts/icomoon.woff?d18ym6") format("woff"), url("/fonts/icomoon.svg?d18ym6#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?d18ym6");
+  src: url("../fonts/icomoon.eot?d18ym6#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?d18ym6") format("truetype"), url("../fonts/icomoon.woff?d18ym6") format("woff"), url("../fonts/icomoon.svg?d18ym6#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -1940,7 +1940,7 @@ Banner:
   }
 }
 .b-bespoke .banner {
-  background-image: url("/img/netmatter05.jpg");
+  background-image: url("../img/netmatter05.jpg");
 }
 .b-bespoke .banner .btn {
   background-color: #67809f;
@@ -1952,12 +1952,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-bespoke .banner {
-    background-image: url("/img/netmatter05.jpg"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter05.jpg"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-it .banner {
-  background-image: url("/img/netmatter06.png");
+  background-image: url("../img/netmatter06.png");
 }
 .b-it .banner .btn {
   background-color: #4183d7;
@@ -1969,12 +1969,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-it .banner {
-    background-image: url("/img/netmatter06.png"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter06.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-marketting .banner {
-  background-image: url("/img/netmatter07.png");
+  background-image: url("../img/netmatter07.png");
 }
 .b-marketting .banner .btn {
   background-color: #2ecc71;
@@ -1986,12 +1986,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-marketting .banner {
-    background-image: url("/img/netmatter07.png"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter07.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-telecoms .banner {
-  background-image: url("/img/netmatter08.png");
+  background-image: url("../img/netmatter08.png");
 }
 .b-telecoms .banner .btn {
   background-color: #d64541;
@@ -2003,12 +2003,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-telecoms .banner {
-    background-image: url("/img/netmatter08.png"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter08.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-web .banner {
-  background-image: url("/img/netmatter02.jpg");
+  background-image: url("../img/netmatter02.jpg");
 }
 .b-web .banner .btn {
   background-color: #926fb1;
@@ -2020,12 +2020,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-web .banner {
-    background-image: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-cyber .banner {
-  background-image: url("/img/netmatter03.png");
+  background-image: url("../img/netmatter03.png");
 }
 .b-cyber .banner .btn {
   background-color: #f62459;
@@ -2037,12 +2037,12 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-cyber .banner {
-    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
 .b-developer .banner {
-  background-image: url("/img/netmatter03.png");
+  background-image: url("../img/netmatter03.png");
 }
 .b-developer .banner .btn {
   background-color: #f62459;
@@ -2054,7 +2054,7 @@ Banner:
 }
 @media screen and (min-width: 992px) {
   .b-developer .banner {
-    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+    background-image: url("../img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
