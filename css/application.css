@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ------------------------------------------------------
 
 Utilities import:
@@ -741,6 +742,24 @@ input[type=email]:focus {
   white-space: normal;
 }
 
+.dimmed::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dimmed::after {
+  opacity: 1;
+}
+
 /* ------------------------------------------------------
 
 Layout import:
@@ -765,7 +784,7 @@ Placeholders:
   padding: 50px 0;
 }
 
-.newsletter .btn, .news__card .btn, .card__element .btn, .btn, .banner .btn, .header .btn {
+.newsletter .btn, .news__card .btn, .card__element .btn, .btn, .banner .btn, .cookies__buttons, .header .btn {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid transparent;
@@ -1082,6 +1101,23 @@ Header:
   margin: 6px 0px;
   transition: 0.4s;
 }
+.header .hamburger .open:after {
+  height: 4px;
+  transform: rotate(45deg);
+  margin: 0px 0px;
+  transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+.header .hamburger .open:before {
+  height: 0px;
+  top: 0;
+  opacity: 0;
+  margin: 0px 0px;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+.header .hamburger .open .bar {
+  margin: 0px 0px;
+  transform: translateY(3px) rotate(-45deg);
+}
 .header .btn {
   height: 56px;
   font-size: 1.125rem;
@@ -1125,11 +1161,21 @@ Header:
   background-color: #286abd;
 }
 .header .btn-contact {
-  background-color: #999aa2;
+  background-color: hsl(233, 5%, 62%);
   border-color: #999aa2;
 }
 .header .btn-contact:hover {
   background-color: #7e808a;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  z-index: 100000000;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.4s;
+  animation: 0.4s ease-in-out forwards;
 }
 
 /* -----------------------------------------------------
@@ -1195,6 +1241,87 @@ Chat function:
   color: white;
   font-size: 30px;
   content: "\e90b";
+}
+
+/* -----------------------------------------------------
+Cookies styles:
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Cookies:
+
+------------------------------------------------------ */
+.cookies {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-pack: center !important;
+  padding: 30px;
+}
+.cookies__container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+}
+.cookies__title {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #333645;
+}
+.cookies__title h3 {
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+.cookies__paragraph {
+  padding: 15px 0px;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 1.875rem;
+  color: #666;
+}
+.cookies__paragraph a {
+  color: #666;
+  text-decoration: none;
+}
+.cookies__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 0px;
+  flex: 1;
+}
+.cookies__buttons .btn-change {
+  background-color: #999aa2;
+  border-color: #999aa2;
+}
+.cookies__buttons .btn-accept {
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+@media screen and (min-width: 768px) {
+  .cookies__buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .cookies__buttons .btn {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+.cookies-hide {
+  display: none;
 }
 
 /* -----------------------------------------------------
@@ -1454,6 +1581,194 @@ Navigation:
 }
 
 /* -----------------------------------------------------
+Sidebar Nav:
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Sidebar:
+
+------------------------------------------------------ */
+.sidebar {
+  position: fixed;
+  z-index: 10000;
+  height: 100vh;
+  width: 275px;
+  top: 0;
+  right: -350px;
+  background-color: #333645;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  overflow: auto;
+}
+.sidebar__top {
+  display: block;
+  padding: 21px;
+}
+@media screen and (min-width: 992px) {
+  .sidebar__top {
+    display: none;
+  }
+}
+.sidebar__top__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding: 19px 0 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+}
+.sidebar__top__card:hover {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+.sidebar__top .s-bespoke .nav-icon:before {
+  content: "\e90c";
+  color: #67809f;
+}
+.sidebar__top .s-it .nav-icon:before {
+  content: "\e956";
+  color: #4183d7;
+}
+.sidebar__top .s-marketting .nav-icon:before {
+  content: "\e902";
+  color: #2ecc71;
+}
+.sidebar__top .s-telecoms .nav-icon:before {
+  content: "\e901";
+  color: #d64541;
+}
+.sidebar__top .s-web .nav-icon:before {
+  content: "\ea80";
+  color: #926fb1;
+}
+.sidebar__top .s-cyber .nav-icon:before {
+  content: "\e900";
+  color: #f62459;
+}
+.sidebar__top .s-developer .nav-icon:before {
+  content: "\e903";
+  color: #ce4125;
+}
+.sidebar__top span {
+  font-family: icomoon !important;
+  display: block;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 1.438rem;
+}
+.sidebar__top small {
+  font-size: 0.625rem;
+  padding-bottom: 5px;
+}
+.sidebar__top ul {
+  padding: 0;
+}
+.sidebar__top li {
+  display: block;
+  padding: 10px;
+  background-color: #262834;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  list-style-type: none;
+  text-align: center;
+  font-size: 1rem;
+}
+.sidebar__top li a {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar__bottom__section {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar__bottom__section__heading {
+  padding: 20px 20px !important;
+  background-color: #333645 !important;
+  line-height: 1rem;
+  font-size: 1rem !important;
+}
+.sidebar__bottom__section__heading h4 {
+  font-weight: 400;
+}
+.sidebar__bottom__section ul {
+  padding-left: 0px;
+  margin: 0;
+}
+.sidebar__bottom__section ul:hover {
+  cursor: pointer;
+}
+.sidebar__bottom__section ul:hover .sidebar__bottom__section__heading {
+  background-color: hsla(0, 0%, 100%, 0.05) !important;
+}
+.sidebar__bottom__section li {
+  display: block;
+  padding: 17.5px 20px 17.5px 20px;
+  background-color: #262834;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+  list-style-type: none;
+  font-size: 0.875rem;
+}
+.sidebar__bottom__section ul li:not(.sidebar__bottom__section__heading)::before {
+  content: "» ";
+  padding-right: 15px !important;
+}
+.sidebar__bottom__section a {
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar__bottom--inner {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.sidebar-push {
+  position: relative;
+}
+
+.sidebar-reveal {
+  right: 0;
+}
+
+.main-content {
+  position: relative;
+  left: -275px;
+  overflow: hidden;
+  left: 0;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-push {
+    position: relative;
+    left: -275px;
+  }
+  .sidebar {
+    width: 275px;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .sidebar-push {
+    position: relative;
+    left: -275px;
+  }
+  .sidebar {
+    width: 275px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sidebar-push {
+    left: -350px;
+  }
+  .sidebar {
+    width: 350px;
+  }
+}
+/* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
 /* ------------------------------------------------------
@@ -1461,7 +1776,46 @@ Footer styles:
 Banner:
 
 ------------------------------------------------------ */
+.slick-banner .slick-list {
+  height: 550px;
+}
+.slick-banner .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+  position: relative;
+  margin-top: -50px;
+  background-color: transparent;
+  color: white;
+  font-size: 25px;
+  height: 15px;
+  border-radius: 50%;
+}
+.slick-banner .slick-dots button {
+  visibility: hidden;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .slick-banner .slick-dots {
+    display: flex;
+  }
+}
+.slick-banner .slick-active {
+  position: relative;
+}
+.slick-banner .slick-active span:after {
+  content: "O";
+}
+.slick-banner .slick-active span {
+  position: absolute;
+  right: 145%;
+  top: -20%;
+  font-size: 30px;
+}
+
 .banner {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1473,6 +1827,13 @@ Banner:
   background-position: center;
   text-align: center;
   color: #fff;
+}
+.banner .background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* this will make the image cover the entire div */
+  z-index: -1; /* this will place the image behind the other content */
 }
 .banner__container {
   display: flex;
@@ -1561,8 +1922,8 @@ Banner:
     background: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
     background-position: center;
     background-size: cover;
-    z-index: 3;
     width: 100%;
+    text-align: left;
   }
   .banner p {
     text-align: left;
@@ -1578,6 +1939,125 @@ Banner:
     font-size: 4rem;
   }
 }
+.b-bespoke .banner {
+  background-image: url("/img/netmatter05.jpg");
+}
+.b-bespoke .banner .btn {
+  background-color: #67809f;
+  border-color: #67809f;
+}
+.b-bespoke .banner .btn:hover {
+  background-color: #526781;
+  border-color: #526781;
+}
+@media screen and (min-width: 992px) {
+  .b-bespoke .banner {
+    background-image: url("/img/netmatter05.jpg"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-it .banner {
+  background-image: url("/img/netmatter06.png");
+}
+.b-it .banner .btn {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+.b-it .banner .btn:hover {
+  background-color: #286abd;
+  border-color: #286abd;
+}
+@media screen and (min-width: 992px) {
+  .b-it .banner {
+    background-image: url("/img/netmatter06.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-marketting .banner {
+  background-image: url("/img/netmatter07.png");
+}
+.b-marketting .banner .btn {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+.b-marketting .banner .btn:hover {
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+@media screen and (min-width: 992px) {
+  .b-marketting .banner {
+    background-image: url("/img/netmatter07.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-telecoms .banner {
+  background-image: url("/img/netmatter08.png");
+}
+.b-telecoms .banner .btn {
+  background-color: #d64541;
+  border-color: #d64541;
+}
+.b-telecoms .banner .btn:hover {
+  background-color: #bc2c28;
+  border-color: #bc2c28;
+}
+@media screen and (min-width: 992px) {
+  .b-telecoms .banner {
+    background-image: url("/img/netmatter08.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-web .banner {
+  background-image: url("/img/netmatter02.jpg");
+}
+.b-web .banner .btn {
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.b-web .banner .btn:hover {
+  background-color: #79539a;
+  border-color: #79539a;
+}
+@media screen and (min-width: 992px) {
+  .b-web .banner {
+    background-image: url("/img/netmatter02.jpg"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-cyber .banner {
+  background-image: url("/img/netmatter03.png");
+}
+.b-cyber .banner .btn {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+.b-cyber .banner .btn:hover {
+  background-color: #de093f;
+  border-color: #de093f;
+}
+@media screen and (min-width: 992px) {
+  .b-cyber .banner {
+    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-developer .banner {
+  background-image: url("/img/netmatter03.png");
+}
+.b-developer .banner .btn {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+.b-developer .banner .btn:hover {
+  background-color: #de093f;
+  border-color: #de093f;
+}
+@media screen and (min-width: 992px) {
+  .b-developer .banner {
+    background-image: url("/img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
 /* -----------------------------------------------------
 Footer styles:
 ------------------------------------------------------ */
@@ -1597,11 +2077,13 @@ Slide show section:
   display: flex;
   position: relative;
   height: 70px;
+  justify-content: center;
 }
 .slideshow__item__img {
   max-height: 100%;
   width: auto;
   align-self: center;
+  justify-self: center;
   filter: grayscale(1);
 }
 .slideshow__item__description {
@@ -1632,7 +2114,7 @@ Slide show section:
   padding: 20px;
   margin: 0 auto 25px;
   font-size: 16px;
-  background-color: #333645;
+  background-color: #333645 !important;
   max-width: 280px;
   text-align: center;
   color: white;

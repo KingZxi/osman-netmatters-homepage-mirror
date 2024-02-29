@@ -261,6 +261,27 @@ Header:
         transition: 0.4s;
       }
     }
+
+    .open {
+      &:after {
+        height: 4px;
+        transform: rotate(45deg);
+        margin: 0px 0px;
+        transition: bottom 0.1s ease-out,
+          transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+      }
+      &:before {
+        height: 0px;
+        top: 0;
+        opacity: 0;
+        margin: 0px 0px;
+        transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+      }
+      .bar {
+        margin: 0px 0px;
+        transform: translateY(3px) rotate(-45deg);
+      }
+    }
   }
 
   .btn {
@@ -312,11 +333,23 @@ Header:
   }
 
   .btn-contact {
-    background-color: #999aa2;
+    background-color: hsl(233, 5%, 62%);
     border-color: #999aa2;
 
     &:hover {
       background-color: darken(#999aa2, 10%);
     }
   }
+}
+
+//Sticky header
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  z-index: 100000000;
+  width: 100%;
+  background-color: $white;
+  transition: 0.4s;
+  animation: 0.4s ease-in-out forwards;
 }

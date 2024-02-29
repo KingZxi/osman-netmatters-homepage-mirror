@@ -177,3 +177,90 @@ Mixins:
     border-color: transparent transparent $color transparent;
   }
 }
+
+@mixin side-type($type) {
+  //If statemens to check card type
+  @if $type == "bespoke" {
+    //I really dislike the use of global, and if I have spare time I will look to change this a bit.
+    $color: map-get($color-map, bespoke-software) !global;
+    $icon: "\e90c" !global;
+  } @else if $type == "it" {
+    $color: map-get($color-map, it-support) !global;
+    $icon: "\e956" !global;
+  } @else if $type == "marketting" {
+    $color: map-get($color-map, digital-marketting) !global;
+    $icon: "\e902" !global;
+  } @else if $type == "telecoms" {
+    $color: map-get($color-map, telecom) !global;
+    $icon: "\e901" !global;
+  } @else if $type == "web" {
+    $color: map-get($color-map, web-design) !global;
+    $icon: "\ea80" !global;
+  } @else if $type == "cyber" {
+    $color: map-get($color-map, cyber-security) !global;
+    $icon: "\e900" !global;
+  } @else if $type == "developer" {
+    $color: map-get($color-map, developer) !global;
+    $icon: "\e903" !global;
+  }
+  //Assigning card icon and colors
+
+  .nav-icon:before {
+    @if (icon != null) {
+      content: $icon;
+      color: $color;
+    }
+  }
+}
+
+@mixin banner-type($type) {
+  //If statemens to check card type
+  @if $type == "bespoke" {
+    //I really dislike the use of global, and if I have spare time I will look to change this a bit.
+    $color: map-get($color-map, bespoke-software) !global;
+    $icon: "\e90c" !global;
+    $url: "/img/netmatter05.jpg" !global;
+  } @else if $type == "it" {
+    $color: map-get($color-map, it-support) !global;
+    $icon: "\e956" !global;
+    $url: "/img/netmatter06.png" !global;
+  } @else if $type == "marketting" {
+    $color: map-get($color-map, digital-marketting) !global;
+    $icon: "\e902" !global;
+    $url: "/img/netmatter07.png" !global;
+  } @else if $type == "telecoms" {
+    $color: map-get($color-map, telecom) !global;
+    $icon: "\e901" !global;
+    $url: "/img/netmatter08.png" !global;
+  } @else if $type == "web" {
+    $color: map-get($color-map, web-design) !global;
+    $icon: "\ea80" !global;
+    $url: "/img/netmatter02.jpg" !global;
+  } @else if $type == "cyber" {
+    $color: map-get($color-map, cyber-security) !global;
+    $icon: "\e900" !global;
+    $url: "/img/netmatter03.png" !global;
+  }
+  //Assigning card icon and colors
+
+  .banner {
+    background-image: url($url);
+  }
+
+  .banner .btn {
+    background-color: $color;
+    border-color: $color;
+
+    &:hover {
+      background-color: darken($color, 10%);
+      border-color: darken($color, 10%);
+    }
+  }
+
+  @include mq(large) {
+    .banner {
+      background-image: url($url),
+        linear-gradient(270deg, transparent 25%, #000);
+    }
+  }
+}

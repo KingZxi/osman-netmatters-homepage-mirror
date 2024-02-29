@@ -5,6 +5,11 @@ Slide show section:
 ------------------------------------------------------ */
 
 //Slideshow section container
+
+// .slick-initialized .slick-slide {
+//   display: flex;
+// }
+
 .slideshow {
   display: flex;
   gap: 90px;
@@ -17,10 +22,13 @@ Slide show section:
     display: flex;
     position: relative;
     height: 70px;
+    justify-content: center;
+
     @include s-e("img") {
       max-height: 100%;
       width: auto;
       align-self: center;
+      justify-self: center;
       filter: grayscale(1);
     }
 
@@ -62,7 +70,7 @@ Slide show section:
   padding: 20px;
   margin: 0 auto 25px;
   font-size: 16px;
-  background-color: $tuna;
+  background-color: $tuna !important  ;
   max-width: 280px;
   text-align: center;
   color: white;
@@ -135,6 +143,9 @@ Slide show section:
     .developer {
       @include card-type(developer);
     }
+  }
+
+  &:hover {
   }
 }
 

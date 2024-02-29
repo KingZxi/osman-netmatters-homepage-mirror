@@ -1,0 +1,86 @@
+/* ------------------------------------------------------
+
+Cookies:
+
+------------------------------------------------------ */
+
+.cookies {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-pack: center !important;
+  padding: 30px;
+
+  @include s-e("container") {
+    max-width: 600px;
+    padding: 20px;
+    background-color: $white;
+  }
+
+  @include s-e("title") {
+    padding: 10px 0px;
+    border-bottom: 1px solid #e5e5e5;
+    color: $tuna;
+    h3 {
+      font-size: 1.625rem;
+      font-weight: 400;
+    }
+  }
+
+  @include s-e("paragraph") {
+    padding: 15px 0px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 1.875rem;
+    color: #666;
+
+    a {
+      color: #666;
+      text-decoration: none;
+    }
+  }
+
+  @include s-e("buttons") {
+    @extend %btn;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px 0px;
+    flex: 1;
+
+    .btn-change {
+      background-color: #999aa2;
+      border-color: #999aa2;
+    }
+
+    .btn-accept {
+      background-color: #926fb1;
+      border-color: #926fb1;
+    }
+
+    @include mq("medium") {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .btn {
+        padding-left: 55px;
+        padding-right: 55px;
+      }
+    }
+  }
+}
+
+.cookies-hide {
+  display: none;
+}

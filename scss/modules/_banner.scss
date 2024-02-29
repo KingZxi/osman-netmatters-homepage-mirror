@@ -3,9 +3,58 @@
 Banner:
 
 ------------------------------------------------------ */
+.slick-banner {
+  // Limits size of slick carousel
+  .slick-list {
+    height: 550px;
+  }
+
+  //Selects the container for the slick-dots
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+    position: relative;
+    margin-top: -50px;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+
+    button {
+      visibility: hidden;
+      background-color: transparent;
+    }
+
+    height: 15px;
+    border-radius: 50%;
+
+    &:hover {
+    }
+
+    @include mq(medium) {
+      display: flex;
+    }
+  }
+
+  //Selects the active slick dot item
+  .slick-active {
+    position: relative;
+    span:after {
+      content: "O";
+    }
+    span {
+      position: absolute;
+      right: 145%;
+      top: -20%;
+      font-size: 30px;
+    }
+  }
+}
 
 //This class is used on the banner divison
 .banner {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +68,14 @@ Banner:
   background-position: center;
   text-align: center;
   color: $white;
+
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* this will make the image cover the entire div */
+    z-index: -1; /* this will place the image behind the other content */
+  }
 
   @include s-e(container) {
     display: flex;
@@ -129,8 +186,8 @@ Banner:
       linear-gradient(270deg, transparent 25%, #000);
     background-position: center;
     background-size: cover;
-    z-index: 3;
     width: 100%;
+    text-align: left;
 
     p {
       text-align: left;
@@ -147,5 +204,29 @@ Banner:
     .h1 {
       font-size: 4rem;
     }
+  }
+}
+
+@at-root {
+  .b-bespoke {
+    @include banner-type(bespoke);
+  }
+  .b-it {
+    @include banner-type(it);
+  }
+  .b-marketting {
+    @include banner-type(marketting);
+  }
+  .b-telecoms {
+    @include banner-type(telecoms);
+  }
+  .b-web {
+    @include banner-type(web);
+  }
+  .b-cyber {
+    @include banner-type(cyber);
+  }
+  .b-developer {
+    @include banner-type(developer);
   }
 }
