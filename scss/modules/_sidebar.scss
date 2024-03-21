@@ -5,6 +5,7 @@ Sidebar:
 ------------------------------------------------------ */
 
 .sidebar {
+  direction: rtl; //Makes scrollbar appear on the left of the sidebar, but requires
   position: fixed;
   z-index: 10000;
   height: 100vh;
@@ -18,6 +19,11 @@ Sidebar:
   text-transform: uppercase;
   transition: all 0.5s;
   overflow: auto;
+
+  & > * {
+    //This property makes the text go left-to-right, which is done because the parent is set to right-to-left
+    direction: ltr;
+  }
 
   @include s-e("top") {
     display: block;

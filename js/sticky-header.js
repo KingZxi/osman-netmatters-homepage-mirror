@@ -28,6 +28,14 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 
+clone.addEventListener(
+  "wheel",
+  function (e) {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
 function stickyHeader() {
   if (window.scrollY > 0) {
     clone.classList.add("sticky-header");
