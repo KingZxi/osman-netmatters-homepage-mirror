@@ -1273,6 +1273,7 @@ Cookies:
 .cookies__container {
   max-width: 600px;
   padding: 20px;
+  border-radius: 5px;
   background-color: #fff;
 }
 .cookies__title {

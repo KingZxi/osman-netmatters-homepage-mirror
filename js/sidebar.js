@@ -9,30 +9,28 @@ const hambuttonClone = document.querySelectorAll(".hambutton")[1];
 
 //Function for toggling sidebar, this is a function because this way it can be applied to both the clone header and regular header more simply.
 function toggleSidebar(hamburger, hambutton, hambuttonClone) {
-  //Toggling the elements
-  sidebar.classList.toggle("sidebar-reveal");
-  main.classList.toggle("sidebar-push");
-  hambutton.classList.toggle("open");
-  hambuttonClone.classList.toggle("open");
+  hamburger.addEventListener("click", () => {
+    //Toggling the elements
+    sidebar.classList.toggle("sidebar-reveal");
+    main.classList.toggle("sidebar-push");
+    hambutton.classList.toggle("open");
+    hambuttonClone.classList.toggle("open");
 
-  //Applys dim to body
-  $("body").toggleClass("dimmed");
+    //Applys dim to body
+    $("body").toggleClass("dimmed");
 
-  //Disables scrolling down on main body.
-  if ($("body").hasClass("dimmed")) {
-    $("body").css("overflow", "hidden");
-  } else {
-    $("body").css("overflow", "auto");
-  }
+    //Disables scrolling down on main body.
+    if ($("body").hasClass("dimmed")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
+  });
 }
 
 //Calling the toggle sidebar for each hamburger button on each header.
-hamburger.addEventListener("click", () =>
-  toggleSidebar(hamburger, hambutton, hambuttonClone)
-);
-hamburgerClone.addEventListener("click", () =>
-  toggleSidebar(hamburger, hambutton, hambuttonClone)
-);
+toggleSidebar(hamburger, hambutton, hambuttonClone);
+toggleSidebar(hamburgerClone, hambutton, hambuttonClone);
 
 //This is used to close the sidebar if you click outside it whilst it is open.
 document.addEventListener("click", (event) => {
