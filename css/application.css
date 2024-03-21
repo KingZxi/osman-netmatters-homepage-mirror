@@ -3127,6 +3127,7 @@ Email Newsletter Sign-up:
   height: 32px;
   float: left;
   border: 3px solid #333645;
+  cursor: pointer;
 }
 .checkbox-draw .check {
   visibility: hidden;
