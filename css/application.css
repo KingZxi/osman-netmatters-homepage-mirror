@@ -1252,7 +1252,7 @@ Cookies:
 
 ------------------------------------------------------ */
 .cookies {
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1268,16 +1268,14 @@ Cookies:
   align-items: center;
   justify-content: center;
   -ms-flex-pack: center !important;
-  padding: 30px;
 }
 .cookies__container {
   max-width: 600px;
-  padding: 20px;
   border-radius: 5px;
   background-color: #fff;
 }
 .cookies__title {
-  padding: 10px 0px;
+  padding: 20px 20px;
   border-bottom: 1px solid #e5e5e5;
   color: #333645;
 }
@@ -1286,7 +1284,7 @@ Cookies:
   font-weight: 400;
 }
 .cookies__paragraph {
-  padding: 15px 0px;
+  padding: 20px 20px 30px 20px;
   border-bottom: 1px solid #e5e5e5;
   line-height: 1.875rem;
   color: #666;
@@ -1299,7 +1297,7 @@ Cookies:
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 15px 0px;
+  padding: 19px 20px 20px;
   flex: 1;
 }
 .cookies__buttons .btn-change {
@@ -1321,8 +1319,8 @@ Cookies:
   }
 }
 
-.cookies-hide {
-  display: none;
+.cookies-show {
+  display: flex;
 }
 
 /* -----------------------------------------------------
