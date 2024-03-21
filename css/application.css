@@ -1588,7 +1588,6 @@ Sidebar:
 
 ------------------------------------------------------ */
 .sidebar {
-  direction: rtl;
   position: fixed;
   z-index: 10000;
   height: 100vh;
@@ -1602,9 +1601,6 @@ Sidebar:
   text-transform: uppercase;
   transition: all 0.5s;
   overflow: auto;
-}
-.sidebar > * {
-  direction: ltr;
 }
 .sidebar__top {
   display: block;
@@ -2320,7 +2316,7 @@ Card:
 
 ------------------------------------------------------ */
 .service {
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 .service .h1 {
   color: #333645;

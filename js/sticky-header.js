@@ -4,6 +4,8 @@
 let cloneContainer = document.querySelector("header");
 let header = document.querySelector(".header");
 
+let lastScrollTop = 0; //Stores the last known scrolll position, updated everytime scroll event is fired.
+
 //A clone of the header is created in order to stop the page from bumping when the original is converted to fixed
 let clone = header.cloneNode(true);
 cloneContainer.appendChild(clone);
@@ -12,21 +14,26 @@ cloneContainer.appendChild(clone);
 clone.style.top = "-40rem";
 clone.classList.add("sticky-header");
 
-document.addEventListener("mousemove", (e) => {
-  //clientY is used to determine where the mouse is to drop the header, scrollY determines how far the user is already scrolled down
-  //e.target.closest is used to target the sub-menu as another case for the sticky header to remain on screen
-  //this is done so when the user tries to  select something from the sub-menu, the cursor doesn't exit display range
-  //causing it to disappear
-  if (
-    (e.clientY < 300 && window.scrollY > 300) ||
-    (e.target.closest(".sub-menu") && window.scrollY > 300)
-  ) {
-    clone.style.top = "0";
-  } else {
-    clone.style.top = "-40rem";
-    document.removeEventListener("scroll", stickyHeader);
-  }
-});
+let headerDisplayThreshold = 700; // Used to determine the amount the page needs to be scrolldowned for sticky header functionality to begin
+
+document.addEventListener(
+  "scroll",
+  function () {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop && st > headerDisplayThreshold) {
+      //Downscroll & past threshold
+      clone.style.top = "-40rem";
+    } else if (st <= headerDisplayThreshold) {
+      //Upscroll & reached top
+      clone.style.top = "-40rem";
+    } else {
+      //Upscroll & past threshold
+      clone.style.top = "0";
+    }
+    lastScrollTop = st <= 0 ? 0 : st; //For mobile and other forms of negative scroll
+  },
+  false
+);
 
 clone.addEventListener(
   "wheel",
@@ -37,7 +44,7 @@ clone.addEventListener(
 );
 
 function stickyHeader() {
-  if (window.scrollY > 0) {
+  if (window.scrollY > headerDisplayThreshold) {
     clone.classList.add("sticky-header");
     clone.style.display = "inline-block";
   } else {

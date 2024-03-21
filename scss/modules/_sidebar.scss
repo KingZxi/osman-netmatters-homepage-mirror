@@ -5,7 +5,7 @@ Sidebar:
 ------------------------------------------------------ */
 
 .sidebar {
-  direction: rtl; //Makes scrollbar appear on the left of the sidebar, but requires
+  //direction: rtl; //Makes scrollbar appear on the left of the sidebar, but requires
   position: fixed;
   z-index: 10000;
   height: 100vh;
@@ -22,7 +22,7 @@ Sidebar:
 
   & > * {
     //This property makes the text go left-to-right, which is done because the parent is set to right-to-left
-    direction: ltr;
+    // direction: ltr;
   }
 
   @include s-e("top") {
