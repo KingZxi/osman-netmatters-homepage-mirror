@@ -1943,9 +1943,6 @@ Banner:
     font-size: 4rem;
   }
 }
-.b-bespoke .banner {
-  background-image: url("../img/netmatter05.jpg");
-}
 .b-bespoke .banner .btn {
   background-color: #67809f;
   border-color: #67809f;
@@ -1960,9 +1957,6 @@ Banner:
   }
 }
 
-.b-it .banner {
-  background-image: url("../img/netmatter06.png");
-}
 .b-it .banner .btn {
   background-color: #4183d7;
   border-color: #4183d7;
@@ -1977,9 +1971,6 @@ Banner:
   }
 }
 
-.b-marketting .banner {
-  background-image: url("../img/netmatter07.png");
-}
 .b-marketting .banner .btn {
   background-color: #2ecc71;
   border-color: #2ecc71;
@@ -1994,9 +1985,6 @@ Banner:
   }
 }
 
-.b-telecoms .banner {
-  background-image: url("../img/netmatter08.png");
-}
 .b-telecoms .banner .btn {
   background-color: #d64541;
   border-color: #d64541;
@@ -2011,9 +1999,6 @@ Banner:
   }
 }
 
-.b-web .banner {
-  background-image: url("../img/netmatter02.jpg");
-}
 .b-web .banner .btn {
   background-color: #926fb1;
   border-color: #926fb1;
@@ -2028,9 +2013,6 @@ Banner:
   }
 }
 
-.b-cyber .banner {
-  background-image: url("../img/netmatter03.png");
-}
 .b-cyber .banner .btn {
   background-color: #f62459;
   border-color: #f62459;
@@ -2045,9 +2027,6 @@ Banner:
   }
 }
 
-.b-developer .banner {
-  background-image: url("../img/netmatter03.png");
-}
 .b-developer .banner .btn {
   background-color: #f62459;
   border-color: #f62459;
@@ -2059,6 +2038,20 @@ Banner:
 @media screen and (min-width: 992px) {
   .b-developer .banner {
     background-image: url("../img/netmatter03.png"), linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.b-first .banner .btn {
+  background-color: #67809f;
+  border-color: #67809f;
+}
+.b-first .banner .btn:hover {
+  background-color: #526781;
+  border-color: #526781;
+}
+@media screen and (min-width: 992px) {
+  .b-first .banner {
+    background-image: url("../img/netmatter04.png"), linear-gradient(270deg, transparent 25%, #000);
   }
 }
 

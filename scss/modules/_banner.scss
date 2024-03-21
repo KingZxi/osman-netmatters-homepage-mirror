@@ -229,4 +229,7 @@ Banner:
   .b-developer {
     @include banner-type(developer);
   }
+  .b-first {
+    @include banner-type(first);
+  }
 }
