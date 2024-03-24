@@ -36,6 +36,7 @@ clone.addEventListener(
   { passive: false }
 );
 
+//Activates sticky header
 function stickyHeader() {
   if (window.scrollY > 0) {
     clone.classList.add("sticky-header");
