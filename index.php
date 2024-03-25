@@ -477,8 +477,11 @@
             </h3>
         </div>
         <div class="card-flex">
+            <?php include 'php/fetch-news.php'; ?>
             <div class="news__card n-web">
                 <!-- <a href="#"> -->
+                <?php
+                /*
                 <div class="news__card__image">
                     <div>
                         <a href="#" class="tooltip">NEWS</a>
@@ -571,11 +574,13 @@
                 </div>
                 <!-- </a> -->
             </div>
+            */
+            ?>
+            </div>
         </div>
-    </div>
-    <div class="container view-all-container underline-hover">
-        <h3><a href="#">View All</a> <span class="arrow-right"></span></h3>
-    </div>
+        <div class="container view-all-container underline-hover">
+            <h3><a href="#">View All</a> <span class="arrow-right"></span></h3>
+        </div>
 </section>
 <div class="slideshow-padding">
     <div class="owl-carousel slideshow height">
@@ -801,7 +806,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <!-- Slick import -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+</script>
 <!-- JS imports -->
 <script src="owlcarousel/owl.carousel.min.js"></script>
 <script src="js/carousel-slideshow.js"></script>
