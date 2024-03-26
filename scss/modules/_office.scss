@@ -1,0 +1,82 @@
+/* ------------------------------------------------------
+
+Our offices section:
+
+------------------------------------------------------ */
+
+.office {
+  @include s-e(section) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @include s-e(item) {
+    border-radius: 25px;
+    img {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      width: 100%;
+    }
+  }
+
+  @include s-e(content) {
+    padding: 30px;
+
+    h2 {
+      color: $tuna;
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .address {
+      font-size: 0.8125rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    .number {
+      font-weight: 700;
+      color: map-get($color-map, web-design);
+      font-size: 1.625rem;
+    }
+  }
+
+  @include s-e(heading) {
+    font-weight: 400;
+    color: $white;
+    padding: 24px 15px;
+    background-color: $tuna;
+
+    .h1 {
+      font-weight: 400;
+    }
+  }
+
+  @include s-e(flex) {
+    border-radius: 20px;
+  }
+
+  @include s-e(btn) {
+    padding: 5px 30px;
+    border-radius: 3px;
+    background-color: map-get($color-map, web-design);
+    border-color: map-get($color-map, web-design);
+    line-height: 35px;
+    font-size: 0.9em;
+    @extend %btn;
+  }
+
+  @include s-e(map) {
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}

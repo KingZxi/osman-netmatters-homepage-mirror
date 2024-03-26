@@ -784,7 +784,7 @@ Placeholders:
   padding: 50px 0;
 }
 
-.newsletter .btn, .news__card .btn, .card__element .btn, .btn, .banner .btn, .cookies__buttons, .header .btn {
+.office__btn, .newsletter .btn, .news__card .btn, .card__element .btn, .btn, .banner .btn, .cookies__buttons, .header .btn {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid transparent;
@@ -3363,6 +3363,77 @@ Footer:
   .footer-logo-large img {
     width: 100%;
   }
+}
+/* -----------------------------------------------------
+Our office styles:
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Our offices section:
+
+------------------------------------------------------ */
+.office__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.office__item {
+  border-radius: 25px;
+}
+.office__item img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+}
+.office__content {
+  padding: 30px;
+}
+.office__content h2 {
+  color: #333645;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.office__content .address {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #666;
+}
+.office__content .number {
+  font-weight: 700;
+  color: #926fb1;
+  font-size: 1.625rem;
+}
+.office__heading {
+  font-weight: 400;
+  color: #fff;
+  padding: 24px 15px;
+  background-color: #333645;
+}
+.office__heading .h1 {
+  font-weight: 400;
+}
+.office__flex {
+  border-radius: 20px;
+}
+.office__btn {
+  padding: 5px 30px;
+  border-radius: 3px;
+  background-color: #926fb1;
+  border-color: #926fb1;
+  line-height: 35px;
+  font-size: 0.9em;
+}
+.office__map {
+  width: 100%;
+}
+.office__map iframe {
+  width: 100%;
+  height: 250px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 /*# sourceMappingURL=application.css.map */
