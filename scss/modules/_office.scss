@@ -49,6 +49,7 @@ Our offices section:
     font-weight: 400;
     color: $white;
     padding: 24px 15px;
+    margin-bottom: 75px;
     background-color: $tuna;
 
     .h1 {
@@ -57,7 +58,9 @@ Our offices section:
   }
 
   @include s-e(flex) {
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   @include s-e(btn) {

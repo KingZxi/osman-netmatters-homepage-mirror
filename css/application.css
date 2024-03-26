@@ -3410,13 +3410,16 @@ Our offices section:
   font-weight: 400;
   color: #fff;
   padding: 24px 15px;
+  margin-bottom: 75px;
   background-color: #333645;
 }
 .office__heading .h1 {
   font-weight: 400;
 }
 .office__flex {
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .office__btn {
   padding: 5px 30px;
@@ -3434,6 +3437,41 @@ Our offices section:
   height: 250px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+/* -----------------------------------------------------
+Contact (page) styles:
+------------------------------------------------------ */
+/* ------------------------------------------------------
+
+Contact (page) section:
+
+------------------------------------------------------ */
+.contact__email {
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: #926fb1;
+}
+.contact__text {
+  line-height: 1.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333645;
+}
+.contact__form {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #e6e7e9;
+}
+.contact__form label {
+  font-weight: 600;
+  color: #333645;
+}
+.contact__form input {
+  height: 47px;
+  padding: 5px 15px;
+  border-color: #ccc;
+  width: 100%;
 }
 
 /*# sourceMappingURL=application.css.map */

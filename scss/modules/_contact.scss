@@ -1,0 +1,38 @@
+/* ------------------------------------------------------
+
+Contact (page) section:
+
+------------------------------------------------------ */
+
+.contact {
+  @include s-e(email) {
+    font-weight: 600;
+    font-size: 1.625rem;
+    color: map-get($color-map, web-design);
+  }
+
+  @include s-e(text) {
+    line-height: 1.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $tuna;
+  }
+
+  @include s-e(form) {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #e6e7e9;
+
+    label {
+      font-weight: 600;
+      color: #333645;
+    }
+
+    input {
+      height: 47px;
+      padding: 5px 15px;
+      border-color: #ccc;
+      width: 100%;
+    }
+  }
+}
