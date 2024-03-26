@@ -242,6 +242,10 @@ Mixins:
     }
   }
 
+  .banner {
+    background-image: url($url);
+  }
+
   @include mq(large) {
     .banner {
       background-image: url($url),
