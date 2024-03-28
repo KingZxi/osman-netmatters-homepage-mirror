@@ -4,19 +4,41 @@ Our offices section:
 
 ------------------------------------------------------ */
 
+.breadcrumbs__section {
+  display: none;
+  border-top: 1px solid #333645;
+  padding: 10px 0px;
+  background-color: #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+
+  .breadcrumbs {
+    font-size: 0.8125rem;
+    margin: 0;
+  }
+
+  @include mq(large) {
+    display: block;
+  }
+}
+
 .office {
   @include s-e(section) {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
   }
 
   @include s-e(item) {
     border-radius: 25px;
+    border: 1px solid #ccc;
+    flex: 1 0 100%;
     img {
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
       width: 100%;
+    }
+
+    @include mq(large) {
+      flex: 1 0 40%;
     }
   }
 
@@ -39,9 +61,16 @@ Our offices section:
     }
 
     .number {
+      margin-bottom: 20px;
+      display: block;
       font-weight: 700;
       color: map-get($color-map, web-design);
       font-size: 1.625rem;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 
@@ -55,11 +84,21 @@ Our offices section:
     .h1 {
       font-weight: 400;
     }
+
+    @include mq(large) {
+      padding: 24px 30px;
+      background-color: transparent;
+
+      .h1 {
+        color: $tuna;
+      }
+    }
   }
 
   @include s-e(flex) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
   }
 
@@ -71,6 +110,11 @@ Our offices section:
     line-height: 35px;
     font-size: 0.9em;
     @extend %btn;
+
+    &:hover {
+      background-color: darken(map-get($color-map, web-design), 10%);
+      border-color: darken(map-get($color-map, web-design), 10%);
+    }
   }
 
   @include s-e(map) {

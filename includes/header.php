@@ -48,7 +48,9 @@
         <!-- My tag structure on the sidebar is noticably different from the live site, might wanna consider changes if I find compatibility issues later on...  -->
         <div class="sidebar__top">
             <div>
-                <div class="sidebar__top__card" style="margin-top: 0">CONTACT US</div>
+                <div class="sidebar__top__card" style="margin-top: 0">
+                    <a href="contact.php">CONTACT US</a>
+                </div>
                 <div class="sidebar__top__card s-bespoke">
                     <span class="nav-icon"></span><small>BESPOKE</small> SOFTWARE
                 </div>
@@ -232,7 +234,7 @@
                     <!-- Logo, search, expansion button -->
                     <div class="header__row">
                         <div class="logo">
-                            <a href="#">
+                            <a href="index.php">
                                 <img src="img/netmatter01.png" alt="Netmatters Logo" />
                             </a>
                         </div>
@@ -242,7 +244,8 @@
                             </a>
                         </div>
                         <div>
-                            <a class="btn btn-contact"><span class="icon-paperplane"></span><span>Contact</span>
+                            <a href="contact.php" class="btn btn-contact"><span
+                                    class="icon-paperplane"></span><span>Contact</span>
                             </a>
                         </div>
                         <div class="header__search-wide">
